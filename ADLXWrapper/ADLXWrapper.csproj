@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)x64\$(Configuration)\ADLXBindings.dll&quot; &quot;$(TargetDir)&quot;" />
+    <Exec Command="xcopy &quot;$(SolutionDir)x64\$(Configuration)\ADLXBindings.dll&quot; &quot;$(TargetDir)&quot; /Y" />
   </Target>
 
 </Project>
