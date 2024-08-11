@@ -155,6 +155,7 @@ using namespace adlx;
 %pointer_functions(IADLXInterface*, adlxInterfaceP_Ptr);
 %pointer_functions(IADLXGPUTuningServices*, gpuTuningP_Ptr);
 %pointer_functions(IADLXManualFanTuning*, manualFanTuningP_Ptr);
+%pointer_functions(IADLXManualPowerTuning*, manualPowerTuningP_Ptr);
 %pointer_functions(IADLXPerformanceMonitoringServices*, performanceP_Ptr);
 %pointer_functions(IADLXManualFanTuningStateList*, fanTuningStateListP_Ptr);
 %pointer_functions(IADLXManualFanTuningState*, fanTuningStateP_Ptr);
@@ -172,3 +173,4 @@ TYPE2 NAME(TYPE1 x) {
 %enddef
 
 %pointer_cast(IADLXManualFanTuning**, void**, CastManualFanTuningVoidPtr);
+%pointer_cast(IADLXManualPowerTuning**, void**, CastManualPowerTuningVoidPtr);

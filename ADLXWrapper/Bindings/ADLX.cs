@@ -563,6 +563,32 @@ public class ADLX {
     return ret;
   }
 
+  public static SWIGTYPE_p_p_adlx__IADLXManualPowerTuning new_manualPowerTuningP_Ptr() {
+    global::System.IntPtr cPtr = ADLXPINVOKE.new_manualPowerTuningP_Ptr();
+    SWIGTYPE_p_p_adlx__IADLXManualPowerTuning ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXManualPowerTuning(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXManualPowerTuning copy_manualPowerTuningP_Ptr(IADLXManualPowerTuning value) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.copy_manualPowerTuningP_Ptr(IADLXManualPowerTuning.getCPtr(value));
+    SWIGTYPE_p_p_adlx__IADLXManualPowerTuning ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXManualPowerTuning(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_manualPowerTuningP_Ptr(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning obj) {
+    ADLXPINVOKE.delete_manualPowerTuningP_Ptr(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning.getCPtr(obj));
+  }
+
+  public static void manualPowerTuningP_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning obj, IADLXManualPowerTuning value) {
+    ADLXPINVOKE.manualPowerTuningP_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning.getCPtr(obj), IADLXManualPowerTuning.getCPtr(value));
+  }
+
+  public static IADLXManualPowerTuning manualPowerTuningP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning obj) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.manualPowerTuningP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning.getCPtr(obj));
+    IADLXManualPowerTuning ret = (cPtr == global::System.IntPtr.Zero) ? null : new IADLXManualPowerTuning(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p_adlx__IADLXPerformanceMonitoringServices new_performanceP_Ptr() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_performanceP_Ptr();
     SWIGTYPE_p_p_adlx__IADLXPerformanceMonitoringServices ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXPerformanceMonitoringServices(cPtr, false);
@@ -720,6 +746,12 @@ public class ADLX {
 
   public static SWIGTYPE_p_p_void CastManualFanTuningVoidPtr(SWIGTYPE_p_p_adlx__IADLXManualFanTuning x) {
     global::System.IntPtr cPtr = ADLXPINVOKE.CastManualFanTuningVoidPtr(SWIGTYPE_p_p_adlx__IADLXManualFanTuning.getCPtr(x));
+    SWIGTYPE_p_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_void(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_void CastManualPowerTuningVoidPtr(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning x) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.CastManualPowerTuningVoidPtr(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning.getCPtr(x));
     SWIGTYPE_p_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_void(cPtr, false);
     return ret;
   }

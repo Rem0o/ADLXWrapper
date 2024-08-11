@@ -895,6 +895,27 @@ static IADLXManualFanTuning* manualFanTuningP_Ptr_value(IADLXManualFanTuning* *o
 }
 
 
+static IADLXManualPowerTuning* *new_manualPowerTuningP_Ptr(void) { 
+  return new IADLXManualPowerTuning*(); 
+}
+
+static IADLXManualPowerTuning* *copy_manualPowerTuningP_Ptr(IADLXManualPowerTuning* value) { 
+  return new IADLXManualPowerTuning*(value); 
+}
+
+static void delete_manualPowerTuningP_Ptr(IADLXManualPowerTuning* *obj) { 
+  delete obj; 
+}
+
+static void manualPowerTuningP_Ptr_assign(IADLXManualPowerTuning* *obj, IADLXManualPowerTuning* value) {
+  *obj = value;
+}
+
+static IADLXManualPowerTuning* manualPowerTuningP_Ptr_value(IADLXManualPowerTuning* *obj) {
+  return *obj;
+}
+
+
 static IADLXPerformanceMonitoringServices* *new_performanceP_Ptr(void) { 
   return new IADLXPerformanceMonitoringServices*(); 
 }
@@ -1022,6 +1043,11 @@ static IADLXGPUMetricsList* gpuMetricsListP_Ptr_value(IADLXGPUMetricsList* *obj)
 
 
 void** CastManualFanTuningVoidPtr(IADLXManualFanTuning** x) {
+   return (void**) x;
+}
+
+
+void** CastManualPowerTuningVoidPtr(IADLXManualPowerTuning** x) {
    return (void**) x;
 }
 
@@ -8893,6 +8919,58 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_manualFanTuningP_Ptr_v
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_manualPowerTuningP_Ptr___() {
+  void * jresult ;
+  adlx::IADLXManualPowerTuning **result = 0 ;
+  
+  result = (adlx::IADLXManualPowerTuning **)new_manualPowerTuningP_Ptr();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_manualPowerTuningP_Ptr___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXManualPowerTuning *arg1 = (adlx::IADLXManualPowerTuning *) 0 ;
+  adlx::IADLXManualPowerTuning **result = 0 ;
+  
+  arg1 = (adlx::IADLXManualPowerTuning *)jarg1; 
+  result = (adlx::IADLXManualPowerTuning **)copy_manualPowerTuningP_Ptr(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_manualPowerTuningP_Ptr___(void * jarg1) {
+  adlx::IADLXManualPowerTuning **arg1 = (adlx::IADLXManualPowerTuning **) 0 ;
+  
+  arg1 = (adlx::IADLXManualPowerTuning **)jarg1; 
+  delete_manualPowerTuningP_Ptr(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_manualPowerTuningP_Ptr_assign___(void * jarg1, void * jarg2) {
+  adlx::IADLXManualPowerTuning **arg1 = (adlx::IADLXManualPowerTuning **) 0 ;
+  adlx::IADLXManualPowerTuning *arg2 = (adlx::IADLXManualPowerTuning *) 0 ;
+  
+  arg1 = (adlx::IADLXManualPowerTuning **)jarg1; 
+  arg2 = (adlx::IADLXManualPowerTuning *)jarg2; 
+  manualPowerTuningP_Ptr_assign(arg1,arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_manualPowerTuningP_Ptr_value___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXManualPowerTuning **arg1 = (adlx::IADLXManualPowerTuning **) 0 ;
+  adlx::IADLXManualPowerTuning *result = 0 ;
+  
+  arg1 = (adlx::IADLXManualPowerTuning **)jarg1; 
+  result = (adlx::IADLXManualPowerTuning *)manualPowerTuningP_Ptr_value(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_performanceP_Ptr___() {
   void * jresult ;
   adlx::IADLXPerformanceMonitoringServices **result = 0 ;
@@ -9212,6 +9290,18 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_CastManualFanTuningVoi
   
   arg1 = (adlx::IADLXManualFanTuning **)jarg1; 
   result = (void **)CastManualFanTuningVoidPtr(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_CastManualPowerTuningVoidPtr___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXManualPowerTuning **arg1 = (adlx::IADLXManualPowerTuning **) 0 ;
+  void **result = 0 ;
+  
+  arg1 = (adlx::IADLXManualPowerTuning **)jarg1; 
+  result = (void **)CastManualPowerTuningVoidPtr(arg1);
   jresult = (void *)result; 
   return jresult;
 }

@@ -27,5 +27,15 @@ namespace ADLXWrapper
 
             return new ManualFanTuning(@interface, _ext);
         }
+
+        public ManualPowerTuning GetPowerTuning(GPU gpu)
+        {
+            var interfacePtr = ADLX.new_adlxInterfaceP_Ptr();
+            NativeInterface.GetManualPowerTuning(gpu.NativeInterface, interfacePtr).ThrowIfError("GetManualPowerTuning");
+            var @interface = ADLX.adlxInterfaceP_Ptr_value(interfacePtr);
+            ADLX.delete_adlxInterfaceP_Ptr(interfacePtr);
+
+            return new ManualPowerTuning(@interface, null);
+        }
     }
 }

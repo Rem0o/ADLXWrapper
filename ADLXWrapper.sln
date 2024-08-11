@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADLXWrapper", "ADLXWrapper\
 		{B9106003-FDC7-4318-A4C7-31C40484CD4E} = {B9106003-FDC7-4318-A4C7-31C40484CD4E}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADLXWrapper.TestApp", "ADLXWrapper.TestApp\ADLXWrapper.TestApp.csproj", "{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,18 @@ Global
 		{E0B1AFF2-2855-4EBC-B583-18E45EF2F5A1}.Release|x64.Build.0 = Release|Any CPU
 		{E0B1AFF2-2855-4EBC-B583-18E45EF2F5A1}.Release|x86.ActiveCfg = Release|Any CPU
 		{E0B1AFF2-2855-4EBC-B583-18E45EF2F5A1}.Release|x86.Build.0 = Release|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Debug|x64.Build.0 = Debug|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Debug|x86.Build.0 = Debug|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Release|x64.ActiveCfg = Release|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Release|x64.Build.0 = Release|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Release|x86.ActiveCfg = Release|Any CPU
+		{F30F9375-26DD-4A42-95FB-6D39D3A45B5D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

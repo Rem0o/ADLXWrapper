@@ -2104,6 +2104,21 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_manualFanTuningP_Ptr_value___")]
   public static extern global::System.IntPtr manualFanTuningP_Ptr_value(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_manualPowerTuningP_Ptr___")]
+  public static extern global::System.IntPtr new_manualPowerTuningP_Ptr();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_copy_manualPowerTuningP_Ptr___")]
+  public static extern global::System.IntPtr copy_manualPowerTuningP_Ptr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_manualPowerTuningP_Ptr___")]
+  public static extern void delete_manualPowerTuningP_Ptr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_manualPowerTuningP_Ptr_assign___")]
+  public static extern void manualPowerTuningP_Ptr_assign(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_manualPowerTuningP_Ptr_value___")]
+  public static extern global::System.IntPtr manualPowerTuningP_Ptr_value(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_performanceP_Ptr___")]
   public static extern global::System.IntPtr new_performanceP_Ptr();
 
@@ -2196,6 +2211,9 @@ class ADLXPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_CastManualFanTuningVoidPtr___")]
   public static extern global::System.IntPtr CastManualFanTuningVoidPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_CastManualPowerTuningVoidPtr___")]
+  public static extern global::System.IntPtr CastManualPowerTuningVoidPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXList_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXList_SWIGUpcast(global::System.IntPtr jarg1);
