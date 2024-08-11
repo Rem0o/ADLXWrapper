@@ -1,8 +1,10 @@
 ﻿using ADLXWrapper.Bindings;
+using System;
 using System.Linq;
 
 namespace ADLXWrapper
 {
+
     public class ManualFanTuning : ADLXInterfaceQueryWrapper<IADLXManualFanTuning>
     {
         private IADLXManualFanTuningStateList _list;
@@ -64,6 +66,9 @@ namespace ADLXWrapper
             using (ADLX_IntRange speedRange = ADLX.adlx_intRangeP_value(speedRangePtr))
                 SpeedRange = new Range(speedRange);
 
+            using (ADLX_IntRange tempRange = ADLX.adlx_intRangeP_value(tempRangePtr))
+                TempRange = new Range(tempRange);
+
             ADLX.delete_adlx_intRangeP(speedRangePtr);
             ADLX.delete_adlx_intRangeP(tempRangePtr);
         }
@@ -73,6 +78,8 @@ namespace ADLXWrapper
         public bool SupportsZeroRPM { get; }
 
         public Range SpeedRange { get; }
+
+        public Range TempRange { get; }
 
         public void Reset()
         {
