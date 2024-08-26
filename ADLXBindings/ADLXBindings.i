@@ -143,6 +143,7 @@ using namespace adlx;
 %pointer_functions(ADLX_DISPLAY_SCAN_TYPE, disScanTypeP);
 %pointer_functions(adlx_size, adlx_sizeP);
 %pointer_functions(ADLX_IntRange, adlx_intRangeP);
+%pointer_functions(ADLX_GPU_TYPE, gpuTypeP);
 
 // T** pointers
 %pointer_functions(IADLXDisplayServices*, displaySerP_Ptr);

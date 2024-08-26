@@ -1954,6 +1954,21 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_adlx_intRangeP_value___")]
   public static extern global::System.IntPtr adlx_intRangeP_value(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_gpuTypeP___")]
+  public static extern global::System.IntPtr new_gpuTypeP();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_copy_gpuTypeP___")]
+  public static extern global::System.IntPtr copy_gpuTypeP(int jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_gpuTypeP___")]
+  public static extern void delete_gpuTypeP(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_gpuTypeP_assign___")]
+  public static extern void gpuTypeP_assign(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_gpuTypeP_value___")]
+  public static extern int gpuTypeP_value(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_displaySerP_Ptr___")]
   public static extern global::System.IntPtr new_displaySerP_Ptr();
 

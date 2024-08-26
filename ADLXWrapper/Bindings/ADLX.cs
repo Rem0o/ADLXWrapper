@@ -303,6 +303,31 @@ public class ADLX {
     return ret;
   }
 
+  public static SWIGTYPE_p_ADLX_GPU_TYPE new_gpuTypeP() {
+    global::System.IntPtr cPtr = ADLXPINVOKE.new_gpuTypeP();
+    SWIGTYPE_p_ADLX_GPU_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_GPU_TYPE(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_ADLX_GPU_TYPE copy_gpuTypeP(ADLX_GPU_TYPE value) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.copy_gpuTypeP((int)value);
+    SWIGTYPE_p_ADLX_GPU_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_GPU_TYPE(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_gpuTypeP(SWIGTYPE_p_ADLX_GPU_TYPE obj) {
+    ADLXPINVOKE.delete_gpuTypeP(SWIGTYPE_p_ADLX_GPU_TYPE.getCPtr(obj));
+  }
+
+  public static void gpuTypeP_assign(SWIGTYPE_p_ADLX_GPU_TYPE obj, ADLX_GPU_TYPE value) {
+    ADLXPINVOKE.gpuTypeP_assign(SWIGTYPE_p_ADLX_GPU_TYPE.getCPtr(obj), (int)value);
+  }
+
+  public static ADLX_GPU_TYPE gpuTypeP_value(SWIGTYPE_p_ADLX_GPU_TYPE obj) {
+    ADLX_GPU_TYPE ret = (ADLX_GPU_TYPE)ADLXPINVOKE.gpuTypeP_value(SWIGTYPE_p_ADLX_GPU_TYPE.getCPtr(obj));
+    return ret;
+  }
+
   public static SWIGTYPE_p_p_adlx__IADLXDisplayServices new_displaySerP_Ptr() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_displaySerP_Ptr();
     SWIGTYPE_p_p_adlx__IADLXDisplayServices ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXDisplayServices(cPtr, false);

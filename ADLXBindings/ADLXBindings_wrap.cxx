@@ -685,6 +685,27 @@ static ADLX_IntRange adlx_intRangeP_value(ADLX_IntRange *obj) {
 }
 
 
+static ADLX_GPU_TYPE *new_gpuTypeP(void) { 
+  return new ADLX_GPU_TYPE(); 
+}
+
+static ADLX_GPU_TYPE *copy_gpuTypeP(ADLX_GPU_TYPE value) { 
+  return new ADLX_GPU_TYPE(value); 
+}
+
+static void delete_gpuTypeP(ADLX_GPU_TYPE *obj) { 
+  delete obj; 
+}
+
+static void gpuTypeP_assign(ADLX_GPU_TYPE *obj, ADLX_GPU_TYPE value) {
+  *obj = value;
+}
+
+static ADLX_GPU_TYPE gpuTypeP_value(ADLX_GPU_TYPE *obj) {
+  return *obj;
+}
+
+
 static IADLXDisplayServices* *new_displaySerP_Ptr(void) { 
   return new IADLXDisplayServices*(); 
 }
@@ -8395,6 +8416,58 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_adlx_intRangeP_value__
   arg1 = (ADLX_IntRange *)jarg1; 
   result = adlx_intRangeP_value(arg1);
   jresult = new ADLX_IntRange(result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_gpuTypeP___() {
+  void * jresult ;
+  ADLX_GPU_TYPE *result = 0 ;
+  
+  result = (ADLX_GPU_TYPE *)new_gpuTypeP();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_gpuTypeP___(int jarg1) {
+  void * jresult ;
+  ADLX_GPU_TYPE arg1 ;
+  ADLX_GPU_TYPE *result = 0 ;
+  
+  arg1 = (ADLX_GPU_TYPE)jarg1; 
+  result = (ADLX_GPU_TYPE *)copy_gpuTypeP(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_gpuTypeP___(void * jarg1) {
+  ADLX_GPU_TYPE *arg1 = (ADLX_GPU_TYPE *) 0 ;
+  
+  arg1 = (ADLX_GPU_TYPE *)jarg1; 
+  delete_gpuTypeP(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_gpuTypeP_assign___(void * jarg1, int jarg2) {
+  ADLX_GPU_TYPE *arg1 = (ADLX_GPU_TYPE *) 0 ;
+  ADLX_GPU_TYPE arg2 ;
+  
+  arg1 = (ADLX_GPU_TYPE *)jarg1; 
+  arg2 = (ADLX_GPU_TYPE)jarg2; 
+  gpuTypeP_assign(arg1,arg2);
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_gpuTypeP_value___(void * jarg1) {
+  int jresult ;
+  ADLX_GPU_TYPE *arg1 = (ADLX_GPU_TYPE *) 0 ;
+  ADLX_GPU_TYPE result;
+  
+  arg1 = (ADLX_GPU_TYPE *)jarg1; 
+  result = (ADLX_GPU_TYPE)gpuTypeP_value(arg1);
+  jresult = (int)result; 
   return jresult;
 }
 
