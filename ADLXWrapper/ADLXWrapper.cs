@@ -1,5 +1,4 @@
 ﻿using ADLXWrapper.Bindings;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ADLXWrapper
 {
@@ -21,15 +20,11 @@ namespace ADLXWrapper
 
         public override void Dispose()
         {
-            try
-            {
-                _ext.Dispose();
-                NativeInterface.Terminate().ThrowIfError("Couldn't terminate ADLX");
-            }
-            finally
-            {
-                base.Dispose();
-            }
+            _ext.Dispose();
+            ADLX_RESULT adlxResult = NativeInterface.Terminate();
+            base.Dispose();
+
+            adlxResult.ThrowIfError("Couldn't terminate ADLX");
         }
     }
 }
