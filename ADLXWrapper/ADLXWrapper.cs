@@ -4,27 +4,58 @@ namespace ADLXWrapper
 {
     public class ADLXWrapper : Wrapper<ADLXHelper>
     {
+        private bool _initialized;
         private ADLXExt _ext;
 
         public ADLXWrapper() : base(new ADLXHelper())
         {
-            NativeInterface.Initialize().ThrowIfError("Couldn't initialize ADLX");
-
             _ext = new ADLXExt();
+        }
+
+        public bool IsAvailable()
+        {
+            try
+            {
+                Initialize();
+                Terminate();
+            }
+            catch
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void Initialize()
+        {
+            NativeInterface.Initialize().ThrowIfError("Couldn't initialize ADLX");
+            _initialized = true;
         }
 
         public SystemServices GetSystemServices()
         {
+            if (!_initialized)
+            {
+                throw new ADLXEception("ADLX was not initialized before getting system services");
+            }
+
             return new SystemServices(NativeInterface.GetSystemServices(), _ext);
+        }
+
+        public void Terminate()
+        {
+            if (_initialized)
+            {
+                _initialized = false;
+                NativeInterface.Terminate().ThrowIfError("Couldn't terminate ADLX");
+            }
         }
 
         public override void Dispose()
         {
-            _ext.Dispose();
-            ADLX_RESULT adlxResult = NativeInterface.Terminate();
+            _ext?.Dispose();
             base.Dispose();
-
-            adlxResult.ThrowIfError("Couldn't terminate ADLX");
         }
     }
 }
