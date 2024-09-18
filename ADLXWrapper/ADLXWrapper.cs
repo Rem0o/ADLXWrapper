@@ -12,21 +12,6 @@ namespace ADLXWrapper
             _ext = new ADLXExt();
         }
 
-        public bool IsAvailable()
-        {
-            try
-            {
-                Initialize();
-                Terminate();
-            }
-            catch
-            {
-                return false;
-            }
-
-            return true;
-        }
-
         public void Initialize()
         {
             NativeInterface.Initialize().ThrowIfError("Couldn't initialize ADLX");
