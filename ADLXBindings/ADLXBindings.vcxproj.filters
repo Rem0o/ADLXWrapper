@@ -18,13 +18,19 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ADLXCSharpBind_wrap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\SDK\ADLXHelper\Windows\Cpp\ADLXHelper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ADLX\SDK\ADLXHelper\Windows\Cpp\ADLXHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADLXBindings_wrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADLXExt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeADLXHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,18 +41,24 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ADLXCSharpBind_wrap.cxx">
+    <ClCompile Include="..\ADLX\SDK\ADLXHelper\Windows\Cpp\ADLXHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\SDK\ADLXHelper\Windows\Cpp\ADLXHelper.cpp">
+    <ClCompile Include="..\ADLX\SDK\Platform\Windows\WinAPIs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\SDK\Platform\Windows\WinAPIs.cpp">
+    <ClCompile Include="ADLXBindings_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ADLXExt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeADLXHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="ADLXCSharpBind.i" />
+    <CustomBuild Include="ADLXBindings.i" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cs_struct.i" />

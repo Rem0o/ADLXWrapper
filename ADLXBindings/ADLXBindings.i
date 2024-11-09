@@ -22,6 +22,7 @@
 #include "../ADLX/SDK/Include/IPerformanceMonitoring.h"
 #include "../ADLX/SDK/ADLXHelper/Windows/Cpp/ADLXHelper.h"
 #include "ADLXExt.h"
+#include "SafeADLXHelper.h"
 
 typedef     int64_t             adlx_int64;
 typedef     int32_t             adlx_int32;
@@ -127,6 +128,7 @@ typedef WCHAR TCHAR;
 %include "../ADLX/SDK/Include/IPerformanceMonitoring.h"
 %include "../ADLX/SDK/ADLXHelper/Windows/Cpp/ADLXHelper.h"
 %include "ADLXExt.h"
+%include "SafeADLXHelper.h"
 
 using namespace adlx;
 

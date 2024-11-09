@@ -2,12 +2,12 @@
 
 namespace ADLXWrapper
 {
-    public class ADLXWrapper : Wrapper<ADLXHelper>
+    public class ADLXWrapper : Wrapper<SafeADLXHelper>
     {
         private bool _initialized;
         private ADLXExt _ext;
 
-        public ADLXWrapper() : base(new ADLXHelper())
+        public ADLXWrapper() : base(new SafeADLXHelper())
         {
             _ext = new ADLXExt();
         }
@@ -30,11 +30,8 @@ namespace ADLXWrapper
 
         public void Terminate()
         {
-            if (_initialized)
-            {
-                _initialized = false;
-                NativeInterface.Terminate().ThrowIfError("Couldn't terminate ADLX");
-            }
+            _initialized = false;
+            NativeInterface.Terminate().ThrowIfError("Couldn't terminate ADLX");
         }
 
         public override void Dispose()

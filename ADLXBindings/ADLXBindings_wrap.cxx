@@ -432,6 +432,7 @@ template <typename T> T SwigValueInit() {
 #include "../ADLX/SDK/Include/IPerformanceMonitoring.h"
 #include "../ADLX/SDK/ADLXHelper/Windows/Cpp/ADLXHelper.h"
 #include "ADLXExt.h"
+#include "SafeADLXHelper.h"
 
 typedef     int64_t             adlx_int64;
 typedef     int32_t             adlx_int32;
@@ -7872,6 +7873,60 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics
   arg4 = jarg4; 
   result = (ADLX_RESULT)(arg1)->GetCurrentMetrics(arg2,arg3,arg4);
   jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_SafeADLXHelper___() {
+  void * jresult ;
+  SafeADLXHelper *result = 0 ;
+  
+  result = (SafeADLXHelper *)new SafeADLXHelper();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_SafeADLXHelper___(void * jarg1) {
+  SafeADLXHelper *arg1 = (SafeADLXHelper *) 0 ;
+  
+  arg1 = (SafeADLXHelper *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_Initialize___(void * jarg1) {
+  int jresult ;
+  SafeADLXHelper *arg1 = (SafeADLXHelper *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (SafeADLXHelper *)jarg1; 
+  result = (ADLX_RESULT)(arg1)->Initialize();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_Terminate___(void * jarg1) {
+  int jresult ;
+  SafeADLXHelper *arg1 = (SafeADLXHelper *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (SafeADLXHelper *)jarg1; 
+  result = (ADLX_RESULT)(arg1)->Terminate();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_GetSystemServices___(void * jarg1) {
+  void * jresult ;
+  SafeADLXHelper *arg1 = (SafeADLXHelper *) 0 ;
+  adlx::IADLXSystem *result = 0 ;
+  
+  arg1 = (SafeADLXHelper *)jarg1; 
+  result = (adlx::IADLXSystem *)(arg1)->GetSystemServices();
+  jresult = (void *)result; 
   return jresult;
 }
 

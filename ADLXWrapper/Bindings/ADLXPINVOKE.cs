@@ -1804,6 +1804,21 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics___")]
   public static extern int ADLXExt_GetCurrentMetrics(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, ref GPUMetricsStruct  jarg4);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_SafeADLXHelper___")]
+  public static extern global::System.IntPtr new_SafeADLXHelper();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_SafeADLXHelper___")]
+  public static extern void delete_SafeADLXHelper(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_Initialize___")]
+  public static extern int SafeADLXHelper_Initialize(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_Terminate___")]
+  public static extern int SafeADLXHelper_Terminate(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_GetSystemServices___")]
+  public static extern global::System.IntPtr SafeADLXHelper_GetSystemServices(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_intP___")]
   public static extern global::System.IntPtr new_intP();
 
