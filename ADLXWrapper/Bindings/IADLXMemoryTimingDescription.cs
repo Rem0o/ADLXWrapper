@@ -53,8 +53,8 @@ public class IADLXMemoryTimingDescription : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetDescription(SWIGTYPE_p_ADLX_MEMORYTIMING_DESCRIPTION description) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXMemoryTimingDescription_GetDescription(swigCPtr, SWIGTYPE_p_ADLX_MEMORYTIMING_DESCRIPTION.getCPtr(description));
+  public virtual ADLX_RESULT GetDescription(SWIGTYPE_p_adlx__ADLX_MEMORYTIMING_DESCRIPTION description) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXMemoryTimingDescription_GetDescription(swigCPtr, SWIGTYPE_p_adlx__ADLX_MEMORYTIMING_DESCRIPTION.getCPtr(description));
     return ret;
   }
 
