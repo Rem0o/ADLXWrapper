@@ -11,6 +11,7 @@ public:
     virtual ~SafeADLXHelper();
 
     ADLX_RESULT Initialize();
+	ADLX_RESULT InitializeWithIncompatibleDriver();
     ADLX_RESULT Terminate();
  
     adlx::IADLXSystem* GetSystemServices();

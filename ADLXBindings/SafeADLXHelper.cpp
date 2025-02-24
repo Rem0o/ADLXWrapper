@@ -21,6 +21,18 @@ ADLX_RESULT SafeADLXHelper::Initialize()
 	}
 }
 
+ADLX_RESULT SafeADLXHelper::InitializeWithIncompatibleDriver()
+{
+	try
+	{
+		return _adlxHelper.InitializeWithIncompatibleDriver();
+	}
+	catch (...)
+	{
+		return ADLX_FAIL;
+	}
+}
+
 ADLX_RESULT SafeADLXHelper::Terminate()
 {
 	try

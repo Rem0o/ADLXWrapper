@@ -7907,6 +7907,18 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_Initialize
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_InitializeWithIncompatibleDriver___(void * jarg1) {
+  int jresult ;
+  SafeADLXHelper *arg1 = (SafeADLXHelper *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (SafeADLXHelper *)jarg1; 
+  result = (ADLX_RESULT)(arg1)->InitializeWithIncompatibleDriver();
+  jresult = (int)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_Terminate___(void * jarg1) {
   int jresult ;
   SafeADLXHelper *arg1 = (SafeADLXHelper *) 0 ;

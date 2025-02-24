@@ -65,6 +65,11 @@ public class SafeADLXHelper : global::System.IDisposable {
     return ret;
   }
 
+  public ADLX_RESULT InitializeWithIncompatibleDriver() {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.SafeADLXHelper_InitializeWithIncompatibleDriver(swigCPtr);
+    return ret;
+  }
+
   public ADLX_RESULT Terminate() {
     ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.SafeADLXHelper_Terminate(swigCPtr);
     return ret;

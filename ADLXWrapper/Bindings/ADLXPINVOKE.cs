@@ -1813,6 +1813,9 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_Initialize___")]
   public static extern int SafeADLXHelper_Initialize(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_InitializeWithIncompatibleDriver___")]
+  public static extern int SafeADLXHelper_InitializeWithIncompatibleDriver(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_Terminate___")]
   public static extern int SafeADLXHelper_Terminate(global::System.Runtime.InteropServices.HandleRef jarg1);
 

@@ -18,6 +18,12 @@ namespace ADLXWrapper
             _initialized = true;
         }
 
+        public void InitializeWithIncompatibleDriver()
+        {
+            NativeInterface.InitializeWithIncompatibleDriver().ThrowIfError("Couldn't initialize ADLX with incompatible driver");
+            _initialized = true;
+        }
+
         public SystemServices GetSystemServices()
         {
             if (!_initialized)
