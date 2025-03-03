@@ -7,6 +7,7 @@ namespace ADLXWrapper
     {
         public double GPUTemperature;
         public double GPUHotspotTemperature;
+        public double GPUTotalBoardPower;
         public int GPUFanSpeed;
     }
 }

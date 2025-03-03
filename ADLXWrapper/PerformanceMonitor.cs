@@ -1,5 +1,4 @@
 ﻿using ADLXWrapper.Bindings;
-using System;
 
 namespace ADLXWrapper
 {
@@ -23,14 +22,16 @@ namespace ADLXWrapper
 
         public GPUMetrics GetGPUMetrics(GPU gpu)
         {
-            NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr);
-            return new GPUMetrics(_metricPtr, _intPtr, _doublePtr);
+            NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr).ThrowIfError("Get GPU Metrics");
+            IADLXGPUMetrics metrics = ADLX.metricsP_Ptr_value(_metricPtr);
+
+            return new GPUMetrics(metrics, _intPtr, _doublePtr);
         }
 
         public GPUMetricsStruct GetGPUMetricsStruct(GPU gpu)
         {
             GPUMetricsStruct metrics = default;
-            _ext.GetCurrentMetrics(NativeInterface, gpu.NativeInterface, ref metrics);
+            _ext.GetCurrentMetrics(NativeInterface, gpu.NativeInterface, ref metrics).ThrowIfError("Get GPU Metrics Struct");
 
             return metrics;
         }

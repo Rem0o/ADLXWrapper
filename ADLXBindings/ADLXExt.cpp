@@ -52,6 +52,7 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics(adlx::IADLXPerformanceMonitoringServices*
 	res = current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
 	res = current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
 	res = current->GPUTemperature(&metricsStruct->GPUTemperature);
+	res = current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
 
 	current->Release();
 
