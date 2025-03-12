@@ -163,6 +163,7 @@ using namespace adlx;
 %pointer_functions(IADLXManualFanTuningStateList*, fanTuningStateListP_Ptr);
 %pointer_functions(IADLXManualFanTuningState*, fanTuningStateP_Ptr);
 %pointer_functions(IADLXGPUMetrics*, metricsP_Ptr);
+%pointer_functions(IADLXGPUMetricsSupport*, metricsSupportP_Ptr);
 %pointer_functions(adlx_string, stringP_Ptr);
 %pointer_functions(IADLXGPUMetricsList*, gpuMetricsListP_Ptr);
 

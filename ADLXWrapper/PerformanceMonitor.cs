@@ -6,9 +6,11 @@ namespace ADLXWrapper
     {
         private readonly ADLXExt _ext;
         private SWIGTYPE_p_p_adlx__IADLXGPUMetrics _metricPtr;
+        private SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport _metricSupportPtr;
         private SWIGTYPE_p_double _doublePtr;
         private SWIGTYPE_p_int _intPtr;
         private readonly SWIGTYPE_p_p_adlx__IADLXGPUMetricsList _metricsList;
+        private readonly GPUMetricsStruct emptyStruct = default;
 
         public PerformanceMonitor(IADLXPerformanceMonitoringServices performanceMonitor, ADLXExt ext) : base(performanceMonitor)
         {
@@ -16,9 +18,15 @@ namespace ADLXWrapper
             _doublePtr = ADLX.new_doubleP().DisposeWith(ADLX.delete_doubleP, Disposable);
             _intPtr = ADLX.new_intP().DisposeWith(ADLX.delete_intP, Disposable);
             _metricsList = ADLX.new_gpuMetricsListP_Ptr().DisposeWith(ADLX.delete_gpuMetricsListP_Ptr, Disposable);
+            _metricSupportPtr = ADLX.new_metricsSupportP_Ptr().DisposeWith(ADLX.delete_metricsSupportP_Ptr, Disposable);
             _ext = ext;
         }
 
+        public GPUMetricsSupport GetSupportedGPUMetrics(GPU gpu)
+        {
+            NativeInterface.GetSupportedGPUMetrics(gpu.NativeInterface, _metricSupportPtr).ThrowIfError("Get Supported GPU Metrics");
+            return new GPUMetricsSupport(ADLX.metricsSupportP_Ptr_value(_metricSupportPtr));
+        }
 
         public GPUMetrics GetGPUMetrics(GPU gpu)
         {
@@ -31,7 +39,12 @@ namespace ADLXWrapper
         public GPUMetricsStruct GetGPUMetricsStruct(GPU gpu)
         {
             GPUMetricsStruct metrics = default;
-            _ext.GetCurrentMetrics(NativeInterface, gpu.NativeInterface, ref metrics).ThrowIfError("Get GPU Metrics Struct");
+            var res = _ext.GetCurrentMetrics(NativeInterface, gpu.NativeInterface, ref metrics);
+
+            if (res.HasError() && metrics == emptyStruct)
+            {
+                throw new ADLXEception(res, "Get GPU Metrics Struct");
+            }
 
             return metrics;
         }

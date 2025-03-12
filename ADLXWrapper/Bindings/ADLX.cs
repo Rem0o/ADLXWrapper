@@ -718,6 +718,32 @@ public class ADLX {
     return ret;
   }
 
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport new_metricsSupportP_Ptr() {
+    global::System.IntPtr cPtr = ADLXPINVOKE.new_metricsSupportP_Ptr();
+    SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport copy_metricsSupportP_Ptr(IADLXGPUMetricsSupport value) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.copy_metricsSupportP_Ptr(IADLXGPUMetricsSupport.getCPtr(value));
+    SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_metricsSupportP_Ptr(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport obj) {
+    ADLXPINVOKE.delete_metricsSupportP_Ptr(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport.getCPtr(obj));
+  }
+
+  public static void metricsSupportP_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport obj, IADLXGPUMetricsSupport value) {
+    ADLXPINVOKE.metricsSupportP_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport.getCPtr(obj), IADLXGPUMetricsSupport.getCPtr(value));
+  }
+
+  public static IADLXGPUMetricsSupport metricsSupportP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport obj) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.metricsSupportP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport.getCPtr(obj));
+    IADLXGPUMetricsSupport ret = (cPtr == global::System.IntPtr.Zero) ? null : new IADLXGPUMetricsSupport(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p_char new_stringP_Ptr() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_stringP_Ptr();
     SWIGTYPE_p_p_char ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_char(cPtr, false);

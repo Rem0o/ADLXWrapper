@@ -2212,6 +2212,21 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metricsP_Ptr_value___")]
   public static extern global::System.IntPtr metricsP_Ptr_value(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_metricsSupportP_Ptr___")]
+  public static extern global::System.IntPtr new_metricsSupportP_Ptr();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_copy_metricsSupportP_Ptr___")]
+  public static extern global::System.IntPtr copy_metricsSupportP_Ptr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_metricsSupportP_Ptr___")]
+  public static extern void delete_metricsSupportP_Ptr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metricsSupportP_Ptr_assign___")]
+  public static extern void metricsSupportP_Ptr_assign(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metricsSupportP_Ptr_value___")]
+  public static extern global::System.IntPtr metricsSupportP_Ptr_value(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_stringP_Ptr___")]
   public static extern global::System.IntPtr new_stringP_Ptr();
 

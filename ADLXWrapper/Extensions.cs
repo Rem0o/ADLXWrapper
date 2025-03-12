@@ -35,10 +35,15 @@ namespace ADLXWrapper
 
         public static void ThrowIfError(this ADLX_RESULT result, string message)
         {
-            if (result != ADLX_RESULT.ADLX_OK && result != ADLX_RESULT.ADLX_ALREADY_ENABLED && result != ADLX_RESULT.ADLX_ALREADY_INITIALIZED)
+            if (result.HasError())
             {
-                throw new ADLXEception($"Result: {result} {Environment.NewLine}{message}");
+                throw new ADLXEception(result, message);
             }
+        }
+
+        public static bool HasError(this ADLX_RESULT result)
+        {
+            return result != ADLX_RESULT.ADLX_OK && result != ADLX_RESULT.ADLX_ALREADY_ENABLED && result != ADLX_RESULT.ADLX_ALREADY_INITIALIZED;
         }
     }
 }

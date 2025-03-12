@@ -22,6 +22,15 @@ namespace ADLXWrapper
             }
         }
 
+        public double GetGPUPowerUsage()
+        {
+            lock (_doublePtr)
+            {
+                NativeInterface.GPUPower(_doublePtr).ThrowIfError("Get power usage");
+                return ADLX.doubleP_value(_doublePtr);
+            }
+        }
+
         public int GetFanSpeed()
         {
             lock (_intPtr)

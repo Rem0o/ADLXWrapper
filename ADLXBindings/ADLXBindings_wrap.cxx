@@ -1022,6 +1022,27 @@ static IADLXGPUMetrics* metricsP_Ptr_value(IADLXGPUMetrics* *obj) {
 }
 
 
+static IADLXGPUMetricsSupport* *new_metricsSupportP_Ptr(void) { 
+  return new IADLXGPUMetricsSupport*(); 
+}
+
+static IADLXGPUMetricsSupport* *copy_metricsSupportP_Ptr(IADLXGPUMetricsSupport* value) { 
+  return new IADLXGPUMetricsSupport*(value); 
+}
+
+static void delete_metricsSupportP_Ptr(IADLXGPUMetricsSupport* *obj) { 
+  delete obj; 
+}
+
+static void metricsSupportP_Ptr_assign(IADLXGPUMetricsSupport* *obj, IADLXGPUMetricsSupport* value) {
+  *obj = value;
+}
+
+static IADLXGPUMetricsSupport* metricsSupportP_Ptr_value(IADLXGPUMetricsSupport* *obj) {
+  return *obj;
+}
+
+
 static adlx_string *new_stringP_Ptr(void) { 
   return new adlx_string(); 
 }
@@ -9314,6 +9335,58 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_metricsP_Ptr_value___(
   
   arg1 = (adlx::IADLXGPUMetrics **)jarg1; 
   result = (adlx::IADLXGPUMetrics *)metricsP_Ptr_value(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_metricsSupportP_Ptr___() {
+  void * jresult ;
+  adlx::IADLXGPUMetricsSupport **result = 0 ;
+  
+  result = (adlx::IADLXGPUMetricsSupport **)new_metricsSupportP_Ptr();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_metricsSupportP_Ptr___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXGPUMetricsSupport *arg1 = (adlx::IADLXGPUMetricsSupport *) 0 ;
+  adlx::IADLXGPUMetricsSupport **result = 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetricsSupport *)jarg1; 
+  result = (adlx::IADLXGPUMetricsSupport **)copy_metricsSupportP_Ptr(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_metricsSupportP_Ptr___(void * jarg1) {
+  adlx::IADLXGPUMetricsSupport **arg1 = (adlx::IADLXGPUMetricsSupport **) 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetricsSupport **)jarg1; 
+  delete_metricsSupportP_Ptr(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_metricsSupportP_Ptr_assign___(void * jarg1, void * jarg2) {
+  adlx::IADLXGPUMetricsSupport **arg1 = (adlx::IADLXGPUMetricsSupport **) 0 ;
+  adlx::IADLXGPUMetricsSupport *arg2 = (adlx::IADLXGPUMetricsSupport *) 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetricsSupport **)jarg1; 
+  arg2 = (adlx::IADLXGPUMetricsSupport *)jarg2; 
+  metricsSupportP_Ptr_assign(arg1,arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_metricsSupportP_Ptr_value___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXGPUMetricsSupport **arg1 = (adlx::IADLXGPUMetricsSupport **) 0 ;
+  adlx::IADLXGPUMetricsSupport *result = 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetricsSupport **)jarg1; 
+  result = (adlx::IADLXGPUMetricsSupport *)metricsSupportP_Ptr_value(arg1);
   jresult = (void *)result; 
   return jresult;
 }
