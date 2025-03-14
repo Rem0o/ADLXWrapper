@@ -17,9 +17,9 @@ namespace ADLXWrapper
             return ADLX.boolP_value(_boolPtr);
         }
 
-        public bool IsSupportedGpuPower()
+        public bool IsSupportedGpuTotalBoardPower()
         {
-            NativeInterface.IsSupportedGPUPower(_boolPtr).ThrowIfError("Is Supported GPU Power");
+            NativeInterface.IsSupportedGPUTotalBoardPower(_boolPtr).ThrowIfError("Is Supported GPU total board Power");
             return ADLX.boolP_value(_boolPtr);
         }
 

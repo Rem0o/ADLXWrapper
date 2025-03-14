@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ADLXWrapper.TestApp": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
