@@ -718,6 +718,32 @@ public class ADLX {
     return ret;
   }
 
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 new_metrics1P_Ptr() {
+    global::System.IntPtr cPtr = ADLXPINVOKE.new_metrics1P_Ptr();
+    SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetrics1(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 copy_metrics1P_Ptr(IADLXGPUMetrics1 value) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.copy_metrics1P_Ptr(IADLXGPUMetrics1.getCPtr(value));
+    SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetrics1(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_metrics1P_Ptr(SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 obj) {
+    ADLXPINVOKE.delete_metrics1P_Ptr(SWIGTYPE_p_p_adlx__IADLXGPUMetrics1.getCPtr(obj));
+  }
+
+  public static void metrics1P_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 obj, IADLXGPUMetrics1 value) {
+    ADLXPINVOKE.metrics1P_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXGPUMetrics1.getCPtr(obj), IADLXGPUMetrics1.getCPtr(value));
+  }
+
+  public static IADLXGPUMetrics1 metrics1P_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 obj) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.metrics1P_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetrics1.getCPtr(obj));
+    IADLXGPUMetrics1 ret = (cPtr == global::System.IntPtr.Zero) ? null : new IADLXGPUMetrics1(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport new_metricsSupportP_Ptr() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_metricsSupportP_Ptr();
     SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport(cPtr, false);
@@ -741,6 +767,32 @@ public class ADLX {
   public static IADLXGPUMetricsSupport metricsSupportP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport obj) {
     global::System.IntPtr cPtr = ADLXPINVOKE.metricsSupportP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport.getCPtr(obj));
     IADLXGPUMetricsSupport ret = (cPtr == global::System.IntPtr.Zero) ? null : new IADLXGPUMetricsSupport(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 new_metricsSupport1P_Ptr() {
+    global::System.IntPtr cPtr = ADLXPINVOKE.new_metricsSupport1P_Ptr();
+    SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 copy_metricsSupport1P_Ptr(IADLXGPUMetricsSupport1 value) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.copy_metricsSupport1P_Ptr(IADLXGPUMetricsSupport1.getCPtr(value));
+    SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_metricsSupport1P_Ptr(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 obj) {
+    ADLXPINVOKE.delete_metricsSupport1P_Ptr(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1.getCPtr(obj));
+  }
+
+  public static void metricsSupport1P_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 obj, IADLXGPUMetricsSupport1 value) {
+    ADLXPINVOKE.metricsSupport1P_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1.getCPtr(obj), IADLXGPUMetricsSupport1.getCPtr(value));
+  }
+
+  public static IADLXGPUMetricsSupport1 metricsSupport1P_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 obj) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.metricsSupport1P_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1.getCPtr(obj));
+    IADLXGPUMetricsSupport1 ret = (cPtr == global::System.IntPtr.Zero) ? null : new IADLXGPUMetricsSupport1(cPtr, false);
     return ret;
   }
 
@@ -804,6 +856,18 @@ public class ADLX {
   public static SWIGTYPE_p_p_void CastManualPowerTuningVoidPtr(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning x) {
     global::System.IntPtr cPtr = ADLXPINVOKE.CastManualPowerTuningVoidPtr(SWIGTYPE_p_p_adlx__IADLXManualPowerTuning.getCPtr(x));
     SWIGTYPE_p_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_void(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 CastGPUMetricsToGPUMetrics1(SWIGTYPE_p_p_adlx__IADLXGPUMetrics x) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.CastGPUMetricsToGPUMetrics1(SWIGTYPE_p_p_adlx__IADLXGPUMetrics.getCPtr(x));
+    SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetrics1(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 CastGPUMetricsSupportToGPUMetricsSupport1(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport x) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.CastGPUMetricsSupportToGPUMetricsSupport1(SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport.getCPtr(x));
+    SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1 ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport1(cPtr, false);
     return ret;
   }
 
