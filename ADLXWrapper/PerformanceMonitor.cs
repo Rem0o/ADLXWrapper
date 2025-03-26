@@ -34,7 +34,6 @@ namespace ADLXWrapper
             NativeInterface.GetSupportedGPUMetrics(gpu.NativeInterface, _metricSupportPtr).ThrowIfError("Get Supported GPU Metrics1");
             var _metricSupport1Ptr = ADLX.CastGPUMetricsSupportToGPUMetricsSupport1(_metricSupportPtr);
 
-
             return new GPUMetricsSupport1(ADLX.metricsSupport1P_Ptr_value(_metricSupport1Ptr));
         }
 

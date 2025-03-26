@@ -80,7 +80,6 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1(adlx::IADLXPerformanceMonitoringServices
 	res = current1->GPUMemoryTemperature(&metricsStruct1->GPUMemoryTemperature);
 	res = current1->NPUFrequency(&metricsStruct1->NPUFrequency);
 	res = current1->NPUActivityLevel(&metricsStruct1->NPUActivityLevel);
-	current1->Release();
 
 	return res;
 }

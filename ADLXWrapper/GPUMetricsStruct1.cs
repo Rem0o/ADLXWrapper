@@ -56,7 +56,7 @@ namespace ADLXWrapper
 
         public override string ToString()
         {
-            return $"GPUTemperature: {GPUTemperature}, GPUMemoryTemperature: {GPUMemoryTemperature},GPUHotspotTemperature: {GPUHotspotTemperature}, GPUTotalBoardPower: {GPUTotalBoardPower}, GPUFanSpeed: {GPUFanSpeed}, NPUFrequency: {NPUFreuqency}, NPUActivityLevel: {NPUActivityLevel}";
+            return $"GPUTemperature: {GPUTemperature}, GPUMemoryTemperature: {GPUMemoryTemperature}, GPUHotspotTemperature: {GPUHotspotTemperature}, GPUTotalBoardPower: {GPUTotalBoardPower}, GPUFanSpeed: {GPUFanSpeed}, NPUFrequency: {NPUFreuqency}, NPUActivityLevel: {NPUActivityLevel}";
         }
     }
 }
