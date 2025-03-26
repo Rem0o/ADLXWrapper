@@ -48,13 +48,12 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics(adlx::IADLXPerformanceMonitoringServices*
 		return res;
 	}
 
-	IADLXGPUMetrics* current = *m_metricsPtr;
+	IADLXGPUMetricsPtr current(*m_metricsPtr);
 
 	res = current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
 	res = current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
 	res = current->GPUTemperature(&metricsStruct->GPUTemperature);
 	res = current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
-
 	current->Release();
 
 	return res;
@@ -63,7 +62,6 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics(adlx::IADLXPerformanceMonitoringServices*
 ADLX_RESULT ADLXExt::GetCurrentMetrics1(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct1* metricsStruct1)
 {
 	ADLX_RESULT res = ADLX_OK;
-
 
 	res = services->GetCurrentGPUMetrics(gpu, m_metricsPtr);
 	if (!ADLX_SUCCEEDED(res))
@@ -80,6 +78,7 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1(adlx::IADLXPerformanceMonitoringServices
 	res = current1->GPUMemoryTemperature(&metricsStruct1->GPUMemoryTemperature);
 	res = current1->NPUFrequency(&metricsStruct1->NPUFrequency);
 	res = current1->NPUActivityLevel(&metricsStruct1->NPUActivityLevel);
+	current1->Release();
 
 	return res;
 }

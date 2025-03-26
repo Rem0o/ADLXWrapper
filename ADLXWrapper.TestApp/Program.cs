@@ -59,10 +59,12 @@ namespace ADLXWrapper.TestApp
 
             var pm = ss.GetPerformanceMonitor().DisposeWith(disposables);
 
-            var supported = pm.GetSupportedGPUMetrics1(gpus.FirstOrDefault()).DisposeWith(disposables);
+            GPU gpu = gpus.FirstOrDefault();
+
+            var supported = pm.GetSupportedGPUMetrics1(gpu).DisposeWith(disposables);
 
             // writeline all supported metrics
-            Console.WriteLine($"Detected GPU: {gpus.FirstOrDefault().Name}");
+            Console.WriteLine($"Detected GPU: {gpu.Name}");
             Console.WriteLine("Supported metrics:");
             Console.WriteLine($"GPU temp: {supported.IsSupportedGPUTemperature()}");
             Console.WriteLine($"GPU total board power: {supported.IsSupportedGpuTotalBoardPower()}");
@@ -72,11 +74,30 @@ namespace ADLXWrapper.TestApp
             Console.WriteLine($"NPU frequency: {supported.IsSupportedNPUFrequency()}");
             Console.WriteLine($"NPU activity level: {supported.IsSupportedNPUActivityLevel()}");
 
+            var metrics = pm.GetGPUMetricsStruct1(gpu);
+
+            // get all metrics
+            Console.WriteLine($"Metrics:");
+            Console.WriteLine($"GPU temp: {metrics.GPUTemperature}");
+            Console.WriteLine($"GPU total board power: {metrics.GPUTotalBoardPower}");
+            Console.WriteLine($"GPU fan: {metrics.GPUFanSpeed}");
+            Console.WriteLine($"GPU hotspot: {metrics.GPUHotspotTemperature}");
+            Console.WriteLine($"GPU Memory temp: {metrics.GPUMemoryTemperature}");
+            Console.WriteLine($"NPU frequency: {metrics.NPUFrequency}");
+            Console.WriteLine($"NPU activity level: {metrics.NPUActivityLevel}");
+
+            var otherMetrics = pm.GetGPUMetricsStruct(gpu);
+
+            Console.WriteLine($"Metrics:");
+            Console.WriteLine($"GPU temp: {otherMetrics.GPUTemperature}");
+            Console.WriteLine($"GPU total board power: {otherMetrics.GPUTotalBoardPower}");
+            Console.WriteLine($"GPU fan: {otherMetrics.GPUFanSpeed}");
+            Console.WriteLine($"GPU hotspot: {otherMetrics.GPUHotspotTemperature}");
 
             // same for fan control
 
             var tuning = ss.GetGPUTuningService().DisposeWith(disposables);
-            var fanTuning = tuning.GetManualFanTuning(gpus.FirstOrDefault()).DisposeWith(disposables);
+            var fanTuning = tuning.GetManualFanTuning(gpu).DisposeWith(disposables);
 
             // supports zeroRpm
             Console.WriteLine($"Fan control:");

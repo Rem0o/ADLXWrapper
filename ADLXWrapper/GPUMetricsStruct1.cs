@@ -11,7 +11,7 @@ namespace ADLXWrapper
         public int GPUFanSpeed;
 
         public double GPUMemoryTemperature;
-        public int NPUFreuqency;
+        public int NPUFrequency;
         public int NPUActivityLevel;
 
         public override bool Equals(object obj)
@@ -23,7 +23,7 @@ namespace ADLXWrapper
                        GPUTotalBoardPower == other.GPUTotalBoardPower &&
                        GPUFanSpeed == other.GPUFanSpeed &&
                        GPUMemoryTemperature == other.GPUMemoryTemperature &&
-                       NPUFreuqency == other.NPUFreuqency &&
+                       NPUFrequency == other.NPUFrequency &&
                        NPUActivityLevel == other.NPUActivityLevel;
             }
 
@@ -39,7 +39,7 @@ namespace ADLXWrapper
             hash = hash * 23 + GPUTotalBoardPower.GetHashCode();
             hash = hash * 23 + GPUFanSpeed.GetHashCode();
             hash = hash * 23 + GPUMemoryTemperature.GetHashCode();
-            hash = hash * 23 + NPUFreuqency.GetHashCode();
+            hash = hash * 23 + NPUFrequency.GetHashCode();
             hash = hash * 23 + NPUActivityLevel.GetHashCode();
             return hash;
         }
@@ -56,7 +56,7 @@ namespace ADLXWrapper
 
         public override string ToString()
         {
-            return $"GPUTemperature: {GPUTemperature}, GPUMemoryTemperature: {GPUMemoryTemperature}, GPUHotspotTemperature: {GPUHotspotTemperature}, GPUTotalBoardPower: {GPUTotalBoardPower}, GPUFanSpeed: {GPUFanSpeed}, NPUFrequency: {NPUFreuqency}, NPUActivityLevel: {NPUActivityLevel}";
+            return $"GPUTemperature: {GPUTemperature}, GPUMemoryTemperature: {GPUMemoryTemperature}, GPUHotspotTemperature: {GPUHotspotTemperature}, GPUTotalBoardPower: {GPUTotalBoardPower}, GPUFanSpeed: {GPUFanSpeed}, NPUFrequency: {NPUFrequency}, NPUActivityLevel: {NPUActivityLevel}";
         }
     }
 }

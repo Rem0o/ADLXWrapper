@@ -8138,178 +8138,6 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_g_ADLX_get___() {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUTemperature_set___(void * jarg1, double jarg2) {
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_double arg2 ;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  arg2 = (adlx_double)jarg2; 
-  if (arg1) (arg1)->GPUTemperature = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUTemperature_get___(void * jarg1) {
-  double jresult ;
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_double result;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  result = (adlx_double) ((arg1)->GPUTemperature);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUHotspotTemperature_set___(void * jarg1, double jarg2) {
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_double arg2 ;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  arg2 = (adlx_double)jarg2; 
-  if (arg1) (arg1)->GPUHotspotTemperature = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUHotspotTemperature_get___(void * jarg1) {
-  double jresult ;
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_double result;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  result = (adlx_double) ((arg1)->GPUHotspotTemperature);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUTotalBoardPower_set___(void * jarg1, double jarg2) {
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_double arg2 ;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  arg2 = (adlx_double)jarg2; 
-  if (arg1) (arg1)->GPUTotalBoardPower = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUTotalBoardPower_get___(void * jarg1) {
-  double jresult ;
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_double result;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  result = (adlx_double) ((arg1)->GPUTotalBoardPower);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUFanSpeed_set___(void * jarg1, int jarg2) {
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_int arg2 ;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  arg2 = (adlx_int)jarg2; 
-  if (arg1) (arg1)->GPUFanSpeed = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUFanSpeed_get___(void * jarg1) {
-  int jresult ;
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_int result;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  result = (adlx_int) ((arg1)->GPUFanSpeed);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUMemoryTemperature_set___(void * jarg1, double jarg2) {
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_double arg2 ;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  arg2 = (adlx_double)jarg2; 
-  if (arg1) (arg1)->GPUMemoryTemperature = arg2;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_GPUMemoryTemperature_get___(void * jarg1) {
-  double jresult ;
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_double result;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  result = (adlx_double) ((arg1)->GPUMemoryTemperature);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_NPUFrequency_set___(void * jarg1, int jarg2) {
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_int arg2 ;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  arg2 = (adlx_int)jarg2; 
-  if (arg1) (arg1)->NPUFrequency = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_NPUFrequency_get___(void * jarg1) {
-  int jresult ;
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_int result;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  result = (adlx_int) ((arg1)->NPUFrequency);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_NPUActivityLevel_set___(void * jarg1, int jarg2) {
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_int arg2 ;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  arg2 = (adlx_int)jarg2; 
-  if (arg1) (arg1)->NPUActivityLevel = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_GPUMetrics1Struct_NPUActivityLevel_get___(void * jarg1) {
-  int jresult ;
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  adlx_int result;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  result = (adlx_int) ((arg1)->NPUActivityLevel);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_GPUMetrics1Struct___() {
-  void * jresult ;
-  GPUMetrics1Struct *result = 0 ;
-  
-  result = (GPUMetrics1Struct *)new GPUMetrics1Struct();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_GPUMetrics1Struct___(void * jarg1) {
-  GPUMetrics1Struct *arg1 = (GPUMetrics1Struct *) 0 ;
-  
-  arg1 = (GPUMetrics1Struct *)jarg1; 
-  delete arg1;
-}
-
-
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_ADLXExt___() {
   void * jresult ;
   ADLXExt *result = 0 ;
@@ -8359,6 +8187,24 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics
   arg3 = (adlx::IADLXGPU *)jarg3; 
   arg4 = jarg4; 
   result = (ADLX_RESULT)(arg1)->GetCurrentMetrics(arg2,arg3,arg4);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics1___(void * jarg1, void * jarg2, void * jarg3,  GPUMetricsStruct1*  jarg4) {
+  int jresult ;
+  ADLXExt *arg1 = (ADLXExt *) 0 ;
+  adlx::IADLXPerformanceMonitoringServices *arg2 = (adlx::IADLXPerformanceMonitoringServices *) 0 ;
+  adlx::IADLXGPU *arg3 = (adlx::IADLXGPU *) 0 ;
+  GPUMetricsStruct1 *arg4 = (GPUMetricsStruct1 *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (ADLXExt *)jarg1; 
+  arg2 = (adlx::IADLXPerformanceMonitoringServices *)jarg2; 
+  arg3 = (adlx::IADLXGPU *)jarg3; 
+  arg4 = jarg4; 
+  result = (ADLX_RESULT)(arg1)->GetCurrentMetrics1(arg2,arg3,arg4);
   jresult = (int)result; 
   return jresult;
 }
