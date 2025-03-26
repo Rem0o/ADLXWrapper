@@ -20,6 +20,8 @@
 #include "../ADLX/SDK/Include/IGPUPresetTuning.h"
 #include "../ADLX/SDK/Include/IGPUTuning.h"
 #include "../ADLX/SDK/Include/IPerformanceMonitoring.h"
+#include "../ADLX/SDK/Include/IPerformanceMonitoring1.h"
+#include "../ADLX/SDK/Include/IPerformanceMonitoring2.h"
 #include "../ADLX/SDK/ADLXHelper/Windows/Cpp/ADLXHelper.h"
 #include "ADLXExt.h"
 #include "SafeADLXHelper.h"
@@ -110,6 +112,7 @@ typedef WCHAR TCHAR;
 %include cs_struct.i
 
 %cs_struct(GPUMetricsStruct, GPUMetricsStruct);
+%cs_struct(GPUMetricsStruct1, GPUMetricsStruct1);
 //%typemap(csclassmodifiers) SWIGTYPE "public partial class"
 
 %include "../ADLX/SDK/Include/ADLXDefines.h"
@@ -126,6 +129,8 @@ typedef WCHAR TCHAR;
 %include "../ADLX/SDK/Include/IGPUPresetTuning.h"
 %include "../ADLX/SDK/Include/IGPUTuning.h"
 %include "../ADLX/SDK/Include/IPerformanceMonitoring.h"
+%include "../ADLX/SDK/Include/IPerformanceMonitoring1.h"
+%include "../ADLX/SDK/Include/IPerformanceMonitoring2.h"
 %include "../ADLX/SDK/ADLXHelper/Windows/Cpp/ADLXHelper.h"
 %include "ADLXExt.h"
 %include "SafeADLXHelper.h"
@@ -163,7 +168,9 @@ using namespace adlx;
 %pointer_functions(IADLXManualFanTuningStateList*, fanTuningStateListP_Ptr);
 %pointer_functions(IADLXManualFanTuningState*, fanTuningStateP_Ptr);
 %pointer_functions(IADLXGPUMetrics*, metricsP_Ptr);
+%pointer_functions(IADLXGPUMetrics1*, metrics1P_Ptr);
 %pointer_functions(IADLXGPUMetricsSupport*, metricsSupportP_Ptr);
+%pointer_functions(IADLXGPUMetricsSupport1*, metricsSupport1P_Ptr);
 %pointer_functions(adlx_string, stringP_Ptr);
 %pointer_functions(IADLXGPUMetricsList*, gpuMetricsListP_Ptr);
 
@@ -178,3 +185,6 @@ TYPE2 NAME(TYPE1 x) {
 
 %pointer_cast(IADLXManualFanTuning**, void**, CastManualFanTuningVoidPtr);
 %pointer_cast(IADLXManualPowerTuning**, void**, CastManualPowerTuningVoidPtr);
+
+%pointer_cast(IADLXGPUMetrics**, IADLXGPUMetrics1**, CastGPUMetricsToGPUMetrics1);
+%pointer_cast(IADLXGPUMetricsSupport**, IADLXGPUMetricsSupport1**, CastGPUMetricsSupportToGPUMetricsSupport1);

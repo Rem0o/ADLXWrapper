@@ -11,6 +11,7 @@ namespace ADLXWrapper
         private SWIGTYPE_p_int _intPtr;
         private readonly SWIGTYPE_p_p_adlx__IADLXGPUMetricsList _metricsList;
         private readonly GPUMetricsStruct emptyStruct = default;
+        private readonly GPUMetricsStruct1 emptyStruct1 = default;
 
         public PerformanceMonitor(IADLXPerformanceMonitoringServices performanceMonitor, ADLXExt ext) : base(performanceMonitor)
         {
@@ -28,12 +29,30 @@ namespace ADLXWrapper
             return new GPUMetricsSupport(ADLX.metricsSupportP_Ptr_value(_metricSupportPtr));
         }
 
+        public GPUMetricsSupport1 GetSupportedGPUMetrics1(GPU gpu)
+        {
+            NativeInterface.GetSupportedGPUMetrics(gpu.NativeInterface, _metricSupportPtr).ThrowIfError("Get Supported GPU Metrics1");
+            var _metricSupport1Ptr = ADLX.CastGPUMetricsSupportToGPUMetricsSupport1(_metricSupportPtr);
+
+
+            return new GPUMetricsSupport1(ADLX.metricsSupport1P_Ptr_value(_metricSupport1Ptr));
+        }
+
         public GPUMetrics GetGPUMetrics(GPU gpu)
         {
             NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr).ThrowIfError("Get GPU Metrics");
             IADLXGPUMetrics metrics = ADLX.metricsP_Ptr_value(_metricPtr);
 
             return new GPUMetrics(metrics, _intPtr, _doublePtr);
+        }
+
+        public GPUMetrics1 GetGPUMetrics1(GPU gpu)
+        {
+            NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr).ThrowIfError("Get GPU Metrics1");
+            var _metric1Ptr = ADLX.CastGPUMetricsToGPUMetrics1(_metricPtr);
+            IADLXGPUMetrics1 metrics1 = ADLX.metrics1P_Ptr_value(_metric1Ptr);
+
+            return new GPUMetrics1(metrics1, _intPtr, _doublePtr);
         }
 
         public GPUMetricsStruct GetGPUMetricsStruct(GPU gpu)
@@ -47,6 +66,18 @@ namespace ADLXWrapper
             }
 
             return metrics;
+        }
+        
+        public GPUMetricsStruct1 GetGPUMetricsStruct1(GPU gpu)
+        {
+            GPUMetricsStruct1 metrics1 = default;
+            var res = _ext.GetCurrentMetrics1(NativeInterface, gpu.NativeInterface, ref metrics1);
+
+            if (res.HasError() && metrics1 == emptyStruct1)
+            {
+                throw new ADLXEception(res, "Get GPU Metrics Struct");
+            }
+            return metrics1;
         }
 
         /*

@@ -59,7 +59,7 @@ namespace ADLXWrapper.TestApp
 
             var pm = ss.GetPerformanceMonitor().DisposeWith(disposables);
 
-            var supported = pm.GetSupportedGPUMetrics(gpus.FirstOrDefault()).DisposeWith(disposables);
+            var supported = pm.GetSupportedGPUMetrics1(gpus.FirstOrDefault()).DisposeWith(disposables);
 
             // writeline all supported metrics
             Console.WriteLine($"Detected GPU: {gpus.FirstOrDefault().Name}");
@@ -68,6 +68,10 @@ namespace ADLXWrapper.TestApp
             Console.WriteLine($"GPU total board power: {supported.IsSupportedGpuTotalBoardPower()}");
             Console.WriteLine($"GPU fan: {supported.IsSupportedFanSpeed()}");
             Console.WriteLine($"GPU hotspot: {supported.IsSupportedGPUHotspotTemperature()}");
+            Console.WriteLine($"GPU Memory temp: {supported.IsSupportedGPUMemoryTemperature()}");
+            Console.WriteLine($"NPU frequency: {supported.IsSupportedNPUFrequency()}");
+            Console.WriteLine($"NPU activity level: {supported.IsSupportedNPUActivityLevel()}");
+
 
             // same for fan control
 
@@ -80,6 +84,7 @@ namespace ADLXWrapper.TestApp
             Console.WriteLine($"Supports target fan speed: {fanTuning.SupportsTargetFanSpeed}");
             // fan speed range
             Console.WriteLine($"Fan speed range: {fanTuning.SpeedRange.Min}-{fanTuning.SpeedRange.Max}");
+            
         }
     }
 }

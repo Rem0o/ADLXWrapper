@@ -6,10 +6,6 @@
     <OutputType>library</OutputType>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Bindings\" />
-  </ItemGroup>
-
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="xcopy &quot;$(SolutionDir)x64\$(Configuration)\ADLXBindings.dll&quot; &quot;$(TargetDir)&quot; /Y" />
   </Target>
