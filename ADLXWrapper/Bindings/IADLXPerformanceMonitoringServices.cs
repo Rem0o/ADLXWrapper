@@ -63,8 +63,8 @@ public class IADLXPerformanceMonitoringServices : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetSamplingInterval(SWIGTYPE_p_int intervalMs) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXPerformanceMonitoringServices_GetSamplingInterval(swigCPtr, SWIGTYPE_p_int.getCPtr(intervalMs));
+  public virtual ADLX_RESULT GetSamplingInterval(ref int intervalMs) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXPerformanceMonitoringServices_GetSamplingInterval(swigCPtr, ref intervalMs);
     return ret;
   }
 
@@ -78,8 +78,8 @@ public class IADLXPerformanceMonitoringServices : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetMaxPerformanceMetricsHistorySize(SWIGTYPE_p_int sizeSec) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXPerformanceMonitoringServices_GetMaxPerformanceMetricsHistorySize(swigCPtr, SWIGTYPE_p_int.getCPtr(sizeSec));
+  public virtual ADLX_RESULT GetMaxPerformanceMetricsHistorySize(ref int sizeSec) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXPerformanceMonitoringServices_GetMaxPerformanceMetricsHistorySize(swigCPtr, ref sizeSec);
     return ret;
   }
 
@@ -88,8 +88,8 @@ public class IADLXPerformanceMonitoringServices : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetCurrentPerformanceMetricsHistorySize(SWIGTYPE_p_int sizeSec) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXPerformanceMonitoringServices_GetCurrentPerformanceMetricsHistorySize(swigCPtr, SWIGTYPE_p_int.getCPtr(sizeSec));
+  public virtual ADLX_RESULT GetCurrentPerformanceMetricsHistorySize(ref int sizeSec) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXPerformanceMonitoringServices_GetCurrentPerformanceMetricsHistorySize(swigCPtr, ref sizeSec);
     return ret;
   }
 

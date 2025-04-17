@@ -53,8 +53,8 @@ public class IADLXAllMetrics : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT TimeStamp(SWIGTYPE_p_long_long ms) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXAllMetrics_TimeStamp(swigCPtr, SWIGTYPE_p_long_long.getCPtr(ms));
+  public virtual ADLX_RESULT TimeStamp(ref int ms) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXAllMetrics_TimeStamp(swigCPtr, ref ms);
     return ret;
   }
 

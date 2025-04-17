@@ -68,8 +68,8 @@ public class IADLXManualFanTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsValidFanTuningStates(IADLXManualFanTuningStateList pStates, SWIGTYPE_p_int errorIndex) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsValidFanTuningStates(swigCPtr, IADLXManualFanTuningStateList.getCPtr(pStates), SWIGTYPE_p_int.getCPtr(errorIndex));
+  public virtual ADLX_RESULT IsValidFanTuningStates(IADLXManualFanTuningStateList pStates, ref int errorIndex) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsValidFanTuningStates(swigCPtr, IADLXManualFanTuningStateList.getCPtr(pStates), ref errorIndex);
     return ret;
   }
 
@@ -78,13 +78,13 @@ public class IADLXManualFanTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedZeroRPM(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsSupportedZeroRPM(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedZeroRPM(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsSupportedZeroRPM(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetZeroRPMState(SWIGTYPE_p_bool isSet) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_GetZeroRPMState(swigCPtr, SWIGTYPE_p_bool.getCPtr(isSet));
+  public virtual ADLX_RESULT GetZeroRPMState(ref bool isSet) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_GetZeroRPMState(swigCPtr, ref isSet);
     return ret;
   }
 
@@ -93,8 +93,8 @@ public class IADLXManualFanTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedMinAcousticLimit(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsSupportedMinAcousticLimit(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedMinAcousticLimit(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsSupportedMinAcousticLimit(swigCPtr, ref supported);
     return ret;
   }
 
@@ -103,8 +103,8 @@ public class IADLXManualFanTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetMinAcousticLimit(SWIGTYPE_p_int value) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_GetMinAcousticLimit(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+  public virtual ADLX_RESULT GetMinAcousticLimit(ref int value) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_GetMinAcousticLimit(swigCPtr, ref value);
     return ret;
   }
 
@@ -113,8 +113,8 @@ public class IADLXManualFanTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedMinFanSpeed(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsSupportedMinFanSpeed(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedMinFanSpeed(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsSupportedMinFanSpeed(swigCPtr, ref supported);
     return ret;
   }
 
@@ -123,8 +123,8 @@ public class IADLXManualFanTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetMinFanSpeed(SWIGTYPE_p_int value) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_GetMinFanSpeed(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+  public virtual ADLX_RESULT GetMinFanSpeed(ref int value) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_GetMinFanSpeed(swigCPtr, ref value);
     return ret;
   }
 
@@ -133,8 +133,8 @@ public class IADLXManualFanTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedTargetFanSpeed(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsSupportedTargetFanSpeed(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedTargetFanSpeed(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_IsSupportedTargetFanSpeed(swigCPtr, ref supported);
     return ret;
   }
 
@@ -143,8 +143,8 @@ public class IADLXManualFanTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetTargetFanSpeed(SWIGTYPE_p_int value) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_GetTargetFanSpeed(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+  public virtual ADLX_RESULT GetTargetFanSpeed(ref int value) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuning_GetTargetFanSpeed(swigCPtr, ref value);
     return ret;
   }
 

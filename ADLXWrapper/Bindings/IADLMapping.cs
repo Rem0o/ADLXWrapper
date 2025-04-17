@@ -67,13 +67,13 @@ public class IADLMapping : global::System.IDisposable {
     return ret;
   }
 
-  public virtual ADLX_RESULT BdfFromADLXGPU(IADLXGPU pGPU, SWIGTYPE_p_int bus, SWIGTYPE_p_int device, SWIGTYPE_p_int function) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLMapping_BdfFromADLXGPU(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_int.getCPtr(bus), SWIGTYPE_p_int.getCPtr(device), SWIGTYPE_p_int.getCPtr(function));
+  public virtual ADLX_RESULT BdfFromADLXGPU(IADLXGPU pGPU, ref int bus, ref int device, ref int function) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLMapping_BdfFromADLXGPU(swigCPtr, IADLXGPU.getCPtr(pGPU), ref bus, ref device, ref function);
     return ret;
   }
 
-  public virtual ADLX_RESULT AdlAdapterIndexFromADLXGPU(IADLXGPU pGPU, SWIGTYPE_p_int adlAdapterIndex) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLMapping_AdlAdapterIndexFromADLXGPU(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_int.getCPtr(adlAdapterIndex));
+  public virtual ADLX_RESULT AdlAdapterIndexFromADLXGPU(IADLXGPU pGPU, ref int adlAdapterIndex) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLMapping_AdlAdapterIndexFromADLXGPU(swigCPtr, IADLXGPU.getCPtr(pGPU), ref adlAdapterIndex);
     return ret;
   }
 
@@ -82,8 +82,8 @@ public class IADLMapping : global::System.IDisposable {
     return ret;
   }
 
-  public virtual ADLX_RESULT ADLIdsFromADLXDisplay(IADLXDisplay pDisplay, SWIGTYPE_p_int adapterIndex, SWIGTYPE_p_int displayIndex, SWIGTYPE_p_int bus, SWIGTYPE_p_int device, SWIGTYPE_p_int function) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLMapping_ADLIdsFromADLXDisplay(swigCPtr, IADLXDisplay.getCPtr(pDisplay), SWIGTYPE_p_int.getCPtr(adapterIndex), SWIGTYPE_p_int.getCPtr(displayIndex), SWIGTYPE_p_int.getCPtr(bus), SWIGTYPE_p_int.getCPtr(device), SWIGTYPE_p_int.getCPtr(function));
+  public virtual ADLX_RESULT ADLIdsFromADLXDisplay(IADLXDisplay pDisplay, ref int adapterIndex, ref int displayIndex, ref int bus, ref int device, ref int function) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLMapping_ADLIdsFromADLXDisplay(swigCPtr, IADLXDisplay.getCPtr(pDisplay), ref adapterIndex, ref displayIndex, ref bus, ref device, ref function);
     return ret;
   }
 
@@ -92,8 +92,8 @@ public class IADLMapping : global::System.IDisposable {
     return ret;
   }
 
-  public virtual ADLX_RESULT ADLIdsFromADLXDesktop(SWIGTYPE_p_adlx__IADLXDesktop pDesktop, SWIGTYPE_p_int adapterIndex, SWIGTYPE_p_int VidPnSourceId, SWIGTYPE_p_int bus, SWIGTYPE_p_int device, SWIGTYPE_p_int function) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLMapping_ADLIdsFromADLXDesktop(swigCPtr, SWIGTYPE_p_adlx__IADLXDesktop.getCPtr(pDesktop), SWIGTYPE_p_int.getCPtr(adapterIndex), SWIGTYPE_p_int.getCPtr(VidPnSourceId), SWIGTYPE_p_int.getCPtr(bus), SWIGTYPE_p_int.getCPtr(device), SWIGTYPE_p_int.getCPtr(function));
+  public virtual ADLX_RESULT ADLIdsFromADLXDesktop(SWIGTYPE_p_adlx__IADLXDesktop pDesktop, ref int adapterIndex, ref int VidPnSourceId, ref int bus, ref int device, ref int function) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLMapping_ADLIdsFromADLXDesktop(swigCPtr, SWIGTYPE_p_adlx__IADLXDesktop.getCPtr(pDesktop), ref adapterIndex, ref VidPnSourceId, ref bus, ref device, ref function);
     return ret;
   }
 

@@ -53,23 +53,23 @@ public class IADLXSystemMetrics : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT TimeStamp(SWIGTYPE_p_long_long ms) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics_TimeStamp(swigCPtr, SWIGTYPE_p_long_long.getCPtr(ms));
+  public virtual ADLX_RESULT TimeStamp(ref int ms) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics_TimeStamp(swigCPtr, ref ms);
     return ret;
   }
 
-  public virtual ADLX_RESULT CPUUsage(SWIGTYPE_p_double data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics_CPUUsage(swigCPtr, SWIGTYPE_p_double.getCPtr(data));
+  public virtual ADLX_RESULT CPUUsage(ref double data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics_CPUUsage(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT SystemRAM(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics_SystemRAM(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT SystemRAM(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics_SystemRAM(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT SmartShift(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics_SmartShift(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT SmartShift(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics_SmartShift(swigCPtr, ref data);
     return ret;
   }
 

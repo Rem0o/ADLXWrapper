@@ -11,8 +11,6 @@ namespace ADLXWrapper
         private IADLXManualFanTuningState[] _states;
         private (int t, int s)[] _resetList;
         private bool _resetZeroRPM = false;
-        private SWIGTYPE_p_int _intPtr;
-        private SWIGTYPE_p_bool _boolPtr;
         private readonly IADLXInterface _interface;
         private readonly ADLXExt _ext;
 
@@ -30,11 +28,10 @@ namespace ADLXWrapper
             _interface = @interface.DisposeWith(Disposable);
             _ext = ext;
 
-            _boolPtr = ADLX.new_boolP().DisposeWith(ADLX.delete_boolP, Disposable);
-            SupportsTargetFanSpeed = NativeInterface.IsSupportedTargetFanSpeed(_boolPtr) == ADLX_RESULT.ADLX_OK && ADLX.boolP_value(_boolPtr);
-            SupportsZeroRPM = NativeInterface.IsSupportedZeroRPM(_boolPtr) == ADLX_RESULT.ADLX_OK && ADLX.boolP_value(_boolPtr);
+            bool isSupported = default;
+            SupportsTargetFanSpeed = NativeInterface.IsSupportedTargetFanSpeed(ref isSupported) == ADLX_RESULT.ADLX_OK && isSupported;
+            SupportsZeroRPM = NativeInterface.IsSupportedZeroRPM(ref isSupported) == ADLX_RESULT.ADLX_OK && isSupported;
 
-            _intPtr = ADLX.new_intP().DisposeWith(ADLX.delete_intP, Disposable);
             var listPtr = ADLX.new_fanTuningStateListP_Ptr();
             NativeInterface.GetFanTuningStates(listPtr).ThrowIfError("Couldn't get fan tuning states");
             _list = ADLX.fanTuningStateListP_Ptr_value(listPtr).DisposeInterfaceWith(Disposable);
@@ -52,10 +49,10 @@ namespace ADLXWrapper
 
             _resetList = _states.Select(x =>
             {
-                x.GetTemperature(_intPtr).ThrowIfError("GetTemperature");
-                var t = ADLX.intP_value(_intPtr);
-                x.GetFanSpeed(_intPtr).ThrowIfError("GetFanSpeed");
-                var s = ADLX.intP_value(_intPtr);
+                int t = default;
+                x.GetTemperature(ref t).ThrowIfError("GetTemperature");
+                int s = default;
+                x.GetFanSpeed(ref s).ThrowIfError("GetFanSpeed");
                 return (t, s);
             }).ToArray();
 
@@ -139,8 +136,9 @@ namespace ADLXWrapper
         {
             var states = _states.Select(x =>
             {
-                x.GetFanSpeed(_intPtr).ThrowIfError("Couldn't get control state");
-                return ADLX.intP_value(_intPtr);
+                int speed = default;
+                x.GetFanSpeed(ref speed).ThrowIfError("Couldn't get control state");
+                return speed;
             });
 
             return states.ToArray();
@@ -148,8 +146,9 @@ namespace ADLXWrapper
 
         public bool GetZeroRPMState()
         {
-            NativeInterface.GetZeroRPMState(_boolPtr).ThrowIfError("Couldn't get zero RPM state");
-            return ADLX.boolP_value(_boolPtr);
+            bool zeroRpm = default;
+            NativeInterface.GetZeroRPMState(ref zeroRpm).ThrowIfError("Couldn't get zero RPM state");
+            return zeroRpm;
         }
     }
 }

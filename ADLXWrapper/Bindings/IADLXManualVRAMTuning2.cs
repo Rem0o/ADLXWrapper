@@ -53,8 +53,8 @@ public class IADLXManualVRAMTuning2 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedMemoryTiming(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning2_IsSupportedMemoryTiming(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedMemoryTiming(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning2_IsSupportedMemoryTiming(swigCPtr, ref supported);
     return ret;
   }
 
@@ -78,8 +78,8 @@ public class IADLXManualVRAMTuning2 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetMaxVRAMFrequency(SWIGTYPE_p_int freq) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning2_GetMaxVRAMFrequency(swigCPtr, SWIGTYPE_p_int.getCPtr(freq));
+  public virtual ADLX_RESULT GetMaxVRAMFrequency(ref int freq) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning2_GetMaxVRAMFrequency(swigCPtr, ref freq);
     return ret;
   }
 

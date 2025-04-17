@@ -7,8 +7,7 @@ namespace ADLXWrapper
         private readonly ADLXExt _ext;
         private SWIGTYPE_p_p_adlx__IADLXGPUMetrics _metricPtr;
         private SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport _metricSupportPtr;
-        private SWIGTYPE_p_double _doublePtr;
-        private SWIGTYPE_p_int _intPtr;
+        
         private readonly SWIGTYPE_p_p_adlx__IADLXGPUMetricsList _metricsList;
         private readonly GPUMetricsStruct emptyStruct = default;
         private readonly GPUMetricsStruct1 emptyStruct1 = default;
@@ -16,8 +15,6 @@ namespace ADLXWrapper
         public PerformanceMonitor(IADLXPerformanceMonitoringServices performanceMonitor, ADLXExt ext) : base(performanceMonitor)
         {
             _metricPtr = ADLX.new_metricsP_Ptr().DisposeWith(ADLX.delete_metricsP_Ptr, Disposable);
-            _doublePtr = ADLX.new_doubleP().DisposeWith(ADLX.delete_doubleP, Disposable);
-            _intPtr = ADLX.new_intP().DisposeWith(ADLX.delete_intP, Disposable);
             _metricsList = ADLX.new_gpuMetricsListP_Ptr().DisposeWith(ADLX.delete_gpuMetricsListP_Ptr, Disposable);
             _metricSupportPtr = ADLX.new_metricsSupportP_Ptr().DisposeWith(ADLX.delete_metricsSupportP_Ptr, Disposable);
             _ext = ext;
@@ -42,7 +39,7 @@ namespace ADLXWrapper
             NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr).ThrowIfError("Get GPU Metrics");
             IADLXGPUMetrics metrics = ADLX.metricsP_Ptr_value(_metricPtr);
 
-            return new GPUMetrics(metrics, _intPtr, _doublePtr);
+            return new GPUMetrics(metrics);
         }
 
         public GPUMetrics1 GetGPUMetrics1(GPU gpu)
@@ -51,7 +48,7 @@ namespace ADLXWrapper
             var _metric1Ptr = ADLX.CastGPUMetricsToGPUMetrics1(_metricPtr);
             IADLXGPUMetrics1 metrics1 = ADLX.metrics1P_Ptr_value(_metric1Ptr);
 
-            return new GPUMetrics1(metrics1, _intPtr, _doublePtr);
+            return new GPUMetrics1(metrics1);
         }
 
         public GPUMetricsStruct GetGPUMetricsStruct(GPU gpu)

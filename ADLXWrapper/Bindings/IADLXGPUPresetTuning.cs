@@ -53,53 +53,53 @@ public class IADLXGPUPresetTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedPowerSaver(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedPowerSaver(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedPowerSaver(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedPowerSaver(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedQuiet(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedQuiet(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedQuiet(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedQuiet(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedBalanced(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedBalanced(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedBalanced(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedBalanced(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedTurbo(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedTurbo(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedTurbo(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedTurbo(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedRage(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedRage(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedRage(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsSupportedRage(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsCurrentPowerSaver(SWIGTYPE_p_bool isPowerSaver) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentPowerSaver(swigCPtr, SWIGTYPE_p_bool.getCPtr(isPowerSaver));
+  public virtual ADLX_RESULT IsCurrentPowerSaver(ref bool isPowerSaver) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentPowerSaver(swigCPtr, ref isPowerSaver);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsCurrentQuiet(SWIGTYPE_p_bool isQuiet) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentQuiet(swigCPtr, SWIGTYPE_p_bool.getCPtr(isQuiet));
+  public virtual ADLX_RESULT IsCurrentQuiet(ref bool isQuiet) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentQuiet(swigCPtr, ref isQuiet);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsCurrentBalanced(SWIGTYPE_p_bool isBalance) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentBalanced(swigCPtr, SWIGTYPE_p_bool.getCPtr(isBalance));
+  public virtual ADLX_RESULT IsCurrentBalanced(ref bool isBalance) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentBalanced(swigCPtr, ref isBalance);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsCurrentTurbo(SWIGTYPE_p_bool isTurbo) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentTurbo(swigCPtr, SWIGTYPE_p_bool.getCPtr(isTurbo));
+  public virtual ADLX_RESULT IsCurrentTurbo(ref bool isTurbo) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentTurbo(swigCPtr, ref isTurbo);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsCurrentRage(SWIGTYPE_p_bool isRage) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentRage(swigCPtr, SWIGTYPE_p_bool.getCPtr(isRage));
+  public virtual ADLX_RESULT IsCurrentRage(ref bool isRage) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUPresetTuning_IsCurrentRage(swigCPtr, ref isRage);
     return ret;
   }
 

@@ -53,13 +53,13 @@ public class IADLXFPS : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT TimeStamp(SWIGTYPE_p_long_long ms) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXFPS_TimeStamp(swigCPtr, SWIGTYPE_p_long_long.getCPtr(ms));
+  public virtual ADLX_RESULT TimeStamp(ref int ms) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXFPS_TimeStamp(swigCPtr, ref ms);
     return ret;
   }
 
-  public virtual ADLX_RESULT FPS(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXFPS_FPS(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT FPS(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXFPS_FPS(swigCPtr, ref data);
     return ret;
   }
 

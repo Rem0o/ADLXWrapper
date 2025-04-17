@@ -53,63 +53,63 @@ public class IADLXGPUMetrics : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT TimeStamp(SWIGTYPE_p_long_long ms) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_TimeStamp(swigCPtr, SWIGTYPE_p_long_long.getCPtr(ms));
+  public virtual ADLX_RESULT TimeStamp(ref int ms) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_TimeStamp(swigCPtr, ref ms);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUUsage(SWIGTYPE_p_double data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUUsage(swigCPtr, SWIGTYPE_p_double.getCPtr(data));
+  public virtual ADLX_RESULT GPUUsage(ref double data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUUsage(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUClockSpeed(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUClockSpeed(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT GPUClockSpeed(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUClockSpeed(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUVRAMClockSpeed(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUVRAMClockSpeed(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT GPUVRAMClockSpeed(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUVRAMClockSpeed(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUTemperature(SWIGTYPE_p_double data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUTemperature(swigCPtr, SWIGTYPE_p_double.getCPtr(data));
+  public virtual ADLX_RESULT GPUTemperature(ref double data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUTemperature(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUHotspotTemperature(SWIGTYPE_p_double data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUHotspotTemperature(swigCPtr, SWIGTYPE_p_double.getCPtr(data));
+  public virtual ADLX_RESULT GPUHotspotTemperature(ref double data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUHotspotTemperature(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUPower(SWIGTYPE_p_double data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUPower(swigCPtr, SWIGTYPE_p_double.getCPtr(data));
+  public virtual ADLX_RESULT GPUPower(ref double data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUPower(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUTotalBoardPower(SWIGTYPE_p_double data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUTotalBoardPower(swigCPtr, SWIGTYPE_p_double.getCPtr(data));
+  public virtual ADLX_RESULT GPUTotalBoardPower(ref double data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUTotalBoardPower(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUFanSpeed(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUFanSpeed(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT GPUFanSpeed(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUFanSpeed(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUVRAM(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUVRAM(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT GPUVRAM(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUVRAM(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUVoltage(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUVoltage(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT GPUVoltage(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUVoltage(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUIntakeTemperature(SWIGTYPE_p_double data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUIntakeTemperature(swigCPtr, SWIGTYPE_p_double.getCPtr(data));
+  public virtual ADLX_RESULT GPUIntakeTemperature(ref double data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics_GPUIntakeTemperature(swigCPtr, ref data);
     return ret;
   }
 

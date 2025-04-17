@@ -4,59 +4,64 @@ namespace ADLXWrapper
 {
     public class GPUMetricsSupport1 : ADLXInterfaceWrapper<IADLXGPUMetricsSupport1>
     {
-        private SWIGTYPE_p_bool _boolPtr;
-
         public GPUMetricsSupport1(IADLXGPUMetricsSupport1 nativeInterface) : base(nativeInterface)
         {
-            _boolPtr = ADLX.new_boolP().DisposeWith(ADLX.delete_boolP, Disposable);
         }
 
         public bool IsSupportedGPUUsage()
         {
-            NativeInterface.IsSupportedGPUUsage(_boolPtr).ThrowIfError("Is Supported GPU Usage");
-            return ADLX.boolP_value(_boolPtr);
+            bool value = false;
+            NativeInterface.IsSupportedGPUUsage(ref value).ThrowIfError("Is Supported GPU Usage");
+            return value;
         }
 
         public bool IsSupportedGpuTotalBoardPower()
         {
-            NativeInterface.IsSupportedGPUTotalBoardPower(_boolPtr).ThrowIfError("Is Supported GPU total board Power");
-            return ADLX.boolP_value(_boolPtr);
+            bool value = false;
+            NativeInterface.IsSupportedGPUTotalBoardPower(ref value).ThrowIfError("Is Supported GPU total board Power");
+            return value;
         }
 
         public bool IsSupportedGPUTemperature()
         {
-            NativeInterface.IsSupportedGPUTemperature(_boolPtr).ThrowIfError("Is Supported GPU Temperature");
-            return ADLX.boolP_value(_boolPtr);
+            bool value = false;
+            NativeInterface.IsSupportedGPUTemperature(ref value).ThrowIfError("Is Supported GPU Temperature");
+            return value;
         }
 
         public bool IsSupportedGPUHotspotTemperature()
         {
-            NativeInterface.IsSupportedGPUHotspotTemperature(_boolPtr).ThrowIfError("Is Supported GPU Hotspot Temperature");
-            return ADLX.boolP_value(_boolPtr);
+            bool value = false;
+            NativeInterface.IsSupportedGPUHotspotTemperature(ref value).ThrowIfError("Is Supported GPU Hotspot Temperature");
+            return value;
         }
 
         public bool IsSupportedFanSpeed()
         {
-            NativeInterface.IsSupportedGPUFanSpeed(_boolPtr).ThrowIfError("Is Supported Fan Speed");
-            return ADLX.boolP_value(_boolPtr);
+            bool value = false;
+            NativeInterface.IsSupportedGPUFanSpeed(ref value).ThrowIfError("Is Supported Fan Speed");
+            return value;
         }
 
         public bool IsSupportedGPUMemoryTemperature()
         {
-            NativeInterface.IsSupportedGPUUsage(_boolPtr).ThrowIfError("Is Supported Memory temperature");
-            return ADLX.boolP_value(_boolPtr);
+            bool value = false;
+            NativeInterface.IsSupportedGPUUsage(ref value).ThrowIfError("Is Supported Memory temperature");
+            return value;
         }
 
         public bool IsSupportedNPUFrequency()
         {
-            NativeInterface.IsSupportedNPUFrequency(_boolPtr).ThrowIfError("Is Supported NPU frequency");
-            return ADLX.boolP_value(_boolPtr);
+            bool value = false;
+            NativeInterface.IsSupportedNPUFrequency(ref value).ThrowIfError("Is Supported NPU frequency");
+            return value;
         }
 
         public bool IsSupportedNPUActivityLevel()
         {
-            NativeInterface.IsSupportedNPUActivityLevel(_boolPtr).ThrowIfError("Is Supported NPU activity level");
-            return ADLX.boolP_value(_boolPtr);
+            bool value = false;
+            NativeInterface.IsSupportedNPUActivityLevel(ref value).ThrowIfError("Is Supported NPU activity level");
+            return value;
         }
     }
 }

@@ -58,8 +58,8 @@ public class IADLXGPUTuningServices : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsAtFactory(IADLXGPU pGPU, SWIGTYPE_p_bool isFactory) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsAtFactory(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_bool.getCPtr(isFactory));
+  public virtual ADLX_RESULT IsAtFactory(IADLXGPU pGPU, ref bool isFactory) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsAtFactory(swigCPtr, IADLXGPU.getCPtr(pGPU), ref isFactory);
     return ret;
   }
 
@@ -68,33 +68,33 @@ public class IADLXGPUTuningServices : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedAutoTuning(IADLXGPU pGPU, SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedAutoTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedAutoTuning(IADLXGPU pGPU, ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedAutoTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedPresetTuning(IADLXGPU pGPU, SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedPresetTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedPresetTuning(IADLXGPU pGPU, ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedPresetTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedManualGFXTuning(IADLXGPU pGPU, SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedManualGFXTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedManualGFXTuning(IADLXGPU pGPU, ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedManualGFXTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedManualVRAMTuning(IADLXGPU pGPU, SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedManualVRAMTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedManualVRAMTuning(IADLXGPU pGPU, ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedManualVRAMTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedManualFanTuning(IADLXGPU pGPU, SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedManualFanTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedManualFanTuning(IADLXGPU pGPU, ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedManualFanTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedManualPowerTuning(IADLXGPU pGPU, SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedManualPowerTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedManualPowerTuning(IADLXGPU pGPU, ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUTuningServices_IsSupportedManualPowerTuning(swigCPtr, IADLXGPU.getCPtr(pGPU), ref supported);
     return ret;
   }
 

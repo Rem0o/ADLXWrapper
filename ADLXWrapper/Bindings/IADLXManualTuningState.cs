@@ -53,8 +53,8 @@ public class IADLXManualTuningState : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetFrequency(SWIGTYPE_p_int value) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualTuningState_GetFrequency(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+  public virtual ADLX_RESULT GetFrequency(ref int value) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualTuningState_GetFrequency(swigCPtr, ref value);
     return ret;
   }
 
@@ -63,8 +63,8 @@ public class IADLXManualTuningState : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetVoltage(SWIGTYPE_p_int value) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualTuningState_GetVoltage(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+  public virtual ADLX_RESULT GetVoltage(ref int value) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualTuningState_GetVoltage(swigCPtr, ref value);
     return ret;
   }
 

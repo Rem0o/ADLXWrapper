@@ -53,33 +53,33 @@ public class IADLXGPUMetricsSupport1 : IADLXGPUMetricsSupport {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUMemoryTemperature(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_IsSupportedGPUMemoryTemperature(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUMemoryTemperature(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_IsSupportedGPUMemoryTemperature(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUMemoryTemperatureRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_GetGPUMemoryTemperatureRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUMemoryTemperatureRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_GetGPUMemoryTemperatureRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedNPUFrequency(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_IsSupportedNPUFrequency(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedNPUFrequency(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_IsSupportedNPUFrequency(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetNPUFrequencyRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_GetNPUFrequencyRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetNPUFrequencyRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_GetNPUFrequencyRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedNPUActivityLevel(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_IsSupportedNPUActivityLevel(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedNPUActivityLevel(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_IsSupportedNPUActivityLevel(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetNPUActivityLevelRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_GetNPUActivityLevelRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetNPUActivityLevelRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport1_GetNPUActivityLevelRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 

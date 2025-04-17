@@ -58,8 +58,8 @@ public class IADLXManualGraphicsTuning2 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUMinFrequency(SWIGTYPE_p_int minFreq) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualGraphicsTuning2_GetGPUMinFrequency(swigCPtr, SWIGTYPE_p_int.getCPtr(minFreq));
+  public virtual ADLX_RESULT GetGPUMinFrequency(ref int minFreq) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualGraphicsTuning2_GetGPUMinFrequency(swigCPtr, ref minFreq);
     return ret;
   }
 
@@ -73,8 +73,8 @@ public class IADLXManualGraphicsTuning2 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUMaxFrequency(SWIGTYPE_p_int maxFreq) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualGraphicsTuning2_GetGPUMaxFrequency(swigCPtr, SWIGTYPE_p_int.getCPtr(maxFreq));
+  public virtual ADLX_RESULT GetGPUMaxFrequency(ref int maxFreq) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualGraphicsTuning2_GetGPUMaxFrequency(swigCPtr, ref maxFreq);
     return ret;
   }
 
@@ -88,8 +88,8 @@ public class IADLXManualGraphicsTuning2 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUVoltage(SWIGTYPE_p_int volt) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualGraphicsTuning2_GetGPUVoltage(swigCPtr, SWIGTYPE_p_int.getCPtr(volt));
+  public virtual ADLX_RESULT GetGPUVoltage(ref int volt) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualGraphicsTuning2_GetGPUVoltage(swigCPtr, ref volt);
     return ret;
   }
 

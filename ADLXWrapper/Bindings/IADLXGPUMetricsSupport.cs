@@ -53,113 +53,113 @@ public class IADLXGPUMetricsSupport : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUUsage(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUUsage(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUUsage(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUUsage(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUClockSpeed(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUClockSpeed(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUClockSpeed(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUClockSpeed(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUVRAMClockSpeed(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUVRAMClockSpeed(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUVRAMClockSpeed(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUVRAMClockSpeed(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUTemperature(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUTemperature(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUTemperature(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUTemperature(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUHotspotTemperature(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUHotspotTemperature(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUHotspotTemperature(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUHotspotTemperature(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUPower(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUPower(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUPower(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUPower(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUTotalBoardPower(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUTotalBoardPower(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUTotalBoardPower(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUTotalBoardPower(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUFanSpeed(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUFanSpeed(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUFanSpeed(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUFanSpeed(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUVRAM(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUVRAM(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUVRAM(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUVRAM(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUVoltage(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUVoltage(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUVoltage(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUVoltage(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUUsageRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUUsageRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUUsageRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUUsageRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUClockSpeedRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUClockSpeedRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUClockSpeedRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUClockSpeedRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUVRAMClockSpeedRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUVRAMClockSpeedRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUVRAMClockSpeedRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUVRAMClockSpeedRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUTemperatureRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUTemperatureRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUTemperatureRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUTemperatureRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUHotspotTemperatureRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUHotspotTemperatureRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUHotspotTemperatureRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUHotspotTemperatureRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUPowerRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUPowerRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUPowerRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUPowerRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUFanSpeedRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUFanSpeedRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUFanSpeedRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUFanSpeedRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUVRAMRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUVRAMRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUVRAMRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUVRAMRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUVoltageRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUVoltageRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUVoltageRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUVoltageRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUTotalBoardPowerRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUTotalBoardPowerRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUTotalBoardPowerRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUTotalBoardPowerRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetGPUIntakeTemperatureRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUIntakeTemperatureRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetGPUIntakeTemperatureRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_GetGPUIntakeTemperatureRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedGPUIntakeTemperature(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUIntakeTemperature(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedGPUIntakeTemperature(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport_IsSupportedGPUIntakeTemperature(swigCPtr, ref supported);
     return ret;
   }
 

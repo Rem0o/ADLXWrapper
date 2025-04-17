@@ -53,18 +53,18 @@ public class IADLXGPUMetrics1 : IADLXGPUMetrics {
     return ret;
   }
 
-  public virtual ADLX_RESULT GPUMemoryTemperature(SWIGTYPE_p_double data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics1_GPUMemoryTemperature(swigCPtr, SWIGTYPE_p_double.getCPtr(data));
+  public virtual ADLX_RESULT GPUMemoryTemperature(ref double data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics1_GPUMemoryTemperature(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT NPUFrequency(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics1_NPUFrequency(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT NPUFrequency(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics1_NPUFrequency(swigCPtr, ref data);
     return ret;
   }
 
-  public virtual ADLX_RESULT NPUActivityLevel(SWIGTYPE_p_int data) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics1_NPUActivityLevel(swigCPtr, SWIGTYPE_p_int.getCPtr(data));
+  public virtual ADLX_RESULT NPUActivityLevel(ref int data) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetrics1_NPUActivityLevel(swigCPtr, ref data);
     return ret;
   }
 

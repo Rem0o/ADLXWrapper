@@ -53,8 +53,8 @@ public class IADLXManualVRAMTuning1 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedMemoryTiming(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning1_IsSupportedMemoryTiming(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedMemoryTiming(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning1_IsSupportedMemoryTiming(swigCPtr, ref supported);
     return ret;
   }
 
@@ -88,8 +88,8 @@ public class IADLXManualVRAMTuning1 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsValidVRAMTuningStates(IADLXManualTuningStateList pVRAMStates, SWIGTYPE_p_int errorIndex) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning1_IsValidVRAMTuningStates(swigCPtr, IADLXManualTuningStateList.getCPtr(pVRAMStates), SWIGTYPE_p_int.getCPtr(errorIndex));
+  public virtual ADLX_RESULT IsValidVRAMTuningStates(IADLXManualTuningStateList pVRAMStates, ref int errorIndex) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning1_IsValidVRAMTuningStates(swigCPtr, IADLXManualTuningStateList.getCPtr(pVRAMStates), ref errorIndex);
     return ret;
   }
 

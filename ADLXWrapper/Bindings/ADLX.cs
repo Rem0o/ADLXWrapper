@@ -61,16 +61,16 @@ public class ADLX {
     return ret;
   }
 
-  public static void delete_intP(SWIGTYPE_p_int obj) {
-    ADLXPINVOKE.delete_intP(SWIGTYPE_p_int.getCPtr(obj));
+  public static void delete_intP(ref int obj) {
+    ADLXPINVOKE.delete_intP(ref obj);
   }
 
-  public static void intP_assign(SWIGTYPE_p_int obj, int value) {
-    ADLXPINVOKE.intP_assign(SWIGTYPE_p_int.getCPtr(obj), value);
+  public static void intP_assign(ref int obj, int value) {
+    ADLXPINVOKE.intP_assign(ref obj, value);
   }
 
-  public static int intP_value(SWIGTYPE_p_int obj) {
-    int ret = ADLXPINVOKE.intP_value(SWIGTYPE_p_int.getCPtr(obj));
+  public static int intP_value(ref int obj) {
+    int ret = ADLXPINVOKE.intP_value(ref obj);
     return ret;
   }
 

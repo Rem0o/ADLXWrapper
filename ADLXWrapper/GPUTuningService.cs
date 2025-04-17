@@ -10,10 +10,8 @@ namespace ADLXWrapper
 
         public bool IsManualFanTuningSupported(GPU gpu)
         {
-            var isSupportedPtr = ADLX.new_boolP();
-            NativeInterface.IsSupportedManualFanTuning(gpu.NativeInterface, isSupportedPtr).ThrowIfError("IsSupportedManualFanTuning");
-            var value = ADLX.boolP_value(isSupportedPtr);
-            ADLX.delete_boolP(isSupportedPtr);
+            bool value = false;
+            NativeInterface.IsSupportedManualFanTuning(gpu.NativeInterface, ref value).ThrowIfError("IsSupportedManualFanTuning");
 
             return value;
         }

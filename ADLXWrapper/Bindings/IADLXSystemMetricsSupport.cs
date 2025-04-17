@@ -53,33 +53,33 @@ public class IADLXSystemMetricsSupport : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedCPUUsage(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_IsSupportedCPUUsage(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedCPUUsage(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_IsSupportedCPUUsage(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedSystemRAM(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_IsSupportedSystemRAM(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedSystemRAM(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_IsSupportedSystemRAM(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedSmartShift(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_IsSupportedSmartShift(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedSmartShift(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_IsSupportedSmartShift(swigCPtr, ref supported);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetCPUUsageRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_GetCPUUsageRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetCPUUsageRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_GetCPUUsageRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetSystemRAMRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_GetSystemRAMRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetSystemRAMRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_GetSystemRAMRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetSmartShiftRange(SWIGTYPE_p_int minValue, SWIGTYPE_p_int maxValue) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_GetSmartShiftRange(swigCPtr, SWIGTYPE_p_int.getCPtr(minValue), SWIGTYPE_p_int.getCPtr(maxValue));
+  public virtual ADLX_RESULT GetSmartShiftRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport_GetSmartShiftRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 

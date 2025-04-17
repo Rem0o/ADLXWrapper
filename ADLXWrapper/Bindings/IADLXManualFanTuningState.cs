@@ -53,8 +53,8 @@ public class IADLXManualFanTuningState : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetFanSpeed(SWIGTYPE_p_int value) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuningState_GetFanSpeed(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+  public virtual ADLX_RESULT GetFanSpeed(ref int value) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuningState_GetFanSpeed(swigCPtr, ref value);
     return ret;
   }
 
@@ -63,8 +63,8 @@ public class IADLXManualFanTuningState : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetTemperature(SWIGTYPE_p_int value) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuningState_GetTemperature(swigCPtr, SWIGTYPE_p_int.getCPtr(value));
+  public virtual ADLX_RESULT GetTemperature(ref int value) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualFanTuningState_GetTemperature(swigCPtr, ref value);
     return ret;
   }
 

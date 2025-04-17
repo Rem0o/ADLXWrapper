@@ -68,8 +68,8 @@ public class IADLXGPU : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsExternal(SWIGTYPE_p_bool isExternal) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPU_IsExternal(swigCPtr, SWIGTYPE_p_bool.getCPtr(isExternal));
+  public virtual ADLX_RESULT IsExternal(ref bool isExternal) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPU_IsExternal(swigCPtr, ref isExternal);
     return ret;
   }
 
@@ -88,8 +88,8 @@ public class IADLXGPU : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT HasDesktops(SWIGTYPE_p_bool hasDesktops) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPU_HasDesktops(swigCPtr, SWIGTYPE_p_bool.getCPtr(hasDesktops));
+  public virtual ADLX_RESULT HasDesktops(ref bool hasDesktops) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPU_HasDesktops(swigCPtr, ref hasDesktops);
     return ret;
   }
 
@@ -128,8 +128,8 @@ public class IADLXGPU : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT UniqueId(SWIGTYPE_p_int uniqueId) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPU_UniqueId(swigCPtr, SWIGTYPE_p_int.getCPtr(uniqueId));
+  public virtual ADLX_RESULT UniqueId(ref int uniqueId) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPU_UniqueId(swigCPtr, ref uniqueId);
     return ret;
   }
 

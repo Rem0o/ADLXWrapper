@@ -68,8 +68,8 @@ public class IADLXManualGraphicsTuning1 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsValidGPUTuningStates(IADLXManualTuningStateList pGFXStates, SWIGTYPE_p_int errorIndex) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualGraphicsTuning1_IsValidGPUTuningStates(swigCPtr, IADLXManualTuningStateList.getCPtr(pGFXStates), SWIGTYPE_p_int.getCPtr(errorIndex));
+  public virtual ADLX_RESULT IsValidGPUTuningStates(IADLXManualTuningStateList pGFXStates, ref int errorIndex) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualGraphicsTuning1_IsValidGPUTuningStates(swigCPtr, IADLXManualTuningStateList.getCPtr(pGFXStates), ref errorIndex);
     return ret;
   }
 

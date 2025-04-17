@@ -572,10 +572,10 @@ class ADLXPINVOKE {
   public static extern int IADLXDisplay_EDID(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXDisplay_NativeResolution___")]
-  public static extern int IADLXDisplay_NativeResolution(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXDisplay_NativeResolution(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXDisplay_RefreshRate___")]
-  public static extern int IADLXDisplay_RefreshRate(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXDisplay_RefreshRate(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXDisplay_PixelClock___")]
   public static extern int IADLXDisplay_PixelClock(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -854,7 +854,7 @@ class ADLXPINVOKE {
   public static extern int IADLXGPU_Type(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPU_IsExternal___")]
-  public static extern int IADLXGPU_IsExternal(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPU_IsExternal(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPU_Name___")]
   public static extern int IADLXGPU_Name(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -866,7 +866,7 @@ class ADLXPINVOKE {
   public static extern int IADLXGPU_PNPString(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPU_HasDesktops___")]
-  public static extern int IADLXGPU_HasDesktops(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPU_HasDesktops(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPU_TotalVRAM___")]
   public static extern int IADLXGPU_TotalVRAM(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -890,7 +890,7 @@ class ADLXPINVOKE {
   public static extern int IADLXGPU_SubSystemVendorId(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPU_UniqueId___")]
-  public static extern int IADLXGPU_UniqueId(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPU_UniqueId(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXGPU___")]
   public static extern void delete_IADLXGPU(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -974,22 +974,22 @@ class ADLXPINVOKE {
   public static extern int IADLMapping_GetADLXGPUFromAdlAdapterIndex(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLMapping_BdfFromADLXGPU___")]
-  public static extern int IADLMapping_BdfFromADLXGPU(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5);
+  public static extern int IADLMapping_BdfFromADLXGPU(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref int jarg3, ref int jarg4, ref int jarg5);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLMapping_AdlAdapterIndexFromADLXGPU___")]
-  public static extern int IADLMapping_AdlAdapterIndexFromADLXGPU(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLMapping_AdlAdapterIndexFromADLXGPU(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLMapping_GetADLXDisplayFromADLIds___")]
   public static extern int IADLMapping_GetADLXDisplayFromADLIds(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, global::System.Runtime.InteropServices.HandleRef jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLMapping_ADLIdsFromADLXDisplay___")]
-  public static extern int IADLMapping_ADLIdsFromADLXDisplay(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, global::System.Runtime.InteropServices.HandleRef jarg7);
+  public static extern int IADLMapping_ADLIdsFromADLXDisplay(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref int jarg3, ref int jarg4, ref int jarg5, ref int jarg6, ref int jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLMapping_GetADLXDesktopFromADLIds___")]
   public static extern int IADLMapping_GetADLXDesktopFromADLIds(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, int jarg4, int jarg5, int jarg6, global::System.Runtime.InteropServices.HandleRef jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLMapping_ADLIdsFromADLXDesktop___")]
-  public static extern int IADLMapping_ADLIdsFromADLXDesktop(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6, global::System.Runtime.InteropServices.HandleRef jarg7);
+  public static extern int IADLMapping_ADLIdsFromADLXDesktop(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref int jarg3, ref int jarg4, ref int jarg5, ref int jarg6, ref int jarg7);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLMapping___")]
   public static extern void delete_IADLMapping(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1004,13 +1004,13 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXManualTuningState_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualTuningState_GetFrequency___")]
-  public static extern int IADLXManualTuningState_GetFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualTuningState_GetFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualTuningState_SetFrequency___")]
   public static extern int IADLXManualTuningState_SetFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualTuningState_GetVoltage___")]
-  public static extern int IADLXManualTuningState_GetVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualTuningState_GetVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualTuningState_SetVoltage___")]
   public static extern int IADLXManualTuningState_SetVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1109,28 +1109,28 @@ class ADLXPINVOKE {
   public static extern int IADLXGPUTuningServices_GetGPUTuningChangedHandling(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_IsAtFactory___")]
-  public static extern int IADLXGPUTuningServices_IsAtFactory(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUTuningServices_IsAtFactory(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref bool jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_ResetToFactory___")]
   public static extern int IADLXGPUTuningServices_ResetToFactory(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_IsSupportedAutoTuning___")]
-  public static extern int IADLXGPUTuningServices_IsSupportedAutoTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUTuningServices_IsSupportedAutoTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref bool jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_IsSupportedPresetTuning___")]
-  public static extern int IADLXGPUTuningServices_IsSupportedPresetTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUTuningServices_IsSupportedPresetTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref bool jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_IsSupportedManualGFXTuning___")]
-  public static extern int IADLXGPUTuningServices_IsSupportedManualGFXTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUTuningServices_IsSupportedManualGFXTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref bool jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_IsSupportedManualVRAMTuning___")]
-  public static extern int IADLXGPUTuningServices_IsSupportedManualVRAMTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUTuningServices_IsSupportedManualVRAMTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref bool jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_IsSupportedManualFanTuning___")]
-  public static extern int IADLXGPUTuningServices_IsSupportedManualFanTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUTuningServices_IsSupportedManualFanTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref bool jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_IsSupportedManualPowerTuning___")]
-  public static extern int IADLXGPUTuningServices_IsSupportedManualPowerTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUTuningServices_IsSupportedManualPowerTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref bool jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUTuningServices_GetAutoTuning___")]
   public static extern int IADLXGPUTuningServices_GetAutoTuning(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
@@ -1157,13 +1157,13 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXManualFanTuningState_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuningState_GetFanSpeed___")]
-  public static extern int IADLXManualFanTuningState_GetFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuningState_GetFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuningState_SetFanSpeed___")]
   public static extern int IADLXManualFanTuningState_SetFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuningState_GetTemperature___")]
-  public static extern int IADLXManualFanTuningState_GetTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuningState_GetTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuningState_SetTemperature___")]
   public static extern int IADLXManualFanTuningState_SetTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1199,52 +1199,52 @@ class ADLXPINVOKE {
   public static extern int IADLXManualFanTuning_GetEmptyFanTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_IsValidFanTuningStates___")]
-  public static extern int IADLXManualFanTuning_IsValidFanTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXManualFanTuning_IsValidFanTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_SetFanTuningStates___")]
   public static extern int IADLXManualFanTuning_SetFanTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_IsSupportedZeroRPM___")]
-  public static extern int IADLXManualFanTuning_IsSupportedZeroRPM(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuning_IsSupportedZeroRPM(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_GetZeroRPMState___")]
-  public static extern int IADLXManualFanTuning_GetZeroRPMState(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuning_GetZeroRPMState(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_SetZeroRPMState___")]
   public static extern int IADLXManualFanTuning_SetZeroRPMState(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_IsSupportedMinAcousticLimit___")]
-  public static extern int IADLXManualFanTuning_IsSupportedMinAcousticLimit(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuning_IsSupportedMinAcousticLimit(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_GetMinAcousticLimitRange___")]
   public static extern int IADLXManualFanTuning_GetMinAcousticLimitRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_GetMinAcousticLimit___")]
-  public static extern int IADLXManualFanTuning_GetMinAcousticLimit(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuning_GetMinAcousticLimit(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_SetMinAcousticLimit___")]
   public static extern int IADLXManualFanTuning_SetMinAcousticLimit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_IsSupportedMinFanSpeed___")]
-  public static extern int IADLXManualFanTuning_IsSupportedMinFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuning_IsSupportedMinFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_GetMinFanSpeedRange___")]
   public static extern int IADLXManualFanTuning_GetMinFanSpeedRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_GetMinFanSpeed___")]
-  public static extern int IADLXManualFanTuning_GetMinFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuning_GetMinFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_SetMinFanSpeed___")]
   public static extern int IADLXManualFanTuning_SetMinFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_IsSupportedTargetFanSpeed___")]
-  public static extern int IADLXManualFanTuning_IsSupportedTargetFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuning_IsSupportedTargetFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_GetTargetFanSpeedRange___")]
   public static extern int IADLXManualFanTuning_GetTargetFanSpeedRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_GetTargetFanSpeed___")]
-  public static extern int IADLXManualFanTuning_GetTargetFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualFanTuning_GetTargetFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_SetTargetFanSpeed___")]
   public static extern int IADLXManualFanTuning_SetTargetFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1265,7 +1265,7 @@ class ADLXPINVOKE {
   public static extern int IADLXManualGraphicsTuning1_GetEmptyGPUTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning1_IsValidGPUTuningStates___")]
-  public static extern int IADLXManualGraphicsTuning1_IsValidGPUTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXManualGraphicsTuning1_IsValidGPUTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning1_SetGPUTuningStates___")]
   public static extern int IADLXManualGraphicsTuning1_SetGPUTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -1280,7 +1280,7 @@ class ADLXPINVOKE {
   public static extern int IADLXManualGraphicsTuning2_GetGPUMinFrequencyRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_GetGPUMinFrequency___")]
-  public static extern int IADLXManualGraphicsTuning2_GetGPUMinFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualGraphicsTuning2_GetGPUMinFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_SetGPUMinFrequency___")]
   public static extern int IADLXManualGraphicsTuning2_SetGPUMinFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1289,7 +1289,7 @@ class ADLXPINVOKE {
   public static extern int IADLXManualGraphicsTuning2_GetGPUMaxFrequencyRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_GetGPUMaxFrequency___")]
-  public static extern int IADLXManualGraphicsTuning2_GetGPUMaxFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualGraphicsTuning2_GetGPUMaxFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_SetGPUMaxFrequency___")]
   public static extern int IADLXManualGraphicsTuning2_SetGPUMaxFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1298,7 +1298,7 @@ class ADLXPINVOKE {
   public static extern int IADLXManualGraphicsTuning2_GetGPUVoltageRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_GetGPUVoltage___")]
-  public static extern int IADLXManualGraphicsTuning2_GetGPUVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualGraphicsTuning2_GetGPUVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_SetGPUVoltage___")]
   public static extern int IADLXManualGraphicsTuning2_SetGPUVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1313,19 +1313,19 @@ class ADLXPINVOKE {
   public static extern int IADLXManualPowerTuning_GetPowerLimitRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning_GetPowerLimit___")]
-  public static extern int IADLXManualPowerTuning_GetPowerLimit(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualPowerTuning_GetPowerLimit(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning_SetPowerLimit___")]
   public static extern int IADLXManualPowerTuning_SetPowerLimit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning_IsSupportedTDCLimit___")]
-  public static extern int IADLXManualPowerTuning_IsSupportedTDCLimit(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualPowerTuning_IsSupportedTDCLimit(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning_GetTDCLimitRange___")]
   public static extern int IADLXManualPowerTuning_GetTDCLimitRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning_GetTDCLimit___")]
-  public static extern int IADLXManualPowerTuning_GetTDCLimit(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualPowerTuning_GetTDCLimit(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning_SetTDCLimit___")]
   public static extern int IADLXManualPowerTuning_SetTDCLimit(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1337,7 +1337,7 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXManualVRAMTuning1_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_IsSupportedMemoryTiming___")]
-  public static extern int IADLXManualVRAMTuning1_IsSupportedMemoryTiming(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualVRAMTuning1_IsSupportedMemoryTiming(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_GetSupportedMemoryTimingDescriptionList___")]
   public static extern int IADLXManualVRAMTuning1_GetSupportedMemoryTimingDescriptionList(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -1358,7 +1358,7 @@ class ADLXPINVOKE {
   public static extern int IADLXManualVRAMTuning1_GetEmptyVRAMTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_IsValidVRAMTuningStates___")]
-  public static extern int IADLXManualVRAMTuning1_IsValidVRAMTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXManualVRAMTuning1_IsValidVRAMTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_SetVRAMTuningStates___")]
   public static extern int IADLXManualVRAMTuning1_SetVRAMTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -1370,7 +1370,7 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXManualVRAMTuning2_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_IsSupportedMemoryTiming___")]
-  public static extern int IADLXManualVRAMTuning2_IsSupportedMemoryTiming(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualVRAMTuning2_IsSupportedMemoryTiming(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_GetSupportedMemoryTimingDescriptionList___")]
   public static extern int IADLXManualVRAMTuning2_GetSupportedMemoryTimingDescriptionList(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -1385,7 +1385,7 @@ class ADLXPINVOKE {
   public static extern int IADLXManualVRAMTuning2_GetMaxVRAMFrequencyRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_GetMaxVRAMFrequency___")]
-  public static extern int IADLXManualVRAMTuning2_GetMaxVRAMFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXManualVRAMTuning2_GetMaxVRAMFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_SetMaxVRAMFrequency___")]
   public static extern int IADLXManualVRAMTuning2_SetMaxVRAMFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
@@ -1397,34 +1397,34 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXGPUPresetTuning_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsSupportedPowerSaver___")]
-  public static extern int IADLXGPUPresetTuning_IsSupportedPowerSaver(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsSupportedPowerSaver(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsSupportedQuiet___")]
-  public static extern int IADLXGPUPresetTuning_IsSupportedQuiet(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsSupportedQuiet(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsSupportedBalanced___")]
-  public static extern int IADLXGPUPresetTuning_IsSupportedBalanced(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsSupportedBalanced(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsSupportedTurbo___")]
-  public static extern int IADLXGPUPresetTuning_IsSupportedTurbo(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsSupportedTurbo(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsSupportedRage___")]
-  public static extern int IADLXGPUPresetTuning_IsSupportedRage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsSupportedRage(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsCurrentPowerSaver___")]
-  public static extern int IADLXGPUPresetTuning_IsCurrentPowerSaver(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsCurrentPowerSaver(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsCurrentQuiet___")]
-  public static extern int IADLXGPUPresetTuning_IsCurrentQuiet(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsCurrentQuiet(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsCurrentBalanced___")]
-  public static extern int IADLXGPUPresetTuning_IsCurrentBalanced(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsCurrentBalanced(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsCurrentTurbo___")]
-  public static extern int IADLXGPUPresetTuning_IsCurrentTurbo(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsCurrentTurbo(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IsCurrentRage___")]
-  public static extern int IADLXGPUPresetTuning_IsCurrentRage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUPresetTuning_IsCurrentRage(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_SetPowerSaver___")]
   public static extern int IADLXGPUPresetTuning_SetPowerSaver(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1448,70 +1448,70 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXGPUMetricsSupport_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUUsage___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUUsage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUUsage(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUClockSpeed___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUClockSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUClockSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUVRAMClockSpeed___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUVRAMClockSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUVRAMClockSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUTemperature___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUHotspotTemperature___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUHotspotTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUHotspotTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUPower___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUPower(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUPower(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUTotalBoardPower___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUTotalBoardPower(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUTotalBoardPower(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUFanSpeed___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUVRAM___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUVRAM(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUVRAM(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUVoltage___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUUsageRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUUsageRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUUsageRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUClockSpeedRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUClockSpeedRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUClockSpeedRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUVRAMClockSpeedRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUVRAMClockSpeedRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUVRAMClockSpeedRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUTemperatureRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUTemperatureRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUTemperatureRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUHotspotTemperatureRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUHotspotTemperatureRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUHotspotTemperatureRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUPowerRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUPowerRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUPowerRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUFanSpeedRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUFanSpeedRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUFanSpeedRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUVRAMRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUVRAMRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUVRAMRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUVoltageRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUVoltageRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUVoltageRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUTotalBoardPowerRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUTotalBoardPowerRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUTotalBoardPowerRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_GetGPUIntakeTemperatureRange___")]
-  public static extern int IADLXGPUMetricsSupport_GetGPUIntakeTemperatureRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport_GetGPUIntakeTemperatureRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport_IsSupportedGPUIntakeTemperature___")]
-  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUIntakeTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport_IsSupportedGPUIntakeTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetricsSupport___")]
   public static extern void delete_IADLXGPUMetricsSupport(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1520,22 +1520,22 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXSystemMetricsSupport_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetricsSupport_IsSupportedCPUUsage___")]
-  public static extern int IADLXSystemMetricsSupport_IsSupportedCPUUsage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXSystemMetricsSupport_IsSupportedCPUUsage(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetricsSupport_IsSupportedSystemRAM___")]
-  public static extern int IADLXSystemMetricsSupport_IsSupportedSystemRAM(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXSystemMetricsSupport_IsSupportedSystemRAM(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetricsSupport_IsSupportedSmartShift___")]
-  public static extern int IADLXSystemMetricsSupport_IsSupportedSmartShift(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXSystemMetricsSupport_IsSupportedSmartShift(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetricsSupport_GetCPUUsageRange___")]
-  public static extern int IADLXSystemMetricsSupport_GetCPUUsageRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXSystemMetricsSupport_GetCPUUsageRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetricsSupport_GetSystemRAMRange___")]
-  public static extern int IADLXSystemMetricsSupport_GetSystemRAMRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXSystemMetricsSupport_GetSystemRAMRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetricsSupport_GetSmartShiftRange___")]
-  public static extern int IADLXSystemMetricsSupport_GetSmartShiftRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXSystemMetricsSupport_GetSmartShiftRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXSystemMetricsSupport___")]
   public static extern void delete_IADLXSystemMetricsSupport(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1544,40 +1544,40 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXGPUMetrics_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_TimeStamp___")]
-  public static extern int IADLXGPUMetrics_TimeStamp(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_TimeStamp(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUUsage___")]
-  public static extern int IADLXGPUMetrics_GPUUsage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUUsage(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUClockSpeed___")]
-  public static extern int IADLXGPUMetrics_GPUClockSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUClockSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUVRAMClockSpeed___")]
-  public static extern int IADLXGPUMetrics_GPUVRAMClockSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUVRAMClockSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUTemperature___")]
-  public static extern int IADLXGPUMetrics_GPUTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUHotspotTemperature___")]
-  public static extern int IADLXGPUMetrics_GPUHotspotTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUHotspotTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUPower___")]
-  public static extern int IADLXGPUMetrics_GPUPower(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUPower(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUTotalBoardPower___")]
-  public static extern int IADLXGPUMetrics_GPUTotalBoardPower(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUTotalBoardPower(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUFanSpeed___")]
-  public static extern int IADLXGPUMetrics_GPUFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUFanSpeed(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUVRAM___")]
-  public static extern int IADLXGPUMetrics_GPUVRAM(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUVRAM(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUVoltage___")]
-  public static extern int IADLXGPUMetrics_GPUVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUVoltage(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics_GPUIntakeTemperature___")]
-  public static extern int IADLXGPUMetrics_GPUIntakeTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics_GPUIntakeTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetrics___")]
   public static extern void delete_IADLXGPUMetrics(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1601,16 +1601,16 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXSystemMetrics_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetrics_TimeStamp___")]
-  public static extern int IADLXSystemMetrics_TimeStamp(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXSystemMetrics_TimeStamp(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetrics_CPUUsage___")]
-  public static extern int IADLXSystemMetrics_CPUUsage(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXSystemMetrics_CPUUsage(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetrics_SystemRAM___")]
-  public static extern int IADLXSystemMetrics_SystemRAM(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXSystemMetrics_SystemRAM(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetrics_SmartShift___")]
-  public static extern int IADLXSystemMetrics_SmartShift(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXSystemMetrics_SmartShift(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXSystemMetrics___")]
   public static extern void delete_IADLXSystemMetrics(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1634,10 +1634,10 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXFPS_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXFPS_TimeStamp___")]
-  public static extern int IADLXFPS_TimeStamp(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXFPS_TimeStamp(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXFPS_FPS___")]
-  public static extern int IADLXFPS_FPS(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXFPS_FPS(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXFPS___")]
   public static extern void delete_IADLXFPS(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1661,7 +1661,7 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXAllMetrics_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXAllMetrics_TimeStamp___")]
-  public static extern int IADLXAllMetrics_TimeStamp(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXAllMetrics_TimeStamp(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXAllMetrics_GetSystemMetrics___")]
   public static extern int IADLXAllMetrics_GetSystemMetrics(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -1700,7 +1700,7 @@ class ADLXPINVOKE {
   public static extern int IADLXPerformanceMonitoringServices_SetSamplingInterval(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXPerformanceMonitoringServices_GetSamplingInterval___")]
-  public static extern int IADLXPerformanceMonitoringServices_GetSamplingInterval(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXPerformanceMonitoringServices_GetSamplingInterval(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXPerformanceMonitoringServices_GetMaxPerformanceMetricsHistorySizeRange___")]
   public static extern int IADLXPerformanceMonitoringServices_GetMaxPerformanceMetricsHistorySizeRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -1709,13 +1709,13 @@ class ADLXPINVOKE {
   public static extern int IADLXPerformanceMonitoringServices_SetMaxPerformanceMetricsHistorySize(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXPerformanceMonitoringServices_GetMaxPerformanceMetricsHistorySize___")]
-  public static extern int IADLXPerformanceMonitoringServices_GetMaxPerformanceMetricsHistorySize(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXPerformanceMonitoringServices_GetMaxPerformanceMetricsHistorySize(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXPerformanceMonitoringServices_ClearPerformanceMetricsHistory___")]
   public static extern int IADLXPerformanceMonitoringServices_ClearPerformanceMetricsHistory(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXPerformanceMonitoringServices_GetCurrentPerformanceMetricsHistorySize___")]
-  public static extern int IADLXPerformanceMonitoringServices_GetCurrentPerformanceMetricsHistorySize(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXPerformanceMonitoringServices_GetCurrentPerformanceMetricsHistorySize(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXPerformanceMonitoringServices_StartPerformanceMetricsTracking___")]
   public static extern int IADLXPerformanceMonitoringServices_StartPerformanceMetricsTracking(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1760,7 +1760,7 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXSystemMetricsSupport1_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetricsSupport1_IsSupportedPowerDistribution___")]
-  public static extern int IADLXSystemMetricsSupport1_IsSupportedPowerDistribution(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXSystemMetricsSupport1_IsSupportedPowerDistribution(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXSystemMetricsSupport1___")]
   public static extern void delete_IADLXSystemMetricsSupport1(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1769,7 +1769,7 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXSystemMetrics1_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXSystemMetrics1_PowerDistribution___")]
-  public static extern int IADLXSystemMetrics1_PowerDistribution(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4, global::System.Runtime.InteropServices.HandleRef jarg5, global::System.Runtime.InteropServices.HandleRef jarg6);
+  public static extern int IADLXSystemMetrics1_PowerDistribution(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3, ref int jarg4, ref int jarg5, ref int jarg6);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXSystemMetrics1___")]
   public static extern void delete_IADLXSystemMetrics1(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1778,22 +1778,22 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXGPUMetricsSupport1_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport1_IsSupportedGPUMemoryTemperature___")]
-  public static extern int IADLXGPUMetricsSupport1_IsSupportedGPUMemoryTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport1_IsSupportedGPUMemoryTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport1_GetGPUMemoryTemperatureRange___")]
-  public static extern int IADLXGPUMetricsSupport1_GetGPUMemoryTemperatureRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport1_GetGPUMemoryTemperatureRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport1_IsSupportedNPUFrequency___")]
-  public static extern int IADLXGPUMetricsSupport1_IsSupportedNPUFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport1_IsSupportedNPUFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport1_GetNPUFrequencyRange___")]
-  public static extern int IADLXGPUMetricsSupport1_GetNPUFrequencyRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport1_GetNPUFrequencyRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport1_IsSupportedNPUActivityLevel___")]
-  public static extern int IADLXGPUMetricsSupport1_IsSupportedNPUActivityLevel(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetricsSupport1_IsSupportedNPUActivityLevel(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport1_GetNPUActivityLevelRange___")]
-  public static extern int IADLXGPUMetricsSupport1_GetNPUActivityLevelRange(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  public static extern int IADLXGPUMetricsSupport1_GetNPUActivityLevelRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetricsSupport1___")]
   public static extern void delete_IADLXGPUMetricsSupport1(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1802,13 +1802,13 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr IADLXGPUMetrics1_IID();
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics1_GPUMemoryTemperature___")]
-  public static extern int IADLXGPUMetrics1_GPUMemoryTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics1_GPUMemoryTemperature(global::System.Runtime.InteropServices.HandleRef jarg1, ref double jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics1_NPUFrequency___")]
-  public static extern int IADLXGPUMetrics1_NPUFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics1_NPUFrequency(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics1_NPUActivityLevel___")]
-  public static extern int IADLXGPUMetrics1_NPUActivityLevel(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+  public static extern int IADLXGPUMetrics1_NPUActivityLevel(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetrics1___")]
   public static extern void delete_IADLXGPUMetrics1(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1889,13 +1889,13 @@ class ADLXPINVOKE {
   public static extern global::System.IntPtr copy_intP(int jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_intP___")]
-  public static extern void delete_intP(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern void delete_intP(ref int jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_intP_assign___")]
-  public static extern void intP_assign(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+  public static extern void intP_assign(ref int jarg1, int jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_intP_value___")]
-  public static extern int intP_value(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern int intP_value(ref int jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_doubleP___")]
   public static extern global::System.IntPtr new_doubleP();

@@ -58,8 +58,8 @@ public class IADLXManualPowerTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetPowerLimit(SWIGTYPE_p_int curVal) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualPowerTuning_GetPowerLimit(swigCPtr, SWIGTYPE_p_int.getCPtr(curVal));
+  public virtual ADLX_RESULT GetPowerLimit(ref int curVal) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualPowerTuning_GetPowerLimit(swigCPtr, ref curVal);
     return ret;
   }
 
@@ -68,8 +68,8 @@ public class IADLXManualPowerTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedTDCLimit(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualPowerTuning_IsSupportedTDCLimit(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedTDCLimit(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualPowerTuning_IsSupportedTDCLimit(swigCPtr, ref supported);
     return ret;
   }
 
@@ -78,8 +78,8 @@ public class IADLXManualPowerTuning : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetTDCLimit(SWIGTYPE_p_int curVal) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualPowerTuning_GetTDCLimit(swigCPtr, SWIGTYPE_p_int.getCPtr(curVal));
+  public virtual ADLX_RESULT GetTDCLimit(ref int curVal) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualPowerTuning_GetTDCLimit(swigCPtr, ref curVal);
     return ret;
   }
 

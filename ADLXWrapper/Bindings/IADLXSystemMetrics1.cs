@@ -53,8 +53,8 @@ public class IADLXSystemMetrics1 : IADLXSystemMetrics {
     return ret;
   }
 
-  public virtual ADLX_RESULT PowerDistribution(SWIGTYPE_p_int apuShiftValue, SWIGTYPE_p_int gpuShiftValue, SWIGTYPE_p_int apuShiftLimit, SWIGTYPE_p_int gpuShiftLimit, SWIGTYPE_p_int totalShiftLimit) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics1_PowerDistribution(swigCPtr, SWIGTYPE_p_int.getCPtr(apuShiftValue), SWIGTYPE_p_int.getCPtr(gpuShiftValue), SWIGTYPE_p_int.getCPtr(apuShiftLimit), SWIGTYPE_p_int.getCPtr(gpuShiftLimit), SWIGTYPE_p_int.getCPtr(totalShiftLimit));
+  public virtual ADLX_RESULT PowerDistribution(ref int apuShiftValue, ref int gpuShiftValue, ref int apuShiftLimit, ref int gpuShiftLimit, ref int totalShiftLimit) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetrics1_PowerDistribution(swigCPtr, ref apuShiftValue, ref gpuShiftValue, ref apuShiftLimit, ref gpuShiftLimit, ref totalShiftLimit);
     return ret;
   }
 

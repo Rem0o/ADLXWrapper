@@ -53,8 +53,8 @@ public class IADLXSystemMetricsSupport1 : IADLXSystemMetricsSupport {
     return ret;
   }
 
-  public virtual ADLX_RESULT IsSupportedPowerDistribution(SWIGTYPE_p_bool supported) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport1_IsSupportedPowerDistribution(swigCPtr, SWIGTYPE_p_bool.getCPtr(supported));
+  public virtual ADLX_RESULT IsSupportedPowerDistribution(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXSystemMetricsSupport1_IsSupportedPowerDistribution(swigCPtr, ref supported);
     return ret;
   }
 

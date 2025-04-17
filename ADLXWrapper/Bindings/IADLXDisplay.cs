@@ -78,13 +78,13 @@ public class IADLXDisplay : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT NativeResolution(SWIGTYPE_p_int maxHResolution, SWIGTYPE_p_int maxVResolution) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXDisplay_NativeResolution(swigCPtr, SWIGTYPE_p_int.getCPtr(maxHResolution), SWIGTYPE_p_int.getCPtr(maxVResolution));
+  public virtual ADLX_RESULT NativeResolution(ref int maxHResolution, ref int maxVResolution) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXDisplay_NativeResolution(swigCPtr, ref maxHResolution, ref maxVResolution);
     return ret;
   }
 
-  public virtual ADLX_RESULT RefreshRate(SWIGTYPE_p_double refreshRate) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXDisplay_RefreshRate(swigCPtr, SWIGTYPE_p_double.getCPtr(refreshRate));
+  public virtual ADLX_RESULT RefreshRate(ref double refreshRate) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXDisplay_RefreshRate(swigCPtr, ref refreshRate);
     return ret;
   }
 

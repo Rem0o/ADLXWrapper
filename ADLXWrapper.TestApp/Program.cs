@@ -29,6 +29,7 @@ namespace ADLXWrapper.TestApp
                 wrapper.InitializeWithIncompatibleDriver();
 
                 CheckAllMetrics(disposables, wrapper);
+
                 disposables.Dispose();
                 wrapper.Terminate();
                 wrapper.Dispose();

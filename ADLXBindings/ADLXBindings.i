@@ -115,6 +115,21 @@ typedef WCHAR TCHAR;
 %cs_struct(GPUMetricsStruct1, GPUMetricsStruct1);
 //%typemap(csclassmodifiers) SWIGTYPE "public partial class"
 
+%apply bool& INOUT { adlx_bool* };
+%apply int& INOUT { adlx_int* };
+%apply int& INOUT { adlx_int32* };
+%apply short& INOUT { adlx_int16* };
+%apply long& INOUT { adlx_int64* };
+%apply char& INOUT { adlx_int8* };
+%apply uint& INOUT { adlx_uint* };
+%apply uint& INOUT { adlx_uint32* };
+%apply ushort& INOUT { adlx_uint16* };
+%apply ulong& INOUT { adlx_uint64* };
+%apply float& INOUT { adlx_float* };
+%apply double& INOUT { adlx_double* };
+%apply ulong& INOUT { adlx_size* };
+
+
 %include "../ADLX/SDK/Include/ADLXDefines.h"
 %include "../ADLX/SDK/Include/ADLXStructures.h"
 %include "../ADLX/SDK/Include/ICollections.h"
