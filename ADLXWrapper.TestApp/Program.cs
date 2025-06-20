@@ -17,7 +17,7 @@ namespace ADLXWrapper.TestApp
                 Console.WriteLine("ADLXWrapper Init");
                 wrapper.Initialize();
 
-                CheckAllMetrics(disposables, wrapper);
+                await CheckAllMetrics(disposables, wrapper);
 
                 disposables.Dispose();
                 wrapper.Terminate();
@@ -28,7 +28,7 @@ namespace ADLXWrapper.TestApp
                 Console.WriteLine("ADLXWrapper Init with WithIncompatibleDriver");
                 wrapper.InitializeWithIncompatibleDriver();
 
-                CheckAllMetrics(disposables, wrapper);
+                await CheckAllMetrics(disposables, wrapper);
 
                 disposables.Dispose();
                 wrapper.Terminate();
@@ -47,7 +47,7 @@ namespace ADLXWrapper.TestApp
             }
         }
 
-        private static void CheckAllMetrics(CompositeDisposable disposables, ADLXWrapper wrapper)
+        private static async Task CheckAllMetrics(CompositeDisposable disposables, ADLXWrapper wrapper)
         {
             var ss = wrapper.GetSystemServices().DisposeWith(disposables);
             var gpus = ss.GetGPUs().DisposeWith(l =>
@@ -63,6 +63,19 @@ namespace ADLXWrapper.TestApp
             GPU gpu = gpus.FirstOrDefault();
 
             var supported = pm.GetSupportedGPUMetrics1(gpu).DisposeWith(disposables);
+
+            pm.StartTracking(500, 100).DisposeWith(disposables);
+
+            for (int i = 0; i < 5; i++)
+            {
+                await Task.Delay(1000);
+                var str = pm.GetGPUMetricsStructFromTracking(gpu);
+                Console.WriteLine($"GPU temp: {str.GPUTemperature}");
+                Console.WriteLine($"GPU total board power: {str.GPUTotalBoardPower}");
+                Console.WriteLine($"GPU fan: {str.GPUFanSpeed}");
+                Console.WriteLine($"GPU hotspot: {str.GPUHotspotTemperature}");
+            }
+
 
             // writeline all supported metrics
             Console.WriteLine($"Detected GPU: {gpu.Name}");
@@ -96,7 +109,6 @@ namespace ADLXWrapper.TestApp
             Console.WriteLine($"GPU hotspot: {otherMetrics.GPUHotspotTemperature}");
 
             // same for fan control
-
             var tuning = ss.GetGPUTuningService().DisposeWith(disposables);
             var fanTuning = tuning.GetManualFanTuning(gpu).DisposeWith(disposables);
 
@@ -104,9 +116,17 @@ namespace ADLXWrapper.TestApp
             Console.WriteLine($"Fan control:");
             Console.WriteLine($"Supports zero RPM: {fanTuning.SupportsZeroRPM}");
             Console.WriteLine($"Supports target fan speed: {fanTuning.SupportsTargetFanSpeed}");
+            Console.WriteLine($"Supports fan tuning states: {fanTuning.SupportsFanTuningStates}");
+
             // fan speed range
-            Console.WriteLine($"Fan speed range: {fanTuning.SpeedRange.Min}-{fanTuning.SpeedRange.Max}");
-            
+            if (fanTuning.SupportsFanTuningStates)
+            {
+                Console.WriteLine($"Fan speed range: {fanTuning.FanTuningStates.SpeedRange.Min}-{fanTuning.FanTuningStates.SpeedRange.Max}");
+            }
+            else
+            {
+                Console.WriteLine("Fan speed range: not supported");
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ADLXWrapper.Bindings;
+using System;
 
 namespace ADLXWrapper
 {
@@ -7,7 +8,7 @@ namespace ADLXWrapper
         private readonly ADLXExt _ext;
         private SWIGTYPE_p_p_adlx__IADLXGPUMetrics _metricPtr;
         private SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport _metricSupportPtr;
-        
+
         private readonly SWIGTYPE_p_p_adlx__IADLXGPUMetricsList _metricsList;
         private readonly GPUMetricsStruct emptyStruct = default;
         private readonly GPUMetricsStruct1 emptyStruct1 = default;
@@ -63,7 +64,7 @@ namespace ADLXWrapper
 
             return metrics;
         }
-        
+
         public GPUMetricsStruct1 GetGPUMetricsStruct1(GPU gpu)
         {
             GPUMetricsStruct1 metrics1 = default;
@@ -76,7 +77,7 @@ namespace ADLXWrapper
             return metrics1;
         }
 
-        /*
+
         public IDisposable StartTracking(int samplingIntervalMs, int? maxHistorySize = null)
         {
             NativeInterface.SetSamplingInterval(samplingIntervalMs).ThrowIfError("Sampling interval");
@@ -99,7 +100,7 @@ namespace ADLXWrapper
             list.At(0, _metricPtr).ThrowIfError("GPUMetricsHistory list at");
             list.DisposeInterface();
 
-            return new GPUMetrics(_metricPtr, _intPtr, _doublePtr);
+            return new GPUMetrics(ADLX.metricsP_Ptr_value(_metricPtr));
         }
 
         public Range GetHistorySizeRange()
@@ -114,10 +115,9 @@ namespace ADLXWrapper
         public GPUMetricsStruct GetGPUMetricsStructFromTracking(GPU gpu)
         {
             GPUMetricsStruct metrics = default;
-            _ext.GetLatestMetricsFromTracking(NativeInterface, gpu.NativeInterface, ref metrics);
+            _ext.GetCurrentMetricsStructFromTracking(NativeInterface, gpu.NativeInterface, ref metrics);
 
             return metrics;
         }
-        */
     }
 }

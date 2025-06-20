@@ -1864,6 +1864,9 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics1___")]
   public static extern int ADLXExt_GetCurrentMetrics1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, ref GPUMetricsStruct1  jarg4);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetricsStructFromTracking___")]
+  public static extern int ADLXExt_GetCurrentMetricsStructFromTracking(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, ref GPUMetricsStruct  jarg4);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_SafeADLXHelper___")]
   public static extern global::System.IntPtr new_SafeADLXHelper();
 
