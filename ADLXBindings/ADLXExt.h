@@ -39,6 +39,8 @@ public:
 
 	ADLX_RESULT GetCurrentMetricsStructFromTracking(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct* metricsStruct);
 
+	ADLX_RESULT GetCurrentMetrics1StructFromTracking(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct1* metricsStruct);
+
 private:
 	adlx::IADLXManualFanTuningState* m_oneState = nullptr;
 

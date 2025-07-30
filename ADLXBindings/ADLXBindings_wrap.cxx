@@ -8228,6 +8228,24 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics1StructFromTracking___(void * jarg1, void * jarg2, void * jarg3,  GPUMetricsStruct1*  jarg4) {
+  int jresult ;
+  ADLXExt *arg1 = (ADLXExt *) 0 ;
+  adlx::IADLXPerformanceMonitoringServices *arg2 = (adlx::IADLXPerformanceMonitoringServices *) 0 ;
+  adlx::IADLXGPU *arg3 = (adlx::IADLXGPU *) 0 ;
+  GPUMetricsStruct1 *arg4 = (GPUMetricsStruct1 *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (ADLXExt *)jarg1; 
+  arg2 = (adlx::IADLXPerformanceMonitoringServices *)jarg2; 
+  arg3 = (adlx::IADLXGPU *)jarg3; 
+  arg4 = jarg4; 
+  result = (ADLX_RESULT)(arg1)->GetCurrentMetrics1StructFromTracking(arg2,arg3,arg4);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_SafeADLXHelper___() {
   void * jresult ;
   SafeADLXHelper *result = 0 ;

@@ -80,6 +80,11 @@ public class ADLXExt : global::System.IDisposable {
     return ret;
   }
 
+  public ADLX_RESULT GetCurrentMetrics1StructFromTracking(IADLXPerformanceMonitoringServices services, IADLXGPU gpu, ref GPUMetricsStruct1  metricsStruct) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.ADLXExt_GetCurrentMetrics1StructFromTracking(swigCPtr, IADLXPerformanceMonitoringServices.getCPtr(services), IADLXGPU.getCPtr(gpu), ref metricsStruct );
+    return ret;
+  }
+
 }
 
 }

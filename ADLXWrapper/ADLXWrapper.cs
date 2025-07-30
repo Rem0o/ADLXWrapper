@@ -9,18 +9,20 @@ namespace ADLXWrapper
 
         public ADLXWrapper() : base(new SafeADLXHelper())
         {
-            _ext = new ADLXExt();
+
         }
 
         public void Initialize()
         {
             NativeInterface.Initialize().ThrowIfError("Couldn't initialize ADLX");
+            _ext = new ADLXExt();
             _initialized = true;
         }
 
         public void InitializeWithIncompatibleDriver()
         {
             NativeInterface.InitializeWithIncompatibleDriver().ThrowIfError("Couldn't initialize ADLX with incompatible driver");
+            _ext = new ADLXExt();
             _initialized = true;
         }
 
@@ -37,12 +39,12 @@ namespace ADLXWrapper
         public void Terminate()
         {
             _initialized = false;
+            _ext?.Dispose();
             NativeInterface.Terminate().ThrowIfError("Couldn't terminate ADLX");
         }
 
         public override void Dispose()
         {
-            _ext?.Dispose();
             base.Dispose();
         }
     }
