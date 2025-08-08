@@ -50,6 +50,11 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics(adlx::IADLXPerformanceMonitoringServices*
 
 	IADLXGPUMetricsPtr current(*m_metricsPtr);
 
+	if (!current)
+	{
+		return ADLX_FAIL;
+	}
+
 	res = current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
 	res = current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
 	res = current->GPUTemperature(&metricsStruct->GPUTemperature);
@@ -71,6 +76,11 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1(adlx::IADLXPerformanceMonitoringServices
 
 	IADLXGPUMetrics1Ptr current1(*m_metricsPtr);
 
+	if (!current1)
+	{
+		return ADLX_FAIL;
+	}
+
 	res = current1->GPUFanSpeed(&metricsStruct1->GPUFanSpeed);
 	res = current1->GPUHotspotTemperature(&metricsStruct1->GPUHotspotTemperature);
 	res = current1->GPUTemperature(&metricsStruct1->GPUTemperature);
@@ -85,7 +95,7 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1(adlx::IADLXPerformanceMonitoringServices
 
 ADLX_RESULT ADLXExt::GetCurrentMetricsStructFromTracking(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct* metricsStruct)
 {
-	ADLX_RESULT res = services->GetGPUMetricsHistory(gpu,0,0, m_metricsListPtr);
+	ADLX_RESULT res = services->GetGPUMetricsHistory(gpu, 0, 0, m_metricsListPtr);
 	if (!ADLX_SUCCEEDED(res))
 	{
 		return res;
@@ -108,6 +118,11 @@ ADLX_RESULT ADLXExt::GetCurrentMetricsStructFromTracking(adlx::IADLXPerformanceM
 	}
 
 	IADLXGPUMetricsPtr current(*m_metricsPtr);
+	if (!current)
+	{
+		return ADLX_FAIL;
+	}
+
 	res = current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
 	res = current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
 	res = current->GPUTemperature(&metricsStruct->GPUTemperature);
@@ -142,10 +157,16 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1StructFromTracking(adlx::IADLXPerformance
 	}
 
 	IADLXGPUMetrics1Ptr current(*m_metricsPtr);
+	if (!current)
+	{
+		return ADLX_FAIL;
+	}
+
 	res = current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
 	res = current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
 	res = current->GPUTemperature(&metricsStruct->GPUTemperature);
 	res = current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
+
 	res = current->GPUMemoryTemperature(&metricsStruct->GPUMemoryTemperature);
 	res = current->NPUFrequency(&metricsStruct->NPUFrequency);
 	res = current->NPUActivityLevel(&metricsStruct->NPUActivityLevel);
