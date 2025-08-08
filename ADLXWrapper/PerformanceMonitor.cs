@@ -115,7 +115,7 @@ namespace ADLXWrapper
         public GPUMetricsStruct GetGPUMetricsStructFromTracking(GPU gpu)
         {
             GPUMetricsStruct metrics = default;
-            _ext.GetCurrentMetricsStructFromTracking(NativeInterface, gpu.NativeInterface, ref metrics);
+            _ext.GetCurrentMetricsStructFromTracking(NativeInterface, gpu.NativeInterface, ref metrics).ThrowIfError("Couldn't get GPU metrics from tracking");
 
             return metrics;
         }
@@ -123,7 +123,7 @@ namespace ADLXWrapper
         public GPUMetricsStruct1 GetGPUMetricsStruct1FromTracking(GPU gpu)
         {
             GPUMetricsStruct1 metrics1 = default;
-            _ext.GetCurrentMetrics1StructFromTracking(NativeInterface, gpu.NativeInterface, ref metrics1);
+            _ext.GetCurrentMetrics1StructFromTracking(NativeInterface, gpu.NativeInterface, ref metrics1).ThrowIfError("Couldn't get GPU metrics 1 from tracking");
 
             return metrics1;
         }
