@@ -123,10 +123,11 @@ ADLX_RESULT ADLXExt::GetCurrentMetricsStructFromTracking(adlx::IADLXPerformanceM
 		return ADLX_FAIL;
 	}
 
-	res = current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
-	res = current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
-	res = current->GPUTemperature(&metricsStruct->GPUTemperature);
-	res = current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
+	current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
+	current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
+	current->GPUTemperature(&metricsStruct->GPUTemperature);
+	current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
+
 	current->Release();
 
 	return res;
@@ -162,14 +163,13 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1StructFromTracking(adlx::IADLXPerformance
 		return ADLX_FAIL;
 	}
 
-	res = current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
-	res = current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
-	res = current->GPUTemperature(&metricsStruct->GPUTemperature);
-	res = current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
-
-	res = current->GPUMemoryTemperature(&metricsStruct->GPUMemoryTemperature);
-	res = current->NPUFrequency(&metricsStruct->NPUFrequency);
-	res = current->NPUActivityLevel(&metricsStruct->NPUActivityLevel);
+	current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
+	current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
+	current->GPUTemperature(&metricsStruct->GPUTemperature);
+	current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
+	current->GPUMemoryTemperature(&metricsStruct->GPUMemoryTemperature);
+	current->NPUFrequency(&metricsStruct->NPUFrequency);
+	current->NPUActivityLevel(&metricsStruct->NPUActivityLevel);
 
 	current->Release();
 
