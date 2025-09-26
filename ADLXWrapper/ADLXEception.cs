@@ -3,13 +3,19 @@ using System;
 
 namespace ADLXWrapper
 {
-    public class ADLXEception : Exception
+    public class ADLXResultException : ADLXEception
     {
-        public ADLXEception(ADLX_RESULT result, string message) : this($"Result: {result} {Environment.NewLine}{message}")
+        public ADLXResultException(ADLX_RESULT result, string message) : base($"Result: {result} {Environment.NewLine}{message}")
         {
-
+            ADLXResult = result;
         }
 
+        public ADLX_RESULT? ADLXResult { get; private set; }
+
+    }
+
+    public class ADLXEception : Exception
+    {
         public ADLXEception(string message) : base(message)
         {
 

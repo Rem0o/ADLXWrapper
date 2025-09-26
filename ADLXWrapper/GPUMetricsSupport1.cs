@@ -2,9 +2,18 @@
 
 namespace ADLXWrapper
 {
-    public class GPUMetricsSupport1 : ADLXInterfaceWrapper<IADLXGPUMetricsSupport1>
+    public class GPUMetricsSupport1 : ADLXInterfaceQueryWrapper<IADLXGPUMetricsSupport1>
     {
-        public GPUMetricsSupport1(IADLXGPUMetricsSupport1 nativeInterface) : base(nativeInterface)
+        private static IADLXGPUMetricsSupport1 QueryInterface(IADLXInterface @interface)
+        {
+            var ptr = ADLX.new_metricsSupport1P_Ptr();
+            @interface.QueryInterface(IADLXGPUMetricsSupport1.IID(), ADLX.CastGPUMetricsSupport1VoidPtr(ptr)).ThrowIfError($"Query {nameof(GPUMetricsSupport1)} interface");
+            var value = ADLX.metricsSupport1P_Ptr_value(ptr);
+            ADLX.delete_metricsSupport1P_Ptr(ptr);
+            return value;
+        }
+
+        public GPUMetricsSupport1(IADLXGPUMetricsSupport @interface) : base(@interface, QueryInterface)
         {
         }
 
@@ -47,6 +56,13 @@ namespace ADLXWrapper
         {
             bool value = false;
             NativeInterface.IsSupportedGPUUsage(ref value).ThrowIfError("Is Supported Memory temperature");
+            return value;
+        }
+
+        public bool IsSupportedGPUIntakeTemperature()
+        {
+            bool value = false;
+            NativeInterface.IsSupportedGPUIntakeTemperature(ref value).ThrowIfError("Is Supported Intake Temperature");
             return value;
         }
 

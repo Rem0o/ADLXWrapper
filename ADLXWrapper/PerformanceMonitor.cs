@@ -30,26 +30,22 @@ namespace ADLXWrapper
         public GPUMetricsSupport1 GetSupportedGPUMetrics1(GPU gpu)
         {
             NativeInterface.GetSupportedGPUMetrics(gpu.NativeInterface, _metricSupportPtr).ThrowIfError("Get Supported GPU Metrics1");
-            var _metricSupport1Ptr = ADLX.CastGPUMetricsSupportToGPUMetricsSupport1(_metricSupportPtr);
-
-            return new GPUMetricsSupport1(ADLX.metricsSupport1P_Ptr_value(_metricSupport1Ptr));
+            return new GPUMetricsSupport1(ADLX.metricsSupportP_Ptr_value(_metricSupportPtr));
         }
 
         public GPUMetrics GetGPUMetrics(GPU gpu)
         {
             NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr).ThrowIfError("Get GPU Metrics");
             IADLXGPUMetrics metrics = ADLX.metricsP_Ptr_value(_metricPtr);
-
             return new GPUMetrics(metrics);
         }
 
         public GPUMetrics1 GetGPUMetrics1(GPU gpu)
         {
             NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr).ThrowIfError("Get GPU Metrics1");
-            var _metric1Ptr = ADLX.CastGPUMetricsToGPUMetrics1(_metricPtr);
-            IADLXGPUMetrics1 metrics1 = ADLX.metrics1P_Ptr_value(_metric1Ptr);
+            IADLXGPUMetrics metrics = ADLX.metricsP_Ptr_value(_metricPtr);
 
-            return new GPUMetrics1(metrics1);
+            return new GPUMetrics1(metrics);
         }
 
         public GPUMetricsStruct GetGPUMetricsStruct(GPU gpu)
@@ -59,7 +55,7 @@ namespace ADLXWrapper
 
             if (res.HasError() && metrics == emptyStruct)
             {
-                throw new ADLXEception(res, "Get GPU Metrics Struct");
+                throw new ADLXResultException(res, "Get GPU Metrics Struct");
             }
 
             return metrics;
@@ -72,7 +68,7 @@ namespace ADLXWrapper
 
             if (res.HasError() && metrics1 == emptyStruct1)
             {
-                throw new ADLXEception(res, "Get GPU Metrics Struct");
+                throw new ADLXResultException(res, "Get GPU Metrics Struct");
             }
             return metrics1;
         }
@@ -101,6 +97,15 @@ namespace ADLXWrapper
             list.DisposeInterface();
 
             return new GPUMetrics(ADLX.metricsP_Ptr_value(_metricPtr));
+        }
+
+        public Range GetSamplingIntervalRange()
+        {
+            using (ADLX_IntRange range = new ADLX_IntRange())
+            {
+                NativeInterface.GetSamplingIntervalRange(range);
+                return new Range(range);
+            }
         }
 
         public Range GetHistorySizeRange()

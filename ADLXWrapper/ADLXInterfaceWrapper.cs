@@ -36,7 +36,7 @@ namespace ADLXWrapper
             NativeInterface.Release();
             int referenceCount = _nativeInterface.Release();
 
-            if (referenceCount != 1)
+            if (referenceCount > 1)
             {
                 string name = typeof(T).Name;
                 throw new ADLXEception($"{name} still has {referenceCount} references.");

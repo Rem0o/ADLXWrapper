@@ -7,6 +7,7 @@ namespace ADLXWrapper
     {
         public double GPUTemperature;
         public double GPUHotspotTemperature;
+        public double GPUIntakeTemperature;
         public double GPUTotalBoardPower;
         public int GPUFanSpeed;
 
@@ -16,6 +17,7 @@ namespace ADLXWrapper
             {
                 return GPUTemperature == other.GPUTemperature &&
                        GPUHotspotTemperature == other.GPUHotspotTemperature &&
+                       GPUIntakeTemperature == other.GPUIntakeTemperature &&
                        GPUTotalBoardPower == other.GPUTotalBoardPower &&
                        GPUFanSpeed == other.GPUFanSpeed;
             }
@@ -29,6 +31,7 @@ namespace ADLXWrapper
             int hash = 17;
             hash = hash * 23 + GPUTemperature.GetHashCode();
             hash = hash * 23 + GPUHotspotTemperature.GetHashCode();
+            hash = hash * 23 + GPUIntakeTemperature.GetHashCode();
             hash = hash * 23 + GPUTotalBoardPower.GetHashCode();
             hash = hash * 23 + GPUFanSpeed.GetHashCode();
             return hash;
@@ -46,7 +49,7 @@ namespace ADLXWrapper
 
         public override string ToString()
         {
-            return $"GPUTemperature: {GPUTemperature}, GPUHotspotTemperature: {GPUHotspotTemperature}, GPUTotalBoardPower: {GPUTotalBoardPower}, GPUFanSpeed: {GPUFanSpeed}";
+            return $"GPUTemperature: {GPUTemperature}, GPUHotspotTemperature: {GPUHotspotTemperature}, GPUIntakeTemperature: {GPUIntakeTemperature}, GPUTotalBoardPower: {GPUTotalBoardPower}, GPUFanSpeed: {GPUFanSpeed}";
         }
     }
 }

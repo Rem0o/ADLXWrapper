@@ -36,6 +36,13 @@ namespace ADLXWrapper
             return value;
         }
 
+        public bool IsSupportedGPUIntakeTemperature()
+        {
+            bool value = false;
+            NativeInterface.IsSupportedGPUIntakeTemperature(ref value).ThrowIfError("Is Supported Intake Temperature");
+            return value;
+        }
+
         public bool IsSupportedFanSpeed()
         {
             bool value = false;

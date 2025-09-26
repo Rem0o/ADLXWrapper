@@ -22,6 +22,7 @@
 #include "../ADLX/SDK/Include/IPerformanceMonitoring.h"
 #include "../ADLX/SDK/Include/IPerformanceMonitoring1.h"
 #include "../ADLX/SDK/Include/IPerformanceMonitoring2.h"
+#include "../ADLX/SDK/Include/IPerformanceMonitoring3.h"
 #include "../ADLX/SDK/ADLXHelper/Windows/Cpp/ADLXHelper.h"
 #include "ADLXExt.h"
 #include "SafeADLXHelper.h"
@@ -139,6 +140,7 @@ typedef WCHAR TCHAR;
 %include "../ADLX/SDK/Include/IPerformanceMonitoring.h"
 %include "../ADLX/SDK/Include/IPerformanceMonitoring1.h"
 %include "../ADLX/SDK/Include/IPerformanceMonitoring2.h"
+%include "../ADLX/SDK/Include/IPerformanceMonitoring3.h"
 %include "../ADLX/SDK/ADLXHelper/Windows/Cpp/ADLXHelper.h"
 %include "ADLXExt.h"
 %include "SafeADLXHelper.h"
@@ -177,8 +179,10 @@ using namespace adlx;
 %pointer_functions(IADLXManualFanTuningState*, fanTuningStateP_Ptr);
 %pointer_functions(IADLXGPUMetrics*, metricsP_Ptr);
 %pointer_functions(IADLXGPUMetrics1*, metrics1P_Ptr);
+%pointer_functions(IADLXGPUMetrics2*, metrics2P_Ptr);
 %pointer_functions(IADLXGPUMetricsSupport*, metricsSupportP_Ptr);
 %pointer_functions(IADLXGPUMetricsSupport1*, metricsSupport1P_Ptr);
+%pointer_functions(IADLXGPUMetricsSupport2*, metricsSupport2P_Ptr);
 %pointer_functions(adlx_string, stringP_Ptr);
 %pointer_functions(IADLXGPUMetricsList*, gpuMetricsListP_Ptr);
 
@@ -193,6 +197,5 @@ TYPE2 NAME(TYPE1 x) {
 
 %pointer_cast(IADLXManualFanTuning**, void**, CastManualFanTuningVoidPtr);
 %pointer_cast(IADLXManualPowerTuning**, void**, CastManualPowerTuningVoidPtr);
-
-%pointer_cast(IADLXGPUMetrics**, IADLXGPUMetrics1**, CastGPUMetricsToGPUMetrics1);
-%pointer_cast(IADLXGPUMetricsSupport**, IADLXGPUMetricsSupport1**, CastGPUMetricsSupportToGPUMetricsSupport1);
+%pointer_cast(IADLXGPUMetricsSupport1**, void**, CastGPUMetricsSupport1VoidPtr);
+%pointer_cast(IADLXGPUMetrics1**, void**, CastGPUMetrics1VoidPtr);

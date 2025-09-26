@@ -2,9 +2,19 @@
 
 namespace ADLXWrapper
 {
-    public class GPUMetrics1 : ADLXInterfaceWrapper<IADLXGPUMetrics1>
+    public class GPUMetrics1 : ADLXInterfaceQueryWrapper<IADLXGPUMetrics1>
     {
-        public GPUMetrics1(IADLXGPUMetrics1 metrics) : base(metrics)
+        private static IADLXGPUMetrics1 QueryInterface(IADLXInterface @interface)
+        {
+            var ptr = ADLX.new_metrics1P_Ptr();
+            @interface.QueryInterface(IADLXGPUMetrics1.IID(), ADLX.CastGPUMetrics1VoidPtr(ptr)).ThrowIfError($"Query {nameof(GPUMetrics1)} interface");
+            var value = ADLX.metrics1P_Ptr_value(ptr);
+            ADLX.delete_metrics1P_Ptr(ptr);
+            return value;
+        }
+
+
+        public GPUMetrics1(IADLXGPUMetrics metrics) : base(metrics, QueryInterface)
         {
         }
 
@@ -40,6 +50,13 @@ namespace ADLXWrapper
         {
             double doubleValue = 0;
             NativeInterface.GPUTemperature(ref doubleValue).ThrowIfError("Get GPU temperature");
+            return doubleValue;
+        }
+
+        public double GetGPUIntakeTemperature()
+        {
+            double doubleValue = 0;
+            NativeInterface.GPUIntakeTemperature(ref doubleValue).ThrowIfError("Get GPU intake temperature");
             return doubleValue;
         }
 

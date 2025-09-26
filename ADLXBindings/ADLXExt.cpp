@@ -59,6 +59,7 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics(adlx::IADLXPerformanceMonitoringServices*
 	res = current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
 	res = current->GPUTemperature(&metricsStruct->GPUTemperature);
 	res = current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
+	res = current->GPUIntakeTemperature(&metricsStruct->GPUIntakeTemperature);
 	current->Release();
 
 	return res;
@@ -78,13 +79,14 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1(adlx::IADLXPerformanceMonitoringServices
 
 	if (!current1)
 	{
-		return ADLX_FAIL;
+		return ADLX_NOT_SUPPORTED;
 	}
 
 	res = current1->GPUFanSpeed(&metricsStruct1->GPUFanSpeed);
 	res = current1->GPUHotspotTemperature(&metricsStruct1->GPUHotspotTemperature);
 	res = current1->GPUTemperature(&metricsStruct1->GPUTemperature);
 	res = current1->GPUTotalBoardPower(&metricsStruct1->GPUTotalBoardPower);
+	res = current1->GPUIntakeTemperature(&metricsStruct1->GPUIntakeTemperature);
 	res = current1->GPUMemoryTemperature(&metricsStruct1->GPUMemoryTemperature);
 	res = current1->NPUFrequency(&metricsStruct1->NPUFrequency);
 	res = current1->NPUActivityLevel(&metricsStruct1->NPUActivityLevel);
@@ -127,6 +129,7 @@ ADLX_RESULT ADLXExt::GetCurrentMetricsStructFromTracking(adlx::IADLXPerformanceM
 	current->GPUHotspotTemperature(&metricsStruct->GPUHotspotTemperature);
 	current->GPUTemperature(&metricsStruct->GPUTemperature);
 	current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
+	current->GPUIntakeTemperature(&metricsStruct->GPUIntakeTemperature);
 
 	current->Release();
 
@@ -160,7 +163,7 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1StructFromTracking(adlx::IADLXPerformance
 	IADLXGPUMetrics1Ptr current(*m_metricsPtr);
 	if (!current)
 	{
-		return ADLX_FAIL;
+		return ADLX_NOT_SUPPORTED;
 	}
 
 	current->GPUFanSpeed(&metricsStruct->GPUFanSpeed);
@@ -168,6 +171,7 @@ ADLX_RESULT ADLXExt::GetCurrentMetrics1StructFromTracking(adlx::IADLXPerformance
 	current->GPUTemperature(&metricsStruct->GPUTemperature);
 	current->GPUTotalBoardPower(&metricsStruct->GPUTotalBoardPower);
 	current->GPUMemoryTemperature(&metricsStruct->GPUMemoryTemperature);
+	current->GPUIntakeTemperature(&metricsStruct->GPUIntakeTemperature);
 	current->NPUFrequency(&metricsStruct->NPUFrequency);
 	current->NPUActivityLevel(&metricsStruct->NPUActivityLevel);
 

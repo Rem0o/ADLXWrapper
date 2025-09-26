@@ -42,5 +42,12 @@ namespace ADLXWrapper
             NativeInterface.GPUTemperature(ref doubleValue).ThrowIfError("Get GPU temperature");
             return doubleValue;
         }
+
+        public double GetGPUIntakeTemperature()
+        {
+            double doubleValue = 0;
+            NativeInterface.GPUIntakeTemperature(ref doubleValue).ThrowIfError("Get GPU intake temperature");
+            return doubleValue;
+        }
     }
 }

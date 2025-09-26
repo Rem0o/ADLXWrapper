@@ -7,6 +7,7 @@ namespace ADLXWrapper
     {
         public double GPUTemperature;
         public double GPUHotspotTemperature;
+        public double GPUIntakeTemperature;
         public double GPUTotalBoardPower;
         public int GPUFanSpeed;
 
@@ -56,7 +57,7 @@ namespace ADLXWrapper
 
         public override string ToString()
         {
-            return $"GPUTemperature: {GPUTemperature}, GPUMemoryTemperature: {GPUMemoryTemperature}, GPUHotspotTemperature: {GPUHotspotTemperature}, GPUTotalBoardPower: {GPUTotalBoardPower}, GPUFanSpeed: {GPUFanSpeed}, NPUFrequency: {NPUFrequency}, NPUActivityLevel: {NPUActivityLevel}";
+            return $"GPUTemperature: {GPUTemperature}, GPUMemoryTemperature: {GPUMemoryTemperature}, GPUHotspotTemperature: {GPUHotspotTemperature}, GPUIntakeTemperature: {GPUIntakeTemperature}, GPUTotalBoardPower: {GPUTotalBoardPower}, GPUFanSpeed: {GPUFanSpeed}, NPUFrequency: {NPUFrequency}, NPUActivityLevel: {NPUActivityLevel}";
         }
     }
 }

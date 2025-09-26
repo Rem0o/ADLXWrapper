@@ -10,18 +10,20 @@
 
 namespace ADLXWrapper.Bindings {
 
-public class IADLXMemoryTimingDescription : IADLXInterface {
+public class ADLX_LUID : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
+  protected bool swigCMemOwn;
 
-  internal IADLXMemoryTimingDescription(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ADLXPINVOKE.IADLXMemoryTimingDescription_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal ADLX_LUID(global::System.IntPtr cPtr, bool cMemoryOwn) {
+    swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(IADLXMemoryTimingDescription obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(ADLX_LUID obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(IADLXMemoryTimingDescription obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(ADLX_LUID obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -34,28 +36,48 @@ public class IADLXMemoryTimingDescription : IADLXInterface {
     }
   }
 
-  protected override void Dispose(bool disposing) {
+  ~ADLX_LUID() {
+    Dispose(false);
+  }
+
+  public void Dispose() {
+    Dispose(true);
+    global::System.GC.SuppressFinalize(this);
+  }
+
+  protected virtual void Dispose(bool disposing) {
     lock(this) {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ADLXPINVOKE.delete_IADLXMemoryTimingDescription(swigCPtr);
+          ADLXPINVOKE.delete_ADLX_LUID(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
-      base.Dispose(disposing);
     }
   }
 
-  public new static SWIGTYPE_p_wchar_t IID() {
-    global::System.IntPtr cPtr = ADLXPINVOKE.IADLXMemoryTimingDescription_IID();
-    SWIGTYPE_p_wchar_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_wchar_t(cPtr, false);
-    return ret;
+  public uint lowPart {
+    set {
+      ADLXPINVOKE.ADLX_LUID_lowPart_set(swigCPtr, value);
+    } 
+    get {
+      uint ret = ADLXPINVOKE.ADLX_LUID_lowPart_get(swigCPtr);
+      return ret;
+    } 
   }
 
-  public virtual ADLX_RESULT GetDescription(SWIGTYPE_p_ADLX_MEMORYTIMING_DESCRIPTION description) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXMemoryTimingDescription_GetDescription(swigCPtr, SWIGTYPE_p_ADLX_MEMORYTIMING_DESCRIPTION.getCPtr(description));
-    return ret;
+  public int highPart {
+    set {
+      ADLXPINVOKE.ADLX_LUID_highPart_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ADLXPINVOKE.ADLX_LUID_highPart_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public ADLX_LUID() : this(ADLXPINVOKE.new_ADLX_LUID(), true) {
   }
 
 }

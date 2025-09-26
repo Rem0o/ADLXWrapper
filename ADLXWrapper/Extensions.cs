@@ -1,8 +1,5 @@
 ﻿using ADLXWrapper.Bindings;
 using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ADLXWrapper
 {
@@ -37,7 +34,7 @@ namespace ADLXWrapper
         {
             if (result.HasError())
             {
-                throw new ADLXEception(result, message);
+                throw new ADLXResultException(result, message);
             }
         }
 

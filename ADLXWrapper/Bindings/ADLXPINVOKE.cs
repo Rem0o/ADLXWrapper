@@ -520,6 +520,24 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_ADLX_3DLUT_Data___")]
   public static extern void delete_ADLX_3DLUT_Data(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_ADLX_LUID_lowPart_set___")]
+  public static extern void ADLX_LUID_lowPart_set(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_ADLX_LUID_lowPart_get___")]
+  public static extern uint ADLX_LUID_lowPart_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_ADLX_LUID_highPart_set___")]
+  public static extern void ADLX_LUID_highPart_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_ADLX_LUID_highPart_get___")]
+  public static extern int ADLX_LUID_highPart_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_ADLX_LUID___")]
+  public static extern global::System.IntPtr new_ADLX_LUID();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_ADLX_LUID___")]
+  public static extern void delete_ADLX_LUID(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXList_IID___")]
   public static extern global::System.IntPtr IADLXList_IID();
 
@@ -1252,6 +1270,27 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXManualFanTuning___")]
   public static extern void delete_IADLXManualFanTuning(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning1_IID___")]
+  public static extern global::System.IntPtr IADLXManualFanTuning1_IID();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning1_GetDefaultFanTuningStates___")]
+  public static extern int IADLXManualFanTuning1_GetDefaultFanTuningStates(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning1_GetMinAcousticLimitDefault___")]
+  public static extern int IADLXManualFanTuning1_GetMinAcousticLimitDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning1_GetMinFanSpeedDefault___")]
+  public static extern int IADLXManualFanTuning1_GetMinFanSpeedDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning1_GetTargetFanSpeedDefault___")]
+  public static extern int IADLXManualFanTuning1_GetTargetFanSpeedDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning1_GetDefaultZeroRPMState___")]
+  public static extern int IADLXManualFanTuning1_GetDefaultZeroRPMState(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXManualFanTuning1___")]
+  public static extern void delete_IADLXManualFanTuning1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning1_IID___")]
   public static extern global::System.IntPtr IADLXManualGraphicsTuning1_IID();
 
@@ -1306,6 +1345,21 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXManualGraphicsTuning2___")]
   public static extern void delete_IADLXManualGraphicsTuning2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_1_IID___")]
+  public static extern global::System.IntPtr IADLXManualGraphicsTuning2_1_IID();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_1_GetGPUMinFrequencyDefault___")]
+  public static extern int IADLXManualGraphicsTuning2_1_GetGPUMinFrequencyDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_1_GetGPUMaxFrequencyDefault___")]
+  public static extern int IADLXManualGraphicsTuning2_1_GetGPUMaxFrequencyDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_1_GetGPUVoltageDefault___")]
+  public static extern int IADLXManualGraphicsTuning2_1_GetGPUVoltageDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXManualGraphicsTuning2_1___")]
+  public static extern void delete_IADLXManualGraphicsTuning2_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning_IID___")]
   public static extern global::System.IntPtr IADLXManualPowerTuning_IID();
 
@@ -1332,6 +1386,18 @@ class ADLXPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXManualPowerTuning___")]
   public static extern void delete_IADLXManualPowerTuning(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning1_IID___")]
+  public static extern global::System.IntPtr IADLXManualPowerTuning1_IID();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning1_GetPowerLimitDefault___")]
+  public static extern int IADLXManualPowerTuning1_GetPowerLimitDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning1_GetTDCLimitDefault___")]
+  public static extern int IADLXManualPowerTuning1_GetTDCLimitDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXManualPowerTuning1___")]
+  public static extern void delete_IADLXManualPowerTuning1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_IID___")]
   public static extern global::System.IntPtr IADLXManualVRAMTuning1_IID();
@@ -1392,6 +1458,15 @@ class ADLXPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXManualVRAMTuning2___")]
   public static extern void delete_IADLXManualVRAMTuning2(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_1_IID___")]
+  public static extern global::System.IntPtr IADLXManualVRAMTuning2_1_IID();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_1_GetMaxVRAMFrequencyDefault___")]
+  public static extern int IADLXManualVRAMTuning2_1_GetMaxVRAMFrequencyDefault(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXManualVRAMTuning2_1___")]
+  public static extern void delete_IADLXManualVRAMTuning2_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_IID___")]
   public static extern global::System.IntPtr IADLXGPUPresetTuning_IID();
@@ -1812,6 +1887,27 @@ class ADLXPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetrics1___")]
   public static extern void delete_IADLXGPUMetrics1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport2_IID___")]
+  public static extern global::System.IntPtr IADLXGPUMetricsSupport2_IID();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport2_IsSupportedGPUSharedMemory___")]
+  public static extern int IADLXGPUMetricsSupport2_IsSupportedGPUSharedMemory(global::System.Runtime.InteropServices.HandleRef jarg1, ref bool jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport2_GetGPUSharedMemoryRange___")]
+  public static extern int IADLXGPUMetricsSupport2_GetGPUSharedMemoryRange(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2, ref int jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetricsSupport2___")]
+  public static extern void delete_IADLXGPUMetricsSupport2(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics2_IID___")]
+  public static extern global::System.IntPtr IADLXGPUMetrics2_IID();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics2_GPUSharedMemory___")]
+  public static extern int IADLXGPUMetrics2_GPUSharedMemory(global::System.Runtime.InteropServices.HandleRef jarg1, ref int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetrics2___")]
+  public static extern void delete_IADLXGPUMetrics2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_ADLXHelper___")]
   public static extern global::System.IntPtr new_ADLXHelper();
@@ -2293,6 +2389,21 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metrics1P_Ptr_value___")]
   public static extern global::System.IntPtr metrics1P_Ptr_value(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_metrics2P_Ptr___")]
+  public static extern global::System.IntPtr new_metrics2P_Ptr();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_copy_metrics2P_Ptr___")]
+  public static extern global::System.IntPtr copy_metrics2P_Ptr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_metrics2P_Ptr___")]
+  public static extern void delete_metrics2P_Ptr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metrics2P_Ptr_assign___")]
+  public static extern void metrics2P_Ptr_assign(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metrics2P_Ptr_value___")]
+  public static extern global::System.IntPtr metrics2P_Ptr_value(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_metricsSupportP_Ptr___")]
   public static extern global::System.IntPtr new_metricsSupportP_Ptr();
 
@@ -2322,6 +2433,21 @@ class ADLXPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metricsSupport1P_Ptr_value___")]
   public static extern global::System.IntPtr metricsSupport1P_Ptr_value(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_metricsSupport2P_Ptr___")]
+  public static extern global::System.IntPtr new_metricsSupport2P_Ptr();
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_copy_metricsSupport2P_Ptr___")]
+  public static extern global::System.IntPtr copy_metricsSupport2P_Ptr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_delete_metricsSupport2P_Ptr___")]
+  public static extern void delete_metricsSupport2P_Ptr(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metricsSupport2P_Ptr_assign___")]
+  public static extern void metricsSupport2P_Ptr_assign(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_metricsSupport2P_Ptr_value___")]
+  public static extern global::System.IntPtr metricsSupport2P_Ptr_value(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_stringP_Ptr___")]
   public static extern global::System.IntPtr new_stringP_Ptr();
@@ -2359,11 +2485,11 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_CastManualPowerTuningVoidPtr___")]
   public static extern global::System.IntPtr CastManualPowerTuningVoidPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_CastGPUMetricsToGPUMetrics1___")]
-  public static extern global::System.IntPtr CastGPUMetricsToGPUMetrics1(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_CastGPUMetricsSupport1VoidPtr___")]
+  public static extern global::System.IntPtr CastGPUMetricsSupport1VoidPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_CastGPUMetricsSupportToGPUMetricsSupport1___")]
-  public static extern global::System.IntPtr CastGPUMetricsSupportToGPUMetricsSupport1(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_CastGPUMetrics1VoidPtr___")]
+  public static extern global::System.IntPtr CastGPUMetrics1VoidPtr(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXList_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXList_SWIGUpcast(global::System.IntPtr jarg1);
@@ -2416,20 +2542,32 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXManualFanTuning_SWIGUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualFanTuning1_SWIGUpcast___")]
+  public static extern global::System.IntPtr IADLXManualFanTuning1_SWIGUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning1_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXManualGraphicsTuning1_SWIGUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXManualGraphicsTuning2_SWIGUpcast(global::System.IntPtr jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualGraphicsTuning2_1_SWIGUpcast___")]
+  public static extern global::System.IntPtr IADLXManualGraphicsTuning2_1_SWIGUpcast(global::System.IntPtr jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXManualPowerTuning_SWIGUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualPowerTuning1_SWIGUpcast___")]
+  public static extern global::System.IntPtr IADLXManualPowerTuning1_SWIGUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXManualVRAMTuning1_SWIGUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXManualVRAMTuning2_SWIGUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_1_SWIGUpcast___")]
+  public static extern global::System.IntPtr IADLXManualVRAMTuning2_1_SWIGUpcast(global::System.IntPtr jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUPresetTuning_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXGPUPresetTuning_SWIGUpcast(global::System.IntPtr jarg1);
@@ -2478,6 +2616,12 @@ class ADLXPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics1_SWIGUpcast___")]
   public static extern global::System.IntPtr IADLXGPUMetrics1_SWIGUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport2_SWIGUpcast___")]
+  public static extern global::System.IntPtr IADLXGPUMetricsSupport2_SWIGUpcast(global::System.IntPtr jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_IADLXGPUMetrics2_SWIGUpcast___")]
+  public static extern global::System.IntPtr IADLXGPUMetrics2_SWIGUpcast(global::System.IntPtr jarg1);
 }
 
 }

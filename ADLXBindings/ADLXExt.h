@@ -8,6 +8,7 @@
 struct GPUMetricsStruct {
 	adlx_double GPUTemperature;
 	adlx_double GPUHotspotTemperature;
+	adlx_double GPUIntakeTemperature;
 	adlx_double GPUTotalBoardPower;
 	adlx_int GPUFanSpeed;
 };
@@ -15,6 +16,7 @@ struct GPUMetricsStruct {
 struct GPUMetricsStruct1 {
 	adlx_double GPUTemperature;
 	adlx_double GPUHotspotTemperature;
+	adlx_double GPUIntakeTemperature;
 	adlx_double GPUTotalBoardPower;
 	adlx_int GPUFanSpeed;
 
