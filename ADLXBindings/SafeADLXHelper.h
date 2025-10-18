@@ -15,6 +15,8 @@ public:
     ADLX_RESULT Terminate();
  
     adlx::IADLXSystem* GetSystemServices();
+    adlx_uint64 QueryFullVersion();
+	const char* QueryVersion();
 
 private:
     ADLXHelper _adlxHelper;

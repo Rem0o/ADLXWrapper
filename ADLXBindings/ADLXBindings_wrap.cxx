@@ -8723,6 +8723,30 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_GetSyst
 }
 
 
+SWIGEXPORT unsigned long long SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_QueryFullVersion___(void * jarg1) {
+  unsigned long long jresult ;
+  SafeADLXHelper *arg1 = (SafeADLXHelper *) 0 ;
+  adlx_uint64 result;
+  
+  arg1 = (SafeADLXHelper *)jarg1; 
+  result = (adlx_uint64)(arg1)->QueryFullVersion();
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_ADLXWrapperfBindings_SafeADLXHelper_QueryVersion___(void * jarg1) {
+  char * jresult ;
+  SafeADLXHelper *arg1 = (SafeADLXHelper *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (SafeADLXHelper *)jarg1; 
+  result = (char *)(arg1)->QueryVersion();
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_intP___() {
   void * jresult ;
   adlx_int *result = 0 ;

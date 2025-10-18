@@ -12,6 +12,16 @@ namespace ADLXWrapper
 
         }
 
+        public string QueryVersion()
+        {
+            return NativeInterface.QueryVersion();
+        }
+
+        public ulong QueryFullVersion()
+        {
+            return NativeInterface.QueryFullVersion();
+        }
+
         public void Initialize()
         {
             NativeInterface.Initialize().ThrowIfError("Couldn't initialize ADLX");

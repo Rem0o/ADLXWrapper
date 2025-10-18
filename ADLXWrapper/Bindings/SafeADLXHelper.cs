@@ -81,6 +81,16 @@ public class SafeADLXHelper : global::System.IDisposable {
     return ret;
   }
 
+  public ulong QueryFullVersion() {
+    ulong ret = ADLXPINVOKE.SafeADLXHelper_QueryFullVersion(swigCPtr);
+    return ret;
+  }
+
+  public string QueryVersion() {
+    string ret = ADLXPINVOKE.SafeADLXHelper_QueryVersion(swigCPtr);
+    return ret;
+  }
+
 }
 
 }

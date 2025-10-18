@@ -49,3 +49,14 @@ adlx::IADLXSystem* SafeADLXHelper::GetSystemServices()
 {
 	return _adlxHelper.GetSystemServices();
 }
+
+// get version
+adlx_uint64 SafeADLXHelper::QueryFullVersion() 
+{
+	return _adlxHelper.QueryFullVersion();
+}
+
+const char* SafeADLXHelper::QueryVersion()
+{
+	return _adlxHelper.QueryVersion();
+}

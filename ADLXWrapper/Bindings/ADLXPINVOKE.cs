@@ -1984,6 +1984,12 @@ class ADLXPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_GetSystemServices___")]
   public static extern global::System.IntPtr SafeADLXHelper_GetSystemServices(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_QueryFullVersion___")]
+  public static extern ulong SafeADLXHelper_QueryFullVersion(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_SafeADLXHelper_QueryVersion___")]
+  public static extern string SafeADLXHelper_QueryVersion(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ADLXBindings", EntryPoint="CSharp_ADLXWrapperfBindings_new_intP___")]
   public static extern global::System.IntPtr new_intP();
 

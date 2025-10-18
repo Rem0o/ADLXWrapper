@@ -9,8 +9,13 @@
   <ItemGroup>
     <ProjectReference Include="..\ADLXWrapper\ADLXWrapper.csproj" />
   </ItemGroup>
+	
+ <PropertyGroup Condition="'$(Configuration)'=='Release'">
+   <DebugType>none</DebugType>
+   <Optimize>True</Optimize>
+ </PropertyGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
 	<Exec Command="xcopy &quot;$(SolutionDir)x64\$(Configuration)\ADLXBindings.dll&quot; &quot;$(TargetDir)&quot; /Y" />
   </Target>
 
