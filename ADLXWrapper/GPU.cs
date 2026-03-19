@@ -18,6 +18,7 @@ namespace ADLXWrapper
             Type = ADLX.gpuTypeP_value(typePtr);
 
             ADLX.delete_stringP_Ptr(namePtr);
+            ADLX.delete_gpuTypeP(typePtr);
         }
 
         public string Name { get; }

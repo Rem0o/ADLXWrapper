@@ -38,6 +38,7 @@ namespace ADLXWrapper
             var ptr = ADLX.new_gpuTuningP_Ptr();
             NativeInterface.GetGPUTuningServices(ptr).ThrowIfError("GetGPUTuningService");
             var tuning = ADLX.gpuTuningP_Ptr_value(ptr);
+            ADLX.delete_gpuTuningP_Ptr(ptr);
             return new GPUTuningService(tuning, _ext);
         }
 
@@ -46,6 +47,7 @@ namespace ADLXWrapper
             var ptr = ADLX.new_performanceP_Ptr();
             NativeInterface.GetPerformanceMonitoringServices(ptr).ThrowIfError("GetPerformanceMonitor");
             var performanceMonitor = ADLX.performanceP_Ptr_value(ptr);
+            ADLX.delete_performanceP_Ptr(ptr);
             return new PerformanceMonitor(performanceMonitor, _ext);
         }
     }

@@ -41,8 +41,9 @@ namespace ADLXWrapper
             {
                 var list = ADLX.fanTuningStateListP_Ptr_value(listPtr).DisposeInterfaceWith(Disposable);
                 FanTuningStates = new FanTuningStates(list, NativeInterface, _ext).DisposeWith(Disposable);
-                ADLX.delete_fanTuningStateListP_Ptr(listPtr);
             }
+
+            ADLX.delete_fanTuningStateListP_Ptr(listPtr);
         }
 
         public bool SupportsTargetFanSpeed { get; }
