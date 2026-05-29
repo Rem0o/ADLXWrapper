@@ -1067,6 +1067,27 @@ static IADLXGPUMetrics2* metrics2P_Ptr_value(IADLXGPUMetrics2* *obj) {
 }
 
 
+static IADLXGPUMetrics3* *new_metrics3P_Ptr(void) { 
+  return new IADLXGPUMetrics3*(); 
+}
+
+static IADLXGPUMetrics3* *copy_metrics3P_Ptr(IADLXGPUMetrics3* value) { 
+  return new IADLXGPUMetrics3*(value); 
+}
+
+static void delete_metrics3P_Ptr(IADLXGPUMetrics3* *obj) { 
+  delete obj; 
+}
+
+static void metrics3P_Ptr_assign(IADLXGPUMetrics3* *obj, IADLXGPUMetrics3* value) {
+  *obj = value;
+}
+
+static IADLXGPUMetrics3* metrics3P_Ptr_value(IADLXGPUMetrics3* *obj) {
+  return *obj;
+}
+
+
 static IADLXGPUMetricsSupport* *new_metricsSupportP_Ptr(void) { 
   return new IADLXGPUMetricsSupport*(); 
 }
@@ -1172,6 +1193,48 @@ static IADLXGPUMetricsList* gpuMetricsListP_Ptr_value(IADLXGPUMetricsList* *obj)
 }
 
 
+static IADLXAllMetricsList* *new_allMetricsListP_Ptr(void) { 
+  return new IADLXAllMetricsList*(); 
+}
+
+static IADLXAllMetricsList* *copy_allMetricsListP_Ptr(IADLXAllMetricsList* value) { 
+  return new IADLXAllMetricsList*(value); 
+}
+
+static void delete_allMetricsListP_Ptr(IADLXAllMetricsList* *obj) { 
+  delete obj; 
+}
+
+static void allMetricsListP_Ptr_assign(IADLXAllMetricsList* *obj, IADLXAllMetricsList* value) {
+  *obj = value;
+}
+
+static IADLXAllMetricsList* allMetricsListP_Ptr_value(IADLXAllMetricsList* *obj) {
+  return *obj;
+}
+
+
+static IADLXAllMetrics* *new_allMetricsP_Ptr(void) { 
+  return new IADLXAllMetrics*(); 
+}
+
+static IADLXAllMetrics* *copy_allMetricsP_Ptr(IADLXAllMetrics* value) { 
+  return new IADLXAllMetrics*(value); 
+}
+
+static void delete_allMetricsP_Ptr(IADLXAllMetrics* *obj) { 
+  delete obj; 
+}
+
+static void allMetricsP_Ptr_assign(IADLXAllMetrics* *obj, IADLXAllMetrics* value) {
+  *obj = value;
+}
+
+static IADLXAllMetrics* allMetricsP_Ptr_value(IADLXAllMetrics* *obj) {
+  return *obj;
+}
+
+
 void** CastManualFanTuningVoidPtr(IADLXManualFanTuning** x) {
    return (void**) x;
 }
@@ -1188,6 +1251,11 @@ void** CastGPUMetricsSupport1VoidPtr(IADLXGPUMetricsSupport1** x) {
 
 
 void** CastGPUMetrics1VoidPtr(IADLXGPUMetrics1** x) {
+   return (void**) x;
+}
+
+
+void** CastGPUMetrics3VoidPtr(IADLXGPUMetrics3** x) {
    return (void**) x;
 }
 
@@ -2092,10 +2160,10 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLX_CustomResolution_ref
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLX_CustomResolution_presentation_set___(void * jarg1, int jarg2) {
   ADLX_CustomResolution *arg1 = (ADLX_CustomResolution *) 0 ;
-  ADLX_DISPLAY_SCAN_TYPE arg2 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE arg2 ;
   
   arg1 = (ADLX_CustomResolution *)jarg1; 
-  arg2 = (ADLX_DISPLAY_SCAN_TYPE)jarg2; 
+  arg2 = (adlx::ADLX_DISPLAY_SCAN_TYPE)jarg2; 
   if (arg1) (arg1)->presentation = arg2;
 }
 
@@ -2103,10 +2171,10 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLX_CustomResolution_pr
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLX_CustomResolution_presentation_get___(void * jarg1) {
   int jresult ;
   ADLX_CustomResolution *arg1 = (ADLX_CustomResolution *) 0 ;
-  ADLX_DISPLAY_SCAN_TYPE result;
+  adlx::ADLX_DISPLAY_SCAN_TYPE result;
   
   arg1 = (ADLX_CustomResolution *)jarg1; 
-  result = (ADLX_DISPLAY_SCAN_TYPE) ((arg1)->presentation);
+  result = (adlx::ADLX_DISPLAY_SCAN_TYPE) ((arg1)->presentation);
   jresult = (int)result; 
   return jresult;
 }
@@ -2114,10 +2182,10 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLX_CustomResolution_pre
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLX_CustomResolution_timingStandard_set___(void * jarg1, int jarg2) {
   ADLX_CustomResolution *arg1 = (ADLX_CustomResolution *) 0 ;
-  ADLX_TIMING_STANDARD arg2 ;
+  adlx::ADLX_TIMING_STANDARD arg2 ;
   
   arg1 = (ADLX_CustomResolution *)jarg1; 
-  arg2 = (ADLX_TIMING_STANDARD)jarg2; 
+  arg2 = (adlx::ADLX_TIMING_STANDARD)jarg2; 
   if (arg1) (arg1)->timingStandard = arg2;
 }
 
@@ -2125,10 +2193,10 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLX_CustomResolution_ti
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLX_CustomResolution_timingStandard_get___(void * jarg1) {
   int jresult ;
   ADLX_CustomResolution *arg1 = (ADLX_CustomResolution *) 0 ;
-  ADLX_TIMING_STANDARD result;
+  adlx::ADLX_TIMING_STANDARD result;
   
   arg1 = (ADLX_CustomResolution *)jarg1; 
-  result = (ADLX_TIMING_STANDARD) ((arg1)->timingStandard);
+  result = (adlx::ADLX_TIMING_STANDARD) ((arg1)->timingStandard);
   jresult = (int)result; 
   return jresult;
 }
@@ -2627,11 +2695,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXDisplay_Manufacturer
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXDisplay_DisplayType___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXDisplay *arg1 = (adlx::IADLXDisplay *) 0 ;
-  ADLX_DISPLAY_TYPE *arg2 = (ADLX_DISPLAY_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_TYPE *arg2 = (adlx::ADLX_DISPLAY_TYPE *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXDisplay *)jarg1; 
-  arg2 = (ADLX_DISPLAY_TYPE *)jarg2; 
+  arg2 = (adlx::ADLX_DISPLAY_TYPE *)jarg2; 
   result = (ADLX_RESULT)((adlx::IADLXDisplay const *)arg1)->DisplayType(arg2);
   jresult = (int)result; 
   return jresult;
@@ -2641,11 +2709,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXDisplay_DisplayType_
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXDisplay_ConnectorType___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXDisplay *arg1 = (adlx::IADLXDisplay *) 0 ;
-  ADLX_DISPLAY_CONNECTOR_TYPE *arg2 = (ADLX_DISPLAY_CONNECTOR_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE *arg2 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXDisplay *)jarg1; 
-  arg2 = (ADLX_DISPLAY_CONNECTOR_TYPE *)jarg2; 
+  arg2 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *)jarg2; 
   result = (ADLX_RESULT)((adlx::IADLXDisplay const *)arg1)->ConnectorType(arg2);
   jresult = (int)result; 
   return jresult;
@@ -2727,11 +2795,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXDisplay_PixelClock__
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXDisplay_ScanType___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXDisplay *arg1 = (adlx::IADLXDisplay *) 0 ;
-  ADLX_DISPLAY_SCAN_TYPE *arg2 = (ADLX_DISPLAY_SCAN_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE *arg2 = (adlx::ADLX_DISPLAY_SCAN_TYPE *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXDisplay *)jarg1; 
-  arg2 = (ADLX_DISPLAY_SCAN_TYPE *)jarg2; 
+  arg2 = (adlx::ADLX_DISPLAY_SCAN_TYPE *)jarg2; 
   result = (ADLX_RESULT)((adlx::IADLXDisplay const *)arg1)->ScanType(arg2);
   jresult = (int)result; 
   return jresult;
@@ -3832,11 +3900,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPU_VendorId___(void
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPU_ASICFamilyType___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXGPU *arg1 = (adlx::IADLXGPU *) 0 ;
-  ADLX_ASIC_FAMILY_TYPE *arg2 = (ADLX_ASIC_FAMILY_TYPE *) 0 ;
+  adlx::ADLX_ASIC_FAMILY_TYPE *arg2 = (adlx::ADLX_ASIC_FAMILY_TYPE *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXGPU *)jarg1; 
-  arg2 = (ADLX_ASIC_FAMILY_TYPE *)jarg2; 
+  arg2 = (adlx::ADLX_ASIC_FAMILY_TYPE *)jarg2; 
   result = (ADLX_RESULT)((adlx::IADLXGPU const *)arg1)->ASICFamilyType(arg2);
   jresult = (int)result; 
   return jresult;
@@ -3846,11 +3914,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPU_ASICFamilyType__
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPU_Type___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXGPU *arg1 = (adlx::IADLXGPU *) 0 ;
-  ADLX_GPU_TYPE *arg2 = (ADLX_GPU_TYPE *) 0 ;
+  adlx::ADLX_GPU_TYPE *arg2 = (adlx::ADLX_GPU_TYPE *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXGPU *)jarg1; 
-  arg2 = (ADLX_GPU_TYPE *)jarg2; 
+  arg2 = (adlx::ADLX_GPU_TYPE *)jarg2; 
   result = (ADLX_RESULT)((adlx::IADLXGPU const *)arg1)->Type(arg2);
   jresult = (int)result; 
   return jresult;
@@ -4180,11 +4248,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_IADLXGPUsChangedH
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXSystem_HybridGraphicsType___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXSystem *arg1 = (adlx::IADLXSystem *) 0 ;
-  ADLX_HG_TYPE *arg2 = (ADLX_HG_TYPE *) 0 ;
+  adlx::ADLX_HG_TYPE *arg2 = (adlx::ADLX_HG_TYPE *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXSystem *)jarg1; 
-  arg2 = (ADLX_HG_TYPE *)jarg2; 
+  arg2 = (adlx::ADLX_HG_TYPE *)jarg2; 
   result = (ADLX_RESULT)(arg1)->HybridGraphicsType(arg2);
   jresult = (int)result; 
   return jresult;
@@ -4266,15 +4334,15 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXSystem_GetGPUsChange
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXSystem_EnableLog___(void * jarg1, int jarg2, int jarg3, void * jarg4, void * jarg5) {
   int jresult ;
   adlx::IADLXSystem *arg1 = (adlx::IADLXSystem *) 0 ;
-  ADLX_LOG_DESTINATION arg2 ;
-  ADLX_LOG_SEVERITY arg3 ;
+  adlx::ADLX_LOG_DESTINATION arg2 ;
+  adlx::ADLX_LOG_SEVERITY arg3 ;
   adlx::IADLXLog *arg4 = (adlx::IADLXLog *) 0 ;
   wchar_t *arg5 = (wchar_t *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXSystem *)jarg1; 
-  arg2 = (ADLX_LOG_DESTINATION)jarg2; 
-  arg3 = (ADLX_LOG_SEVERITY)jarg3; 
+  arg2 = (adlx::ADLX_LOG_DESTINATION)jarg2; 
+  arg3 = (adlx::ADLX_LOG_SEVERITY)jarg3; 
   arg4 = (adlx::IADLXLog *)jarg4; 
   arg5 = (wchar_t *)jarg5; 
   result = (ADLX_RESULT)(arg1)->EnableLog(arg2,arg3,arg4,(wchar_t const *)arg5);
@@ -4648,11 +4716,11 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXMemoryTimingDescr
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXMemoryTimingDescription_GetDescription___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXMemoryTimingDescription *arg1 = (adlx::IADLXMemoryTimingDescription *) 0 ;
-  ADLX_MEMORYTIMING_DESCRIPTION *arg2 = (ADLX_MEMORYTIMING_DESCRIPTION *) 0 ;
+  adlx::ADLX_MEMORYTIMING_DESCRIPTION *arg2 = (adlx::ADLX_MEMORYTIMING_DESCRIPTION *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXMemoryTimingDescription *)jarg1; 
-  arg2 = (ADLX_MEMORYTIMING_DESCRIPTION *)jarg2; 
+  arg2 = (adlx::ADLX_MEMORYTIMING_DESCRIPTION *)jarg2; 
   result = (ADLX_RESULT)(arg1)->GetDescription(arg2);
   jresult = (int)result; 
   return jresult;
@@ -6230,11 +6298,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_Ge
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_GetMemoryTimingDescription___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXManualVRAMTuning1 *arg1 = (adlx::IADLXManualVRAMTuning1 *) 0 ;
-  ADLX_MEMORYTIMING_DESCRIPTION *arg2 = (ADLX_MEMORYTIMING_DESCRIPTION *) 0 ;
+  adlx::ADLX_MEMORYTIMING_DESCRIPTION *arg2 = (adlx::ADLX_MEMORYTIMING_DESCRIPTION *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXManualVRAMTuning1 *)jarg1; 
-  arg2 = (ADLX_MEMORYTIMING_DESCRIPTION *)jarg2; 
+  arg2 = (adlx::ADLX_MEMORYTIMING_DESCRIPTION *)jarg2; 
   result = (ADLX_RESULT)(arg1)->GetMemoryTimingDescription(arg2);
   jresult = (int)result; 
   return jresult;
@@ -6244,11 +6312,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_Ge
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning1_SetMemoryTimingDescription___(void * jarg1, int jarg2) {
   int jresult ;
   adlx::IADLXManualVRAMTuning1 *arg1 = (adlx::IADLXManualVRAMTuning1 *) 0 ;
-  ADLX_MEMORYTIMING_DESCRIPTION arg2 ;
+  adlx::ADLX_MEMORYTIMING_DESCRIPTION arg2 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXManualVRAMTuning1 *)jarg1; 
-  arg2 = (ADLX_MEMORYTIMING_DESCRIPTION)jarg2; 
+  arg2 = (adlx::ADLX_MEMORYTIMING_DESCRIPTION)jarg2; 
   result = (ADLX_RESULT)(arg1)->SetMemoryTimingDescription(arg2);
   jresult = (int)result; 
   return jresult;
@@ -6378,11 +6446,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_Ge
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_GetMemoryTimingDescription___(void * jarg1, void * jarg2) {
   int jresult ;
   adlx::IADLXManualVRAMTuning2 *arg1 = (adlx::IADLXManualVRAMTuning2 *) 0 ;
-  ADLX_MEMORYTIMING_DESCRIPTION *arg2 = (ADLX_MEMORYTIMING_DESCRIPTION *) 0 ;
+  adlx::ADLX_MEMORYTIMING_DESCRIPTION *arg2 = (adlx::ADLX_MEMORYTIMING_DESCRIPTION *) 0 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXManualVRAMTuning2 *)jarg1; 
-  arg2 = (ADLX_MEMORYTIMING_DESCRIPTION *)jarg2; 
+  arg2 = (adlx::ADLX_MEMORYTIMING_DESCRIPTION *)jarg2; 
   result = (ADLX_RESULT)(arg1)->GetMemoryTimingDescription(arg2);
   jresult = (int)result; 
   return jresult;
@@ -6392,11 +6460,11 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_Ge
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXManualVRAMTuning2_SetMemoryTimingDescription___(void * jarg1, int jarg2) {
   int jresult ;
   adlx::IADLXManualVRAMTuning2 *arg1 = (adlx::IADLXManualVRAMTuning2 *) 0 ;
-  ADLX_MEMORYTIMING_DESCRIPTION arg2 ;
+  adlx::ADLX_MEMORYTIMING_DESCRIPTION arg2 ;
   ADLX_RESULT result;
   
   arg1 = (adlx::IADLXManualVRAMTuning2 *)jarg1; 
-  arg2 = (ADLX_MEMORYTIMING_DESCRIPTION)jarg2; 
+  arg2 = (adlx::ADLX_MEMORYTIMING_DESCRIPTION)jarg2; 
   result = (ADLX_RESULT)(arg1)->SetMemoryTimingDescription(arg2);
   jresult = (int)result; 
   return jresult;
@@ -8407,6 +8475,86 @@ SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetrics2_
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport3_IID___() {
+  void * jresult ;
+  wchar_t *result = 0 ;
+  
+  result = (wchar_t *)adlx::IADLXGPUMetricsSupport3::IID();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport3_IsSupportedGPUFanDuty___(void * jarg1, unsigned int * jarg2) {
+  int jresult ;
+  adlx::IADLXGPUMetricsSupport3 *arg1 = (adlx::IADLXGPUMetricsSupport3 *) 0 ;
+  adlx_bool *arg2 = (adlx_bool *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (adlx::IADLXGPUMetricsSupport3 *)jarg1; 
+  arg2 = (adlx_bool *)jarg2; 
+  result = (ADLX_RESULT)(arg1)->IsSupportedGPUFanDuty(arg2);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport3_GetGPUFanDutyRange___(void * jarg1, int * jarg2, int * jarg3) {
+  int jresult ;
+  adlx::IADLXGPUMetricsSupport3 *arg1 = (adlx::IADLXGPUMetricsSupport3 *) 0 ;
+  adlx_int *arg2 = (adlx_int *) 0 ;
+  adlx_int *arg3 = (adlx_int *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (adlx::IADLXGPUMetricsSupport3 *)jarg1; 
+  arg2 = (adlx_int *)jarg2; 
+  arg3 = (adlx_int *)jarg3; 
+  result = (ADLX_RESULT)(arg1)->GetGPUFanDutyRange(arg2,arg3);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetricsSupport3___(void * jarg1) {
+  adlx::IADLXGPUMetricsSupport3 *arg1 = (adlx::IADLXGPUMetricsSupport3 *) 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetricsSupport3 *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPUMetrics3_IID___() {
+  void * jresult ;
+  wchar_t *result = 0 ;
+  
+  result = (wchar_t *)adlx::IADLXGPUMetrics3::IID();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPUMetrics3_GPUFanDuty___(void * jarg1, int * jarg2) {
+  int jresult ;
+  adlx::IADLXGPUMetrics3 *arg1 = (adlx::IADLXGPUMetrics3 *) 0 ;
+  adlx_int *arg2 = (adlx_int *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (adlx::IADLXGPUMetrics3 *)jarg1; 
+  arg2 = (adlx_int *)jarg2; 
+  result = (ADLX_RESULT)(arg1)->GPUFanDuty(arg2);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_IADLXGPUMetrics3___(void * jarg1) {
+  adlx::IADLXGPUMetrics3 *arg1 = (adlx::IADLXGPUMetrics3 *) 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetrics3 *)jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_ADLXHelper___() {
   void * jresult ;
   ADLXHelper *result = 0 ;
@@ -8621,6 +8769,24 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics
 }
 
 
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics3___(void * jarg1, void * jarg2, void * jarg3,  GPUMetricsStruct3*  jarg4) {
+  int jresult ;
+  ADLXExt *arg1 = (ADLXExt *) 0 ;
+  adlx::IADLXPerformanceMonitoringServices *arg2 = (adlx::IADLXPerformanceMonitoringServices *) 0 ;
+  adlx::IADLXGPU *arg3 = (adlx::IADLXGPU *) 0 ;
+  GPUMetricsStruct3 *arg4 = (GPUMetricsStruct3 *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (ADLXExt *)jarg1; 
+  arg2 = (adlx::IADLXPerformanceMonitoringServices *)jarg2; 
+  arg3 = (adlx::IADLXGPU *)jarg3; 
+  arg4 = jarg4; 
+  result = (ADLX_RESULT)(arg1)->GetCurrentMetrics3(arg2,arg3,arg4);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetricsStructFromTracking___(void * jarg1, void * jarg2, void * jarg3,  GPUMetricsStruct*  jarg4) {
   int jresult ;
   ADLXExt *arg1 = (ADLXExt *) 0 ;
@@ -8652,6 +8818,24 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics
   arg3 = (adlx::IADLXGPU *)jarg3; 
   arg4 = jarg4; 
   result = (ADLX_RESULT)(arg1)->GetCurrentMetrics1StructFromTracking(arg2,arg3,arg4);
+  jresult = (int)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_ADLXExt_GetCurrentMetrics3StructFromTracking___(void * jarg1, void * jarg2, void * jarg3,  GPUMetricsStruct3*  jarg4) {
+  int jresult ;
+  ADLXExt *arg1 = (ADLXExt *) 0 ;
+  adlx::IADLXPerformanceMonitoringServices *arg2 = (adlx::IADLXPerformanceMonitoringServices *) 0 ;
+  adlx::IADLXGPU *arg3 = (adlx::IADLXGPU *) 0 ;
+  GPUMetricsStruct3 *arg4 = (GPUMetricsStruct3 *) 0 ;
+  ADLX_RESULT result;
+  
+  arg1 = (ADLXExt *)jarg1; 
+  arg2 = (adlx::IADLXPerformanceMonitoringServices *)jarg2; 
+  arg3 = (adlx::IADLXGPU *)jarg3; 
+  arg4 = jarg4; 
+  result = (ADLX_RESULT)(arg1)->GetCurrentMetrics3StructFromTracking(arg2,arg3,arg4);
   jresult = (int)result; 
   return jresult;
 }
@@ -9021,9 +9205,9 @@ SWIGEXPORT unsigned int SWIGSTDCALL CSharp_ADLXWrapperfBindings_uintP_value___(v
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_displayTypeP___() {
   void * jresult ;
-  ADLX_DISPLAY_TYPE *result = 0 ;
+  adlx::ADLX_DISPLAY_TYPE *result = 0 ;
   
-  result = (ADLX_DISPLAY_TYPE *)new_displayTypeP();
+  result = (adlx::ADLX_DISPLAY_TYPE *)new_displayTypeP();
   jresult = (void *)result; 
   return jresult;
 }
@@ -9031,41 +9215,41 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_displayTypeP___() 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_displayTypeP___(int jarg1) {
   void * jresult ;
-  ADLX_DISPLAY_TYPE arg1 ;
-  ADLX_DISPLAY_TYPE *result = 0 ;
+  adlx::ADLX_DISPLAY_TYPE arg1 ;
+  adlx::ADLX_DISPLAY_TYPE *result = 0 ;
   
-  arg1 = (ADLX_DISPLAY_TYPE)jarg1; 
-  result = (ADLX_DISPLAY_TYPE *)copy_displayTypeP(arg1);
+  arg1 = (adlx::ADLX_DISPLAY_TYPE)jarg1; 
+  result = (adlx::ADLX_DISPLAY_TYPE *)copy_displayTypeP(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_displayTypeP___(void * jarg1) {
-  ADLX_DISPLAY_TYPE *arg1 = (ADLX_DISPLAY_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_TYPE *arg1 = (adlx::ADLX_DISPLAY_TYPE *) 0 ;
   
-  arg1 = (ADLX_DISPLAY_TYPE *)jarg1; 
+  arg1 = (adlx::ADLX_DISPLAY_TYPE *)jarg1; 
   delete_displayTypeP(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_displayTypeP_assign___(void * jarg1, int jarg2) {
-  ADLX_DISPLAY_TYPE *arg1 = (ADLX_DISPLAY_TYPE *) 0 ;
-  ADLX_DISPLAY_TYPE arg2 ;
+  adlx::ADLX_DISPLAY_TYPE *arg1 = (adlx::ADLX_DISPLAY_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_TYPE arg2 ;
   
-  arg1 = (ADLX_DISPLAY_TYPE *)jarg1; 
-  arg2 = (ADLX_DISPLAY_TYPE)jarg2; 
+  arg1 = (adlx::ADLX_DISPLAY_TYPE *)jarg1; 
+  arg2 = (adlx::ADLX_DISPLAY_TYPE)jarg2; 
   displayTypeP_assign(arg1,arg2);
 }
 
 
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_displayTypeP_value___(void * jarg1) {
   int jresult ;
-  ADLX_DISPLAY_TYPE *arg1 = (ADLX_DISPLAY_TYPE *) 0 ;
-  ADLX_DISPLAY_TYPE result;
+  adlx::ADLX_DISPLAY_TYPE *arg1 = (adlx::ADLX_DISPLAY_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_TYPE result;
   
-  arg1 = (ADLX_DISPLAY_TYPE *)jarg1; 
-  result = (ADLX_DISPLAY_TYPE)displayTypeP_value(arg1);
+  arg1 = (adlx::ADLX_DISPLAY_TYPE *)jarg1; 
+  result = (adlx::ADLX_DISPLAY_TYPE)displayTypeP_value(arg1);
   jresult = (int)result; 
   return jresult;
 }
@@ -9073,9 +9257,9 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_displayTypeP_value___(voi
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_disConnectTypeP___() {
   void * jresult ;
-  ADLX_DISPLAY_CONNECTOR_TYPE *result = 0 ;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE *result = 0 ;
   
-  result = (ADLX_DISPLAY_CONNECTOR_TYPE *)new_disConnectTypeP();
+  result = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *)new_disConnectTypeP();
   jresult = (void *)result; 
   return jresult;
 }
@@ -9083,41 +9267,41 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_disConnectTypeP___
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_disConnectTypeP___(int jarg1) {
   void * jresult ;
-  ADLX_DISPLAY_CONNECTOR_TYPE arg1 ;
-  ADLX_DISPLAY_CONNECTOR_TYPE *result = 0 ;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE arg1 ;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE *result = 0 ;
   
-  arg1 = (ADLX_DISPLAY_CONNECTOR_TYPE)jarg1; 
-  result = (ADLX_DISPLAY_CONNECTOR_TYPE *)copy_disConnectTypeP(arg1);
+  arg1 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE)jarg1; 
+  result = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *)copy_disConnectTypeP(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_disConnectTypeP___(void * jarg1) {
-  ADLX_DISPLAY_CONNECTOR_TYPE *arg1 = (ADLX_DISPLAY_CONNECTOR_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE *arg1 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *) 0 ;
   
-  arg1 = (ADLX_DISPLAY_CONNECTOR_TYPE *)jarg1; 
+  arg1 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *)jarg1; 
   delete_disConnectTypeP(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_disConnectTypeP_assign___(void * jarg1, int jarg2) {
-  ADLX_DISPLAY_CONNECTOR_TYPE *arg1 = (ADLX_DISPLAY_CONNECTOR_TYPE *) 0 ;
-  ADLX_DISPLAY_CONNECTOR_TYPE arg2 ;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE *arg1 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE arg2 ;
   
-  arg1 = (ADLX_DISPLAY_CONNECTOR_TYPE *)jarg1; 
-  arg2 = (ADLX_DISPLAY_CONNECTOR_TYPE)jarg2; 
+  arg1 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *)jarg1; 
+  arg2 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE)jarg2; 
   disConnectTypeP_assign(arg1,arg2);
 }
 
 
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_disConnectTypeP_value___(void * jarg1) {
   int jresult ;
-  ADLX_DISPLAY_CONNECTOR_TYPE *arg1 = (ADLX_DISPLAY_CONNECTOR_TYPE *) 0 ;
-  ADLX_DISPLAY_CONNECTOR_TYPE result;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE *arg1 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_CONNECTOR_TYPE result;
   
-  arg1 = (ADLX_DISPLAY_CONNECTOR_TYPE *)jarg1; 
-  result = (ADLX_DISPLAY_CONNECTOR_TYPE)disConnectTypeP_value(arg1);
+  arg1 = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE *)jarg1; 
+  result = (adlx::ADLX_DISPLAY_CONNECTOR_TYPE)disConnectTypeP_value(arg1);
   jresult = (int)result; 
   return jresult;
 }
@@ -9125,9 +9309,9 @@ SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_disConnectTypeP_value___(
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_disScanTypeP___() {
   void * jresult ;
-  ADLX_DISPLAY_SCAN_TYPE *result = 0 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE *result = 0 ;
   
-  result = (ADLX_DISPLAY_SCAN_TYPE *)new_disScanTypeP();
+  result = (adlx::ADLX_DISPLAY_SCAN_TYPE *)new_disScanTypeP();
   jresult = (void *)result; 
   return jresult;
 }
@@ -9135,41 +9319,41 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_disScanTypeP___() 
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_disScanTypeP___(int jarg1) {
   void * jresult ;
-  ADLX_DISPLAY_SCAN_TYPE arg1 ;
-  ADLX_DISPLAY_SCAN_TYPE *result = 0 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE arg1 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE *result = 0 ;
   
-  arg1 = (ADLX_DISPLAY_SCAN_TYPE)jarg1; 
-  result = (ADLX_DISPLAY_SCAN_TYPE *)copy_disScanTypeP(arg1);
+  arg1 = (adlx::ADLX_DISPLAY_SCAN_TYPE)jarg1; 
+  result = (adlx::ADLX_DISPLAY_SCAN_TYPE *)copy_disScanTypeP(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_disScanTypeP___(void * jarg1) {
-  ADLX_DISPLAY_SCAN_TYPE *arg1 = (ADLX_DISPLAY_SCAN_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE *arg1 = (adlx::ADLX_DISPLAY_SCAN_TYPE *) 0 ;
   
-  arg1 = (ADLX_DISPLAY_SCAN_TYPE *)jarg1; 
+  arg1 = (adlx::ADLX_DISPLAY_SCAN_TYPE *)jarg1; 
   delete_disScanTypeP(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_disScanTypeP_assign___(void * jarg1, int jarg2) {
-  ADLX_DISPLAY_SCAN_TYPE *arg1 = (ADLX_DISPLAY_SCAN_TYPE *) 0 ;
-  ADLX_DISPLAY_SCAN_TYPE arg2 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE *arg1 = (adlx::ADLX_DISPLAY_SCAN_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE arg2 ;
   
-  arg1 = (ADLX_DISPLAY_SCAN_TYPE *)jarg1; 
-  arg2 = (ADLX_DISPLAY_SCAN_TYPE)jarg2; 
+  arg1 = (adlx::ADLX_DISPLAY_SCAN_TYPE *)jarg1; 
+  arg2 = (adlx::ADLX_DISPLAY_SCAN_TYPE)jarg2; 
   disScanTypeP_assign(arg1,arg2);
 }
 
 
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_disScanTypeP_value___(void * jarg1) {
   int jresult ;
-  ADLX_DISPLAY_SCAN_TYPE *arg1 = (ADLX_DISPLAY_SCAN_TYPE *) 0 ;
-  ADLX_DISPLAY_SCAN_TYPE result;
+  adlx::ADLX_DISPLAY_SCAN_TYPE *arg1 = (adlx::ADLX_DISPLAY_SCAN_TYPE *) 0 ;
+  adlx::ADLX_DISPLAY_SCAN_TYPE result;
   
-  arg1 = (ADLX_DISPLAY_SCAN_TYPE *)jarg1; 
-  result = (ADLX_DISPLAY_SCAN_TYPE)disScanTypeP_value(arg1);
+  arg1 = (adlx::ADLX_DISPLAY_SCAN_TYPE *)jarg1; 
+  result = (adlx::ADLX_DISPLAY_SCAN_TYPE)disScanTypeP_value(arg1);
   jresult = (int)result; 
   return jresult;
 }
@@ -9293,9 +9477,9 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_adlx_intRangeP_value__
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_gpuTypeP___() {
   void * jresult ;
-  ADLX_GPU_TYPE *result = 0 ;
+  adlx::ADLX_GPU_TYPE *result = 0 ;
   
-  result = (ADLX_GPU_TYPE *)new_gpuTypeP();
+  result = (adlx::ADLX_GPU_TYPE *)new_gpuTypeP();
   jresult = (void *)result; 
   return jresult;
 }
@@ -9303,41 +9487,41 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_gpuTypeP___() {
 
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_gpuTypeP___(int jarg1) {
   void * jresult ;
-  ADLX_GPU_TYPE arg1 ;
-  ADLX_GPU_TYPE *result = 0 ;
+  adlx::ADLX_GPU_TYPE arg1 ;
+  adlx::ADLX_GPU_TYPE *result = 0 ;
   
-  arg1 = (ADLX_GPU_TYPE)jarg1; 
-  result = (ADLX_GPU_TYPE *)copy_gpuTypeP(arg1);
+  arg1 = (adlx::ADLX_GPU_TYPE)jarg1; 
+  result = (adlx::ADLX_GPU_TYPE *)copy_gpuTypeP(arg1);
   jresult = (void *)result; 
   return jresult;
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_gpuTypeP___(void * jarg1) {
-  ADLX_GPU_TYPE *arg1 = (ADLX_GPU_TYPE *) 0 ;
+  adlx::ADLX_GPU_TYPE *arg1 = (adlx::ADLX_GPU_TYPE *) 0 ;
   
-  arg1 = (ADLX_GPU_TYPE *)jarg1; 
+  arg1 = (adlx::ADLX_GPU_TYPE *)jarg1; 
   delete_gpuTypeP(arg1);
 }
 
 
 SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_gpuTypeP_assign___(void * jarg1, int jarg2) {
-  ADLX_GPU_TYPE *arg1 = (ADLX_GPU_TYPE *) 0 ;
-  ADLX_GPU_TYPE arg2 ;
+  adlx::ADLX_GPU_TYPE *arg1 = (adlx::ADLX_GPU_TYPE *) 0 ;
+  adlx::ADLX_GPU_TYPE arg2 ;
   
-  arg1 = (ADLX_GPU_TYPE *)jarg1; 
-  arg2 = (ADLX_GPU_TYPE)jarg2; 
+  arg1 = (adlx::ADLX_GPU_TYPE *)jarg1; 
+  arg2 = (adlx::ADLX_GPU_TYPE)jarg2; 
   gpuTypeP_assign(arg1,arg2);
 }
 
 
 SWIGEXPORT int SWIGSTDCALL CSharp_ADLXWrapperfBindings_gpuTypeP_value___(void * jarg1) {
   int jresult ;
-  ADLX_GPU_TYPE *arg1 = (ADLX_GPU_TYPE *) 0 ;
-  ADLX_GPU_TYPE result;
+  adlx::ADLX_GPU_TYPE *arg1 = (adlx::ADLX_GPU_TYPE *) 0 ;
+  adlx::ADLX_GPU_TYPE result;
   
-  arg1 = (ADLX_GPU_TYPE *)jarg1; 
-  result = (ADLX_GPU_TYPE)gpuTypeP_value(arg1);
+  arg1 = (adlx::ADLX_GPU_TYPE *)jarg1; 
+  result = (adlx::ADLX_GPU_TYPE)gpuTypeP_value(arg1);
   jresult = (int)result; 
   return jresult;
 }
@@ -10227,6 +10411,58 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_metrics2P_Ptr_value___
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_metrics3P_Ptr___() {
+  void * jresult ;
+  adlx::IADLXGPUMetrics3 **result = 0 ;
+  
+  result = (adlx::IADLXGPUMetrics3 **)new_metrics3P_Ptr();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_metrics3P_Ptr___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXGPUMetrics3 *arg1 = (adlx::IADLXGPUMetrics3 *) 0 ;
+  adlx::IADLXGPUMetrics3 **result = 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetrics3 *)jarg1; 
+  result = (adlx::IADLXGPUMetrics3 **)copy_metrics3P_Ptr(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_metrics3P_Ptr___(void * jarg1) {
+  adlx::IADLXGPUMetrics3 **arg1 = (adlx::IADLXGPUMetrics3 **) 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetrics3 **)jarg1; 
+  delete_metrics3P_Ptr(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_metrics3P_Ptr_assign___(void * jarg1, void * jarg2) {
+  adlx::IADLXGPUMetrics3 **arg1 = (adlx::IADLXGPUMetrics3 **) 0 ;
+  adlx::IADLXGPUMetrics3 *arg2 = (adlx::IADLXGPUMetrics3 *) 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetrics3 **)jarg1; 
+  arg2 = (adlx::IADLXGPUMetrics3 *)jarg2; 
+  metrics3P_Ptr_assign(arg1,arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_metrics3P_Ptr_value___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXGPUMetrics3 **arg1 = (adlx::IADLXGPUMetrics3 **) 0 ;
+  adlx::IADLXGPUMetrics3 *result = 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetrics3 **)jarg1; 
+  result = (adlx::IADLXGPUMetrics3 *)metrics3P_Ptr_value(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_metricsSupportP_Ptr___() {
   void * jresult ;
   adlx::IADLXGPUMetricsSupport **result = 0 ;
@@ -10487,6 +10723,110 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_gpuMetricsListP_Ptr_va
 }
 
 
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_allMetricsListP_Ptr___() {
+  void * jresult ;
+  adlx::IADLXAllMetricsList **result = 0 ;
+  
+  result = (adlx::IADLXAllMetricsList **)new_allMetricsListP_Ptr();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_allMetricsListP_Ptr___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXAllMetricsList *arg1 = (adlx::IADLXAllMetricsList *) 0 ;
+  adlx::IADLXAllMetricsList **result = 0 ;
+  
+  arg1 = (adlx::IADLXAllMetricsList *)jarg1; 
+  result = (adlx::IADLXAllMetricsList **)copy_allMetricsListP_Ptr(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_allMetricsListP_Ptr___(void * jarg1) {
+  adlx::IADLXAllMetricsList **arg1 = (adlx::IADLXAllMetricsList **) 0 ;
+  
+  arg1 = (adlx::IADLXAllMetricsList **)jarg1; 
+  delete_allMetricsListP_Ptr(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_allMetricsListP_Ptr_assign___(void * jarg1, void * jarg2) {
+  adlx::IADLXAllMetricsList **arg1 = (adlx::IADLXAllMetricsList **) 0 ;
+  adlx::IADLXAllMetricsList *arg2 = (adlx::IADLXAllMetricsList *) 0 ;
+  
+  arg1 = (adlx::IADLXAllMetricsList **)jarg1; 
+  arg2 = (adlx::IADLXAllMetricsList *)jarg2; 
+  allMetricsListP_Ptr_assign(arg1,arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_allMetricsListP_Ptr_value___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXAllMetricsList **arg1 = (adlx::IADLXAllMetricsList **) 0 ;
+  adlx::IADLXAllMetricsList *result = 0 ;
+  
+  arg1 = (adlx::IADLXAllMetricsList **)jarg1; 
+  result = (adlx::IADLXAllMetricsList *)allMetricsListP_Ptr_value(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_new_allMetricsP_Ptr___() {
+  void * jresult ;
+  adlx::IADLXAllMetrics **result = 0 ;
+  
+  result = (adlx::IADLXAllMetrics **)new_allMetricsP_Ptr();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_copy_allMetricsP_Ptr___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXAllMetrics *arg1 = (adlx::IADLXAllMetrics *) 0 ;
+  adlx::IADLXAllMetrics **result = 0 ;
+  
+  arg1 = (adlx::IADLXAllMetrics *)jarg1; 
+  result = (adlx::IADLXAllMetrics **)copy_allMetricsP_Ptr(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_delete_allMetricsP_Ptr___(void * jarg1) {
+  adlx::IADLXAllMetrics **arg1 = (adlx::IADLXAllMetrics **) 0 ;
+  
+  arg1 = (adlx::IADLXAllMetrics **)jarg1; 
+  delete_allMetricsP_Ptr(arg1);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_ADLXWrapperfBindings_allMetricsP_Ptr_assign___(void * jarg1, void * jarg2) {
+  adlx::IADLXAllMetrics **arg1 = (adlx::IADLXAllMetrics **) 0 ;
+  adlx::IADLXAllMetrics *arg2 = (adlx::IADLXAllMetrics *) 0 ;
+  
+  arg1 = (adlx::IADLXAllMetrics **)jarg1; 
+  arg2 = (adlx::IADLXAllMetrics *)jarg2; 
+  allMetricsP_Ptr_assign(arg1,arg2);
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_allMetricsP_Ptr_value___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXAllMetrics **arg1 = (adlx::IADLXAllMetrics **) 0 ;
+  adlx::IADLXAllMetrics *result = 0 ;
+  
+  arg1 = (adlx::IADLXAllMetrics **)jarg1; 
+  result = (adlx::IADLXAllMetrics *)allMetricsP_Ptr_value(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_CastManualFanTuningVoidPtr___(void * jarg1) {
   void * jresult ;
   adlx::IADLXManualFanTuning **arg1 = (adlx::IADLXManualFanTuning **) 0 ;
@@ -10530,6 +10870,18 @@ SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_CastGPUMetrics1VoidPtr
   
   arg1 = (adlx::IADLXGPUMetrics1 **)jarg1; 
   result = (void **)CastGPUMetrics1VoidPtr(arg1);
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_ADLXWrapperfBindings_CastGPUMetrics3VoidPtr___(void * jarg1) {
+  void * jresult ;
+  adlx::IADLXGPUMetrics3 **arg1 = (adlx::IADLXGPUMetrics3 **) 0 ;
+  void **result = 0 ;
+  
+  arg1 = (adlx::IADLXGPUMetrics3 **)jarg1; 
+  result = (void **)CastGPUMetrics3VoidPtr(arg1);
   jresult = (void *)result; 
   return jresult;
 }
@@ -10709,6 +11061,14 @@ SWIGEXPORT adlx::IADLXGPUMetricsSupport1 * SWIGSTDCALL CSharp_ADLXWrapperfBindin
 
 SWIGEXPORT adlx::IADLXGPUMetrics1 * SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPUMetrics2_SWIGUpcast___(adlx::IADLXGPUMetrics2 *jarg1) {
     return (adlx::IADLXGPUMetrics1 *)jarg1;
+}
+
+SWIGEXPORT adlx::IADLXGPUMetricsSupport2 * SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPUMetricsSupport3_SWIGUpcast___(adlx::IADLXGPUMetricsSupport3 *jarg1) {
+    return (adlx::IADLXGPUMetricsSupport2 *)jarg1;
+}
+
+SWIGEXPORT adlx::IADLXGPUMetrics2 * SWIGSTDCALL CSharp_ADLXWrapperfBindings_IADLXGPUMetrics3_SWIGUpcast___(adlx::IADLXGPUMetrics3 *jarg1) {
+    return (adlx::IADLXGPUMetrics2 *)jarg1;
 }
 
 #ifdef __cplusplus

@@ -11,12 +11,16 @@ namespace ADLXWrapper
         private readonly IADLXManualFanTuningStateList _list;
         private readonly IADLXManualFanTuning _manualFanTuning;
         private readonly ADLXExt _ext;
+        private readonly GPUTuningService _gpuTuningService;
+        private readonly GPU _gpu;
 
-        public FanTuningStates(IADLXManualFanTuningStateList list, IADLXManualFanTuning manualFanTuning, ADLXExt ext)
+        public FanTuningStates(IADLXManualFanTuningStateList list, IADLXManualFanTuning manualFanTuning, ADLXExt ext, GPUTuningService gpuTuningService, GPU gpu)
         {
             _list = list;
             _manualFanTuning = manualFanTuning;
             _ext = ext;
+            _gpuTuningService = gpuTuningService;
+            _gpu = gpu;
 
             var statePtr = ADLX.new_fanTuningStateP_Ptr();
             _states = Enumerable.Range((int)_list.Begin(), (int)(_list.End() - _list.Begin())).Select(i =>
@@ -69,13 +73,18 @@ namespace ADLXWrapper
             for (int i = 0; i < _states.Length; i++)
                 _states[i].SetFanSpeed(speedPercent).ThrowIfError("Set fan speed");
 
-            _manualFanTuning.SetFanTuningStates(_list)
-                .ThrowIfError($"Couldn't set fan speed with tuning states {speedPercent} %");
+            Extensions.ExecuteWithResetRetry(
+                () => _manualFanTuning.SetFanTuningStates(_list),
+                () => _gpuTuningService.ResetToFactory(_gpu),
+                $"Couldn't set fan speed with tuning states {speedPercent} %");
         }
 
         public void SetFanTuningStates2(int speedPercent)
         {
-            _ext.SetSpeed(_manualFanTuning, speedPercent, _list).ThrowIfError($"Couldn't set fan speed with tuning states {speedPercent} %");
+            Extensions.ExecuteWithResetRetry(
+                () => _ext.SetSpeed(_manualFanTuning, speedPercent, _list),
+                () => _gpuTuningService.ResetToFactory(_gpu),
+                $"Couldn't set fan speed with tuning states {speedPercent} %");
         }
 
         public void SetFanTuningStates(int[] speedPercent)
@@ -83,8 +92,10 @@ namespace ADLXWrapper
             for (int i = 0; i < _states.Length; i++)
                 _states[i].SetFanSpeed(speedPercent[i]).ThrowIfError("Set fan speed");
 
-            _manualFanTuning.SetFanTuningStates(_list)
-                .ThrowIfError($"Couldn't set fan speed with tuning states {speedPercent} %");
+            Extensions.ExecuteWithResetRetry(
+                () => _manualFanTuning.SetFanTuningStates(_list),
+                () => _gpuTuningService.ResetToFactory(_gpu),
+                $"Couldn't set fan speed with tuning states {speedPercent} %");
         }
 
         public void SetFanTuningStates((int temp, int speed)[] states)
@@ -96,7 +107,10 @@ namespace ADLXWrapper
                 state.SetFanSpeed(states[i].speed).ThrowIfError("Set fan speed");
             }
 
-            _manualFanTuning.SetFanTuningStates(_list).ThrowIfError($"Couldn't set fan speed with tuning states {states}");
+            Extensions.ExecuteWithResetRetry(
+                () => _manualFanTuning.SetFanTuningStates(_list),
+                () => _gpuTuningService.ResetToFactory(_gpu),
+                $"Couldn't set fan speed with tuning states {states}");
         }
 
         internal void Reset()

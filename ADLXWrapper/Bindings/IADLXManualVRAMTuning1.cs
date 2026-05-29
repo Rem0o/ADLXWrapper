@@ -63,8 +63,8 @@ public class IADLXManualVRAMTuning1 : IADLXInterface {
     return ret;
   }
 
-  public virtual ADLX_RESULT GetMemoryTimingDescription(SWIGTYPE_p_ADLX_MEMORYTIMING_DESCRIPTION description) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning1_GetMemoryTimingDescription(swigCPtr, SWIGTYPE_p_ADLX_MEMORYTIMING_DESCRIPTION.getCPtr(description));
+  public virtual ADLX_RESULT GetMemoryTimingDescription(SWIGTYPE_p_adlx__ADLX_MEMORYTIMING_DESCRIPTION description) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXManualVRAMTuning1_GetMemoryTimingDescription(swigCPtr, SWIGTYPE_p_adlx__ADLX_MEMORYTIMING_DESCRIPTION.getCPtr(description));
     return ret;
   }
 

@@ -10,15 +10,10 @@
 
 namespace ADLXWrapper.Bindings {
 
-public enum ADLX_PCI_BUS_TYPE {
-  UNDEFINED = 0,
-  PCI,
-  AGP,
-  PCIE,
-  PCIE_2_0,
-  PCIE_3_0,
-  PCIE_4_0,
-  PCIE_5_0
+public enum ADLX_AFMF_ALGORITHM {
+  AFMF_ALGORITHM_AUTO = 0,
+  AFMF_ALGORITHM_ENHANCED,
+  AFMF_ALGORITHM_STANDARD
 }
 
 }

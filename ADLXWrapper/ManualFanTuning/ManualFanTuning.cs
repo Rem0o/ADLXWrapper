@@ -6,6 +6,8 @@ namespace ADLXWrapper
     {
         private bool _resetZeroRPM = false;
         private readonly ADLXExt _ext;
+        private readonly GPUTuningService _gpuTuningService;
+        private readonly GPU _gpu;
 
         private static IADLXManualFanTuning QueryManualFanTuning(IADLXInterface @interface)
         {
@@ -16,9 +18,11 @@ namespace ADLXWrapper
             return fanTuning;
         }
 
-        public ManualFanTuning(IADLXInterface @interface, ADLXExt ext) : base(@interface, QueryManualFanTuning)
+        public ManualFanTuning(IADLXInterface @interface, ADLXExt ext, GPUTuningService gpuTuningService, GPU gpu) : base(@interface, QueryManualFanTuning)
         {
             _ext = ext;
+            _gpuTuningService = gpuTuningService;
+            _gpu = gpu;
 
             bool isSupported = default;
             SupportsTargetFanSpeed = NativeInterface.IsSupportedTargetFanSpeed(ref isSupported) == ADLX_RESULT.ADLX_OK && isSupported;
@@ -26,7 +30,7 @@ namespace ADLXWrapper
 
             if (SupportsTargetFanSpeed && SupportsMinimumFanSpeed)
             {
-                TargetFanSpeed = new TargetFanSpeed(NativeInterface);
+                TargetFanSpeed = new TargetFanSpeed(NativeInterface, _gpuTuningService, _gpu);
             }
 
             SupportsZeroRPM = NativeInterface.IsSupportedZeroRPM(ref isSupported) == ADLX_RESULT.ADLX_OK && isSupported;
@@ -40,7 +44,7 @@ namespace ADLXWrapper
             if (SupportsFanTuningStates)
             {
                 var list = ADLX.fanTuningStateListP_Ptr_value(listPtr).DisposeInterfaceWith(Disposable);
-                FanTuningStates = new FanTuningStates(list, NativeInterface, _ext).DisposeWith(Disposable);
+                FanTuningStates = new FanTuningStates(list, NativeInterface, _ext, _gpuTuningService, _gpu).DisposeWith(Disposable);
             }
 
             ADLX.delete_fanTuningStateListP_Ptr(listPtr);
@@ -56,7 +60,7 @@ namespace ADLXWrapper
 
         public void SetZeroRPM(bool enabled)
         {
-            NativeInterface.SetZeroRPMState(enabled).ThrowIfError("SetZeroRPMState");
+            Extensions.ExecuteWithResetRetry(() => NativeInterface.SetZeroRPMState(enabled), () => _gpuTuningService.ResetToFactory(_gpu), "SetZeroRPMState");
         }
 
         public bool GetZeroRPMState()

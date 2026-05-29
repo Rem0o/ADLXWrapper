@@ -75,6 +75,11 @@ public class ADLXExt : global::System.IDisposable {
     return ret;
   }
 
+  public ADLX_RESULT GetCurrentMetrics3(IADLXPerformanceMonitoringServices services, IADLXGPU gpu, ref GPUMetricsStruct3  metricsStruct3) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.ADLXExt_GetCurrentMetrics3(swigCPtr, IADLXPerformanceMonitoringServices.getCPtr(services), IADLXGPU.getCPtr(gpu), ref metricsStruct3 );
+    return ret;
+  }
+
   public ADLX_RESULT GetCurrentMetricsStructFromTracking(IADLXPerformanceMonitoringServices services, IADLXGPU gpu, ref GPUMetricsStruct  metricsStruct) {
     ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.ADLXExt_GetCurrentMetricsStructFromTracking(swigCPtr, IADLXPerformanceMonitoringServices.getCPtr(services), IADLXGPU.getCPtr(gpu), ref metricsStruct );
     return ret;
@@ -82,6 +87,11 @@ public class ADLXExt : global::System.IDisposable {
 
   public ADLX_RESULT GetCurrentMetrics1StructFromTracking(IADLXPerformanceMonitoringServices services, IADLXGPU gpu, ref GPUMetricsStruct1  metricsStruct) {
     ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.ADLXExt_GetCurrentMetrics1StructFromTracking(swigCPtr, IADLXPerformanceMonitoringServices.getCPtr(services), IADLXGPU.getCPtr(gpu), ref metricsStruct );
+    return ret;
+  }
+
+  public ADLX_RESULT GetCurrentMetrics3StructFromTracking(IADLXPerformanceMonitoringServices services, IADLXGPU gpu, ref GPUMetricsStruct3  metricsStruct) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.ADLXExt_GetCurrentMetrics3StructFromTracking(swigCPtr, IADLXPerformanceMonitoringServices.getCPtr(services), IADLXGPU.getCPtr(gpu), ref metricsStruct );
     return ret;
   }
 

@@ -176,78 +176,78 @@ public class ADLX {
     return ret;
   }
 
-  public static SWIGTYPE_p_ADLX_DISPLAY_TYPE new_displayTypeP() {
+  public static SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE new_displayTypeP() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_displayTypeP();
-    SWIGTYPE_p_ADLX_DISPLAY_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_DISPLAY_TYPE(cPtr, false);
+    SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE(cPtr, false);
     return ret;
   }
 
-  public static SWIGTYPE_p_ADLX_DISPLAY_TYPE copy_displayTypeP(ADLX_DISPLAY_TYPE value) {
+  public static SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE copy_displayTypeP(ADLX_DISPLAY_TYPE value) {
     global::System.IntPtr cPtr = ADLXPINVOKE.copy_displayTypeP((int)value);
-    SWIGTYPE_p_ADLX_DISPLAY_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_DISPLAY_TYPE(cPtr, false);
+    SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE(cPtr, false);
     return ret;
   }
 
-  public static void delete_displayTypeP(SWIGTYPE_p_ADLX_DISPLAY_TYPE obj) {
-    ADLXPINVOKE.delete_displayTypeP(SWIGTYPE_p_ADLX_DISPLAY_TYPE.getCPtr(obj));
+  public static void delete_displayTypeP(SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE obj) {
+    ADLXPINVOKE.delete_displayTypeP(SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE.getCPtr(obj));
   }
 
-  public static void displayTypeP_assign(SWIGTYPE_p_ADLX_DISPLAY_TYPE obj, ADLX_DISPLAY_TYPE value) {
-    ADLXPINVOKE.displayTypeP_assign(SWIGTYPE_p_ADLX_DISPLAY_TYPE.getCPtr(obj), (int)value);
+  public static void displayTypeP_assign(SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE obj, ADLX_DISPLAY_TYPE value) {
+    ADLXPINVOKE.displayTypeP_assign(SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE.getCPtr(obj), (int)value);
   }
 
-  public static ADLX_DISPLAY_TYPE displayTypeP_value(SWIGTYPE_p_ADLX_DISPLAY_TYPE obj) {
-    ADLX_DISPLAY_TYPE ret = (ADLX_DISPLAY_TYPE)ADLXPINVOKE.displayTypeP_value(SWIGTYPE_p_ADLX_DISPLAY_TYPE.getCPtr(obj));
+  public static ADLX_DISPLAY_TYPE displayTypeP_value(SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE obj) {
+    ADLX_DISPLAY_TYPE ret = (ADLX_DISPLAY_TYPE)ADLXPINVOKE.displayTypeP_value(SWIGTYPE_p_adlx__ADLX_DISPLAY_TYPE.getCPtr(obj));
     return ret;
   }
 
-  public static SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE new_disConnectTypeP() {
+  public static SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE new_disConnectTypeP() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_disConnectTypeP();
-    SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE(cPtr, false);
+    SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE(cPtr, false);
     return ret;
   }
 
-  public static SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE copy_disConnectTypeP(ADLX_DISPLAY_CONNECTOR_TYPE value) {
+  public static SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE copy_disConnectTypeP(ADLX_DISPLAY_CONNECTOR_TYPE value) {
     global::System.IntPtr cPtr = ADLXPINVOKE.copy_disConnectTypeP((int)value);
-    SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE(cPtr, false);
+    SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE(cPtr, false);
     return ret;
   }
 
-  public static void delete_disConnectTypeP(SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE obj) {
-    ADLXPINVOKE.delete_disConnectTypeP(SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE.getCPtr(obj));
+  public static void delete_disConnectTypeP(SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE obj) {
+    ADLXPINVOKE.delete_disConnectTypeP(SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE.getCPtr(obj));
   }
 
-  public static void disConnectTypeP_assign(SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE obj, ADLX_DISPLAY_CONNECTOR_TYPE value) {
-    ADLXPINVOKE.disConnectTypeP_assign(SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE.getCPtr(obj), (int)value);
+  public static void disConnectTypeP_assign(SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE obj, ADLX_DISPLAY_CONNECTOR_TYPE value) {
+    ADLXPINVOKE.disConnectTypeP_assign(SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE.getCPtr(obj), (int)value);
   }
 
-  public static ADLX_DISPLAY_CONNECTOR_TYPE disConnectTypeP_value(SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE obj) {
-    ADLX_DISPLAY_CONNECTOR_TYPE ret = (ADLX_DISPLAY_CONNECTOR_TYPE)ADLXPINVOKE.disConnectTypeP_value(SWIGTYPE_p_ADLX_DISPLAY_CONNECTOR_TYPE.getCPtr(obj));
+  public static ADLX_DISPLAY_CONNECTOR_TYPE disConnectTypeP_value(SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE obj) {
+    ADLX_DISPLAY_CONNECTOR_TYPE ret = (ADLX_DISPLAY_CONNECTOR_TYPE)ADLXPINVOKE.disConnectTypeP_value(SWIGTYPE_p_adlx__ADLX_DISPLAY_CONNECTOR_TYPE.getCPtr(obj));
     return ret;
   }
 
-  public static SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE new_disScanTypeP() {
+  public static SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE new_disScanTypeP() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_disScanTypeP();
-    SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE(cPtr, false);
+    SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE(cPtr, false);
     return ret;
   }
 
-  public static SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE copy_disScanTypeP(ADLX_DISPLAY_SCAN_TYPE value) {
+  public static SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE copy_disScanTypeP(ADLX_DISPLAY_SCAN_TYPE value) {
     global::System.IntPtr cPtr = ADLXPINVOKE.copy_disScanTypeP((int)value);
-    SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE(cPtr, false);
+    SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE(cPtr, false);
     return ret;
   }
 
-  public static void delete_disScanTypeP(SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE obj) {
-    ADLXPINVOKE.delete_disScanTypeP(SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE.getCPtr(obj));
+  public static void delete_disScanTypeP(SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE obj) {
+    ADLXPINVOKE.delete_disScanTypeP(SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE.getCPtr(obj));
   }
 
-  public static void disScanTypeP_assign(SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE obj, ADLX_DISPLAY_SCAN_TYPE value) {
-    ADLXPINVOKE.disScanTypeP_assign(SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE.getCPtr(obj), (int)value);
+  public static void disScanTypeP_assign(SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE obj, ADLX_DISPLAY_SCAN_TYPE value) {
+    ADLXPINVOKE.disScanTypeP_assign(SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE.getCPtr(obj), (int)value);
   }
 
-  public static ADLX_DISPLAY_SCAN_TYPE disScanTypeP_value(SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE obj) {
-    ADLX_DISPLAY_SCAN_TYPE ret = (ADLX_DISPLAY_SCAN_TYPE)ADLXPINVOKE.disScanTypeP_value(SWIGTYPE_p_ADLX_DISPLAY_SCAN_TYPE.getCPtr(obj));
+  public static ADLX_DISPLAY_SCAN_TYPE disScanTypeP_value(SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE obj) {
+    ADLX_DISPLAY_SCAN_TYPE ret = (ADLX_DISPLAY_SCAN_TYPE)ADLXPINVOKE.disScanTypeP_value(SWIGTYPE_p_adlx__ADLX_DISPLAY_SCAN_TYPE.getCPtr(obj));
     return ret;
   }
 
@@ -303,28 +303,28 @@ public class ADLX {
     return ret;
   }
 
-  public static SWIGTYPE_p_ADLX_GPU_TYPE new_gpuTypeP() {
+  public static SWIGTYPE_p_adlx__ADLX_GPU_TYPE new_gpuTypeP() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_gpuTypeP();
-    SWIGTYPE_p_ADLX_GPU_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_GPU_TYPE(cPtr, false);
+    SWIGTYPE_p_adlx__ADLX_GPU_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_adlx__ADLX_GPU_TYPE(cPtr, false);
     return ret;
   }
 
-  public static SWIGTYPE_p_ADLX_GPU_TYPE copy_gpuTypeP(ADLX_GPU_TYPE value) {
+  public static SWIGTYPE_p_adlx__ADLX_GPU_TYPE copy_gpuTypeP(ADLX_GPU_TYPE value) {
     global::System.IntPtr cPtr = ADLXPINVOKE.copy_gpuTypeP((int)value);
-    SWIGTYPE_p_ADLX_GPU_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_ADLX_GPU_TYPE(cPtr, false);
+    SWIGTYPE_p_adlx__ADLX_GPU_TYPE ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_adlx__ADLX_GPU_TYPE(cPtr, false);
     return ret;
   }
 
-  public static void delete_gpuTypeP(SWIGTYPE_p_ADLX_GPU_TYPE obj) {
-    ADLXPINVOKE.delete_gpuTypeP(SWIGTYPE_p_ADLX_GPU_TYPE.getCPtr(obj));
+  public static void delete_gpuTypeP(SWIGTYPE_p_adlx__ADLX_GPU_TYPE obj) {
+    ADLXPINVOKE.delete_gpuTypeP(SWIGTYPE_p_adlx__ADLX_GPU_TYPE.getCPtr(obj));
   }
 
-  public static void gpuTypeP_assign(SWIGTYPE_p_ADLX_GPU_TYPE obj, ADLX_GPU_TYPE value) {
-    ADLXPINVOKE.gpuTypeP_assign(SWIGTYPE_p_ADLX_GPU_TYPE.getCPtr(obj), (int)value);
+  public static void gpuTypeP_assign(SWIGTYPE_p_adlx__ADLX_GPU_TYPE obj, ADLX_GPU_TYPE value) {
+    ADLXPINVOKE.gpuTypeP_assign(SWIGTYPE_p_adlx__ADLX_GPU_TYPE.getCPtr(obj), (int)value);
   }
 
-  public static ADLX_GPU_TYPE gpuTypeP_value(SWIGTYPE_p_ADLX_GPU_TYPE obj) {
-    ADLX_GPU_TYPE ret = (ADLX_GPU_TYPE)ADLXPINVOKE.gpuTypeP_value(SWIGTYPE_p_ADLX_GPU_TYPE.getCPtr(obj));
+  public static ADLX_GPU_TYPE gpuTypeP_value(SWIGTYPE_p_adlx__ADLX_GPU_TYPE obj) {
+    ADLX_GPU_TYPE ret = (ADLX_GPU_TYPE)ADLXPINVOKE.gpuTypeP_value(SWIGTYPE_p_adlx__ADLX_GPU_TYPE.getCPtr(obj));
     return ret;
   }
 
@@ -770,6 +770,32 @@ public class ADLX {
     return ret;
   }
 
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetrics3 new_metrics3P_Ptr() {
+    global::System.IntPtr cPtr = ADLXPINVOKE.new_metrics3P_Ptr();
+    SWIGTYPE_p_p_adlx__IADLXGPUMetrics3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetrics3(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXGPUMetrics3 copy_metrics3P_Ptr(IADLXGPUMetrics3 value) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.copy_metrics3P_Ptr(IADLXGPUMetrics3.getCPtr(value));
+    SWIGTYPE_p_p_adlx__IADLXGPUMetrics3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetrics3(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_metrics3P_Ptr(SWIGTYPE_p_p_adlx__IADLXGPUMetrics3 obj) {
+    ADLXPINVOKE.delete_metrics3P_Ptr(SWIGTYPE_p_p_adlx__IADLXGPUMetrics3.getCPtr(obj));
+  }
+
+  public static void metrics3P_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXGPUMetrics3 obj, IADLXGPUMetrics3 value) {
+    ADLXPINVOKE.metrics3P_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXGPUMetrics3.getCPtr(obj), IADLXGPUMetrics3.getCPtr(value));
+  }
+
+  public static IADLXGPUMetrics3 metrics3P_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetrics3 obj) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.metrics3P_Ptr_value(SWIGTYPE_p_p_adlx__IADLXGPUMetrics3.getCPtr(obj));
+    IADLXGPUMetrics3 ret = (cPtr == global::System.IntPtr.Zero) ? null : new IADLXGPUMetrics3(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport new_metricsSupportP_Ptr() {
     global::System.IntPtr cPtr = ADLXPINVOKE.new_metricsSupportP_Ptr();
     SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXGPUMetricsSupport(cPtr, false);
@@ -899,6 +925,58 @@ public class ADLX {
     return ret;
   }
 
+  public static SWIGTYPE_p_p_adlx__IADLXAllMetricsList new_allMetricsListP_Ptr() {
+    global::System.IntPtr cPtr = ADLXPINVOKE.new_allMetricsListP_Ptr();
+    SWIGTYPE_p_p_adlx__IADLXAllMetricsList ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXAllMetricsList(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXAllMetricsList copy_allMetricsListP_Ptr(IADLXAllMetricsList value) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.copy_allMetricsListP_Ptr(IADLXAllMetricsList.getCPtr(value));
+    SWIGTYPE_p_p_adlx__IADLXAllMetricsList ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXAllMetricsList(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_allMetricsListP_Ptr(SWIGTYPE_p_p_adlx__IADLXAllMetricsList obj) {
+    ADLXPINVOKE.delete_allMetricsListP_Ptr(SWIGTYPE_p_p_adlx__IADLXAllMetricsList.getCPtr(obj));
+  }
+
+  public static void allMetricsListP_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXAllMetricsList obj, IADLXAllMetricsList value) {
+    ADLXPINVOKE.allMetricsListP_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXAllMetricsList.getCPtr(obj), IADLXAllMetricsList.getCPtr(value));
+  }
+
+  public static IADLXAllMetricsList allMetricsListP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXAllMetricsList obj) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.allMetricsListP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXAllMetricsList.getCPtr(obj));
+    IADLXAllMetricsList ret = (cPtr == global::System.IntPtr.Zero) ? null : new IADLXAllMetricsList(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXAllMetrics new_allMetricsP_Ptr() {
+    global::System.IntPtr cPtr = ADLXPINVOKE.new_allMetricsP_Ptr();
+    SWIGTYPE_p_p_adlx__IADLXAllMetrics ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXAllMetrics(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_adlx__IADLXAllMetrics copy_allMetricsP_Ptr(IADLXAllMetrics value) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.copy_allMetricsP_Ptr(IADLXAllMetrics.getCPtr(value));
+    SWIGTYPE_p_p_adlx__IADLXAllMetrics ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_adlx__IADLXAllMetrics(cPtr, false);
+    return ret;
+  }
+
+  public static void delete_allMetricsP_Ptr(SWIGTYPE_p_p_adlx__IADLXAllMetrics obj) {
+    ADLXPINVOKE.delete_allMetricsP_Ptr(SWIGTYPE_p_p_adlx__IADLXAllMetrics.getCPtr(obj));
+  }
+
+  public static void allMetricsP_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXAllMetrics obj, IADLXAllMetrics value) {
+    ADLXPINVOKE.allMetricsP_Ptr_assign(SWIGTYPE_p_p_adlx__IADLXAllMetrics.getCPtr(obj), IADLXAllMetrics.getCPtr(value));
+  }
+
+  public static IADLXAllMetrics allMetricsP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXAllMetrics obj) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.allMetricsP_Ptr_value(SWIGTYPE_p_p_adlx__IADLXAllMetrics.getCPtr(obj));
+    IADLXAllMetrics ret = (cPtr == global::System.IntPtr.Zero) ? null : new IADLXAllMetrics(cPtr, false);
+    return ret;
+  }
+
   public static SWIGTYPE_p_p_void CastManualFanTuningVoidPtr(SWIGTYPE_p_p_adlx__IADLXManualFanTuning x) {
     global::System.IntPtr cPtr = ADLXPINVOKE.CastManualFanTuningVoidPtr(SWIGTYPE_p_p_adlx__IADLXManualFanTuning.getCPtr(x));
     SWIGTYPE_p_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_void(cPtr, false);
@@ -919,6 +997,12 @@ public class ADLX {
 
   public static SWIGTYPE_p_p_void CastGPUMetrics1VoidPtr(SWIGTYPE_p_p_adlx__IADLXGPUMetrics1 x) {
     global::System.IntPtr cPtr = ADLXPINVOKE.CastGPUMetrics1VoidPtr(SWIGTYPE_p_p_adlx__IADLXGPUMetrics1.getCPtr(x));
+    SWIGTYPE_p_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_void(cPtr, false);
+    return ret;
+  }
+
+  public static SWIGTYPE_p_p_void CastGPUMetrics3VoidPtr(SWIGTYPE_p_p_adlx__IADLXGPUMetrics3 x) {
+    global::System.IntPtr cPtr = ADLXPINVOKE.CastGPUMetrics3VoidPtr(SWIGTYPE_p_p_adlx__IADLXGPUMetrics3.getCPtr(x));
     SWIGTYPE_p_p_void ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_p_void(cPtr, false);
     return ret;
   }

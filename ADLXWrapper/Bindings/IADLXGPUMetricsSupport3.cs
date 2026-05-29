@@ -10,18 +10,18 @@
 
 namespace ADLXWrapper.Bindings {
 
-public class IADLXMemoryTimingDescription : IADLXInterface {
+public class IADLXGPUMetricsSupport3 : IADLXGPUMetricsSupport2 {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
 
-  internal IADLXMemoryTimingDescription(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ADLXPINVOKE.IADLXMemoryTimingDescription_SWIGUpcast(cPtr), cMemoryOwn) {
+  internal IADLXGPUMetricsSupport3(global::System.IntPtr cPtr, bool cMemoryOwn) : base(ADLXPINVOKE.IADLXGPUMetricsSupport3_SWIGUpcast(cPtr), cMemoryOwn) {
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(IADLXMemoryTimingDescription obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(IADLXGPUMetricsSupport3 obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(IADLXMemoryTimingDescription obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(IADLXGPUMetricsSupport3 obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -39,7 +39,7 @@ public class IADLXMemoryTimingDescription : IADLXInterface {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          ADLXPINVOKE.delete_IADLXMemoryTimingDescription(swigCPtr);
+          ADLXPINVOKE.delete_IADLXGPUMetricsSupport3(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -48,13 +48,18 @@ public class IADLXMemoryTimingDescription : IADLXInterface {
   }
 
   public new static SWIGTYPE_p_wchar_t IID() {
-    global::System.IntPtr cPtr = ADLXPINVOKE.IADLXMemoryTimingDescription_IID();
+    global::System.IntPtr cPtr = ADLXPINVOKE.IADLXGPUMetricsSupport3_IID();
     SWIGTYPE_p_wchar_t ret = (cPtr == global::System.IntPtr.Zero) ? null : new SWIGTYPE_p_wchar_t(cPtr, false);
     return ret;
   }
 
-  public virtual ADLX_RESULT GetDescription(SWIGTYPE_p_adlx__ADLX_MEMORYTIMING_DESCRIPTION description) {
-    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXMemoryTimingDescription_GetDescription(swigCPtr, SWIGTYPE_p_adlx__ADLX_MEMORYTIMING_DESCRIPTION.getCPtr(description));
+  public virtual ADLX_RESULT IsSupportedGPUFanDuty(ref bool supported) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport3_IsSupportedGPUFanDuty(swigCPtr, ref supported);
+    return ret;
+  }
+
+  public virtual ADLX_RESULT GetGPUFanDutyRange(ref int minValue, ref int maxValue) {
+    ADLX_RESULT ret = (ADLX_RESULT)ADLXPINVOKE.IADLXGPUMetricsSupport3_GetGPUFanDutyRange(swigCPtr, ref minValue, ref maxValue);
     return ret;
   }
 

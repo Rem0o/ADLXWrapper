@@ -2,19 +2,19 @@
 
 namespace ADLXWrapper
 {
-    public class GPUMetrics1 : ADLXInterfaceQueryWrapper<IADLXGPUMetrics1>
+    public class GPUMetrics3 : ADLXInterfaceQueryWrapper<IADLXGPUMetrics3>
     {
-        private static IADLXGPUMetrics1 QueryInterface(IADLXInterface @interface)
+        private static IADLXGPUMetrics3 QueryInterface(IADLXInterface @interface)
         {
-            var ptr = ADLX.new_metrics1P_Ptr();
-            @interface.QueryInterface(IADLXGPUMetrics3.IID(), ADLX.CastGPUMetrics1VoidPtr(ptr)).ThrowIfError($"Query {nameof(GPUMetrics1)} interface");
-            var value = ADLX.metrics1P_Ptr_value(ptr);
-            ADLX.delete_metrics1P_Ptr(ptr);
+            var ptr = ADLX.new_metrics3P_Ptr();
+            @interface.QueryInterface(IADLXGPUMetrics3.IID(), ADLX.CastGPUMetrics3VoidPtr(ptr)).ThrowIfError($"Query {nameof(GPUMetrics3)} interface");
+            var value = ADLX.metrics3P_Ptr_value(ptr);
+            ADLX.delete_metrics3P_Ptr(ptr);
             return value;
         }
 
 
-        public GPUMetrics1(IADLXGPUMetrics metrics) : base(metrics, QueryInterface)
+        public GPUMetrics3(IADLXGPUMetrics metrics) : base(metrics, QueryInterface)
         {
         }
 
@@ -36,6 +36,13 @@ namespace ADLXWrapper
         {
             int intValue = 0;
             NativeInterface.GPUFanSpeed(ref intValue).ThrowIfError("Get fan speed");
+            return intValue;
+        }
+
+        public int GetFanDuty()
+        {
+            int intValue = 0;
+            NativeInterface.GPUFanDuty(ref intValue).ThrowIfError("Get fan duty");
             return intValue;
         }
 

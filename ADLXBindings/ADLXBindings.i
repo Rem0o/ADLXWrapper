@@ -114,6 +114,7 @@ typedef WCHAR TCHAR;
 
 %cs_struct(GPUMetricsStruct, GPUMetricsStruct);
 %cs_struct(GPUMetricsStruct1, GPUMetricsStruct1);
+%cs_struct(GPUMetricsStruct3, GPUMetricsStruct3);
 //%typemap(csclassmodifiers) SWIGTYPE "public partial class"
 
 %apply bool& INOUT { adlx_bool* };
@@ -180,11 +181,14 @@ using namespace adlx;
 %pointer_functions(IADLXGPUMetrics*, metricsP_Ptr);
 %pointer_functions(IADLXGPUMetrics1*, metrics1P_Ptr);
 %pointer_functions(IADLXGPUMetrics2*, metrics2P_Ptr);
+%pointer_functions(IADLXGPUMetrics3*, metrics3P_Ptr);
 %pointer_functions(IADLXGPUMetricsSupport*, metricsSupportP_Ptr);
 %pointer_functions(IADLXGPUMetricsSupport1*, metricsSupport1P_Ptr);
 %pointer_functions(IADLXGPUMetricsSupport2*, metricsSupport2P_Ptr);
 %pointer_functions(adlx_string, stringP_Ptr);
 %pointer_functions(IADLXGPUMetricsList*, gpuMetricsListP_Ptr);
+%pointer_functions(IADLXAllMetricsList*, allMetricsListP_Ptr);
+%pointer_functions(IADLXAllMetrics*, allMetricsP_Ptr);
 
 // Interface cast
 %define %pointer_cast(TYPE1,TYPE2,NAME)
@@ -199,3 +203,4 @@ TYPE2 NAME(TYPE1 x) {
 %pointer_cast(IADLXManualPowerTuning**, void**, CastManualPowerTuningVoidPtr);
 %pointer_cast(IADLXGPUMetricsSupport1**, void**, CastGPUMetricsSupport1VoidPtr);
 %pointer_cast(IADLXGPUMetrics1**, void**, CastGPUMetrics1VoidPtr);
+%pointer_cast(IADLXGPUMetrics3**, void**, CastGPUMetrics3VoidPtr);

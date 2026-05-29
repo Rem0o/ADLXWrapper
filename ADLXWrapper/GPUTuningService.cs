@@ -16,6 +16,11 @@ namespace ADLXWrapper
             return value;
         }
 
+        internal void ResetToFactory(GPU gpu)
+        {
+            NativeInterface.ResetToFactory(gpu.NativeInterface).ThrowIfError("ResetToFactory");
+        }
+
         public ManualFanTuning GetManualFanTuning(GPU gpu)
         {
             var interfacePtr = ADLX.new_adlxInterfaceP_Ptr();
@@ -23,7 +28,7 @@ namespace ADLXWrapper
             var @interface = ADLX.adlxInterfaceP_Ptr_value(interfacePtr);
             ADLX.delete_adlxInterfaceP_Ptr(interfacePtr);
 
-            return new ManualFanTuning(@interface, _ext);
+            return new ManualFanTuning(@interface, _ext, this, gpu);
         }
 
         public ManualPowerTuning GetPowerTuning(GPU gpu)

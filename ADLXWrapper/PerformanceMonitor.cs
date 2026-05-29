@@ -1,5 +1,6 @@
 ﻿using ADLXWrapper.Bindings;
 using System;
+using System.Threading;
 
 namespace ADLXWrapper
 {
@@ -12,6 +13,7 @@ namespace ADLXWrapper
         private readonly SWIGTYPE_p_p_adlx__IADLXGPUMetricsList _metricsList;
         private readonly GPUMetricsStruct emptyStruct = default;
         private readonly GPUMetricsStruct1 emptyStruct1 = default;
+        private readonly GPUMetricsStruct3 emptyStruct3 = default;
 
         public PerformanceMonitor(IADLXPerformanceMonitoringServices performanceMonitor, ADLXExt ext) : base(performanceMonitor)
         {
@@ -33,6 +35,12 @@ namespace ADLXWrapper
             return new GPUMetricsSupport1(ADLX.metricsSupportP_Ptr_value(_metricSupportPtr));
         }
 
+        public GPUMetricsSupport3 GetSupportedGPUMetrics3(GPU gpu)
+        {
+            NativeInterface.GetSupportedGPUMetrics(gpu.NativeInterface, _metricSupportPtr).ThrowIfError("Get Supported GPU Metrics3");
+            return new GPUMetricsSupport3(ADLX.metricsSupportP_Ptr_value(_metricSupportPtr));
+        }
+
         public GPUMetrics GetGPUMetrics(GPU gpu)
         {
             NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr).ThrowIfError("Get GPU Metrics");
@@ -46,6 +54,13 @@ namespace ADLXWrapper
             IADLXGPUMetrics metrics = ADLX.metricsP_Ptr_value(_metricPtr);
 
             return new GPUMetrics1(metrics);
+        }
+
+        public GPUMetrics3 GetGPUMetrics3(GPU gpu)
+        {
+            NativeInterface.GetCurrentGPUMetrics(gpu.NativeInterface, _metricPtr).ThrowIfError("Get GPU Metrics3");
+            IADLXGPUMetrics metrics = ADLX.metricsP_Ptr_value(_metricPtr);
+            return new GPUMetrics3(metrics);
         }
 
         public GPUMetricsStruct GetGPUMetricsStruct(GPU gpu)
@@ -73,6 +88,19 @@ namespace ADLXWrapper
             return metrics1;
         }
 
+        public GPUMetricsStruct3 GetGPUMetricsStruct3(GPU gpu)
+        {
+            GPUMetricsStruct3 metrics3 = default;
+            var res = _ext.GetCurrentMetrics3(NativeInterface, gpu.NativeInterface, ref metrics3);
+
+            if (res.HasError() && metrics3 == emptyStruct3)
+            {
+                throw new ADLXResultException(res, "Get GPU Metrics Struct3");
+            }
+
+            return metrics3;
+        }
+
 
         public IDisposable StartTracking(int samplingIntervalMs, int? maxHistorySize = null)
         {
@@ -84,8 +112,11 @@ namespace ADLXWrapper
 
             return new ActionDisposable(() =>
             {
-                NativeInterface.StopPerformanceMetricsTracking().ThrowIfError("Couldn't stop performance metrics tracking");
-                NativeInterface.ClearPerformanceMetricsHistory().ThrowIfError("Clear performance metrics");
+                ADLX_RESULT stopResumt = NativeInterface.StopPerformanceMetricsTracking();
+                ADLX_RESULT clearResult = NativeInterface.ClearPerformanceMetricsHistory();
+
+                stopResumt.ThrowIfError("Couldn't stop performance metrics tracking");
+                clearResult.ThrowIfError("Clear performance metrics");
             });
         }
 
@@ -131,6 +162,14 @@ namespace ADLXWrapper
             _ext.GetCurrentMetrics1StructFromTracking(NativeInterface, gpu.NativeInterface, ref metrics1).ThrowIfError("Couldn't get GPU metrics 1 from tracking");
 
             return metrics1;
+        }
+
+        public GPUMetricsStruct3 GetGPUMetricsStruct3FromTracking(GPU gpu)
+        {
+            GPUMetricsStruct3 metrics3 = default;
+            _ext.GetCurrentMetrics3StructFromTracking(NativeInterface, gpu.NativeInterface, ref metrics3).ThrowIfError("Couldn't get GPU metrics 3 from tracking");
+
+            return metrics3;
         }
     }
 }

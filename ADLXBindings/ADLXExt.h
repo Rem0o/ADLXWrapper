@@ -3,6 +3,8 @@
 #include "../ADLX/SDK/Include/IGPUManualFanTuning.h"
 #include "../ADLX/SDK/Include/IPerformanceMonitoring.h"
 #include "../ADLX/SDK/Include/IPerformanceMonitoring2.h"
+#include "../ADLX/SDK/Include/IPerformanceMonitoring3.h"
+#include "../ADLX/SDK/Include/IPerformanceMonitoring3.h"
 
 
 struct GPUMetricsStruct {
@@ -25,6 +27,20 @@ struct GPUMetricsStruct1 {
 	adlx_int NPUActivityLevel;
 };
 
+struct GPUMetricsStruct3 {
+	adlx_double GPUTemperature;
+	adlx_double GPUHotspotTemperature;
+	adlx_double GPUIntakeTemperature;
+	adlx_double GPUTotalBoardPower;
+	adlx_int GPUFanSpeed;
+
+	adlx_double GPUMemoryTemperature;
+	adlx_int NPUFrequency;
+	adlx_int NPUActivityLevel;
+
+	adlx_int GPUFanDuty;
+};
+
 class ADLXExt
 {
 public:
@@ -39,16 +55,13 @@ public:
 	
 	ADLX_RESULT GetCurrentMetrics1(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct1* metricsStruct1);
 
+	ADLX_RESULT GetCurrentMetrics3(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct3* metricsStruct3);
+
 	ADLX_RESULT GetCurrentMetricsStructFromTracking(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct* metricsStruct);
 
 	ADLX_RESULT GetCurrentMetrics1StructFromTracking(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct1* metricsStruct);
 
-private:
-	adlx::IADLXManualFanTuningState* m_oneState = nullptr;
-
-	adlx::IADLXGPUMetrics** m_metricsPtr = nullptr;
-
-	adlx::IADLXGPUMetricsList** m_metricsListPtr = nullptr;
+	ADLX_RESULT GetCurrentMetrics3StructFromTracking(adlx::IADLXPerformanceMonitoringServices* services, adlx::IADLXGPU* gpu, GPUMetricsStruct3* metricsStruct);
 
 };
 
