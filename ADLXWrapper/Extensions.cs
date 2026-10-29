@@ -42,9 +42,7 @@ namespace ADLXWrapper
         {
             return result != ADLX_RESULT.ADLX_OK &&
                 result != ADLX_RESULT.ADLX_ALREADY_ENABLED &&
-                result != ADLX_RESULT.ADLX_ALREADY_INITIALIZED &&
-                // when running in a windows service, ADLX may return ADLX_ORPHAN_OBJECTS on user logoff, which should not be treated as an error
-                result != ADLX_RESULT.ADLX_ORPHAN_OBJECTS;
+                result != ADLX_RESULT.ADLX_ALREADY_INITIALIZED;
         }
 
         public static void ExecuteWithResetRetry(Func<ADLX_RESULT> operation, Action resetToFactory, string message)
